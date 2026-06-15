@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-15T19:00:01-0400",
-  "generated_human": "2026-06-15 07:00 PM EDT",
-  "generated_unix": 1781564401,
+  "generated_at": "2026-06-15T19:10:01-0400",
+  "generated_human": "2026-06-15 07:10 PM EDT",
+  "generated_unix": 1781565001,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-15",
   "corpus": {
-    "documents": 329047,
-    "as_of": "2026-06-15T19:00:02-0400",
+    "documents": 329051,
+    "as_of": "2026-06-15T19:10:02-0400",
     "stale": false
   },
   "runner": {
@@ -17,8 +17,8 @@
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
     "current_ingest_proc": null,
-    "last_cycle_marker": "2026-06-15T18:54:00-04:00 === runner end ===",
-    "last_log_line": "2026-06-15T18:54:00-04:00 === runner end ==="
+    "last_cycle_marker": "2026-06-15T19:09:26-04:00 === runner end ===",
+    "last_log_line": "2026-06-15T19:09:26-04:00 === runner end ==="
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -30,15 +30,23 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-15": 12,
+      "2026-06-15": 14,
       "2026-06-14": 48,
       "2026-06-13": 57,
       "2026-06-12": 28,
       "2026-06-11": 38,
       "2026-06-10": 3
     },
-    "today": 12,
+    "today": 14,
     "recent_closes": [
+      {
+        "when": "2026-06-15 19:09",
+        "subject": "docs: SOLO-CLOSE #43 ME AG opinions freshness repair \u2014 backlog + campaign evidence log"
+      },
+      {
+        "when": "2026-06-15 19:08",
+        "subject": "ME AG opinions freshness repair: index restructure fix (+4, 2021\u21922024)"
+      },
       {
         "when": "2026-06-15 18:53",
         "subject": "docs: SOLO-CLOSE #42 NE whistleblower (Ch.81 Art.27) \u2014 backlog + campaign evidence log"
@@ -86,14 +94,6 @@
       {
         "when": "2026-06-15 00:24",
         "subject": "campaign: AR session laws freshness repair \u2014 direct session enumeration ingester, 174 election-relevant Acts (1987-2026, was frozen at 2019)"
-      },
-      {
-        "when": "2026-06-14 13:53",
-        "subject": "campaign: SOLO-CLOSE evidence + backlog \u2014 AL session laws freshness repair (5e9efa5, +106)"
-      },
-      {
-        "when": "2026-06-14 13:52",
-        "subject": "campaign: AL session laws freshness repair \u2014 GraphQL acts ingester, 106 election-relevant Acts (2023-2026 RS) full text (was 0 rows/11yr sta"
       }
     ]
   },
