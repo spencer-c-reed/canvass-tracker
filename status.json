@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-06-15T19:30:01-0400",
-  "generated_human": "2026-06-15 07:30 PM EDT",
-  "generated_unix": 1781566201,
+  "generated_at": "2026-06-15T19:40:02-0400",
+  "generated_human": "2026-06-15 07:40 PM EDT",
+  "generated_unix": 1781566802,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-15",
   "corpus": {
     "documents": 329130,
-    "as_of": "2026-06-15T19:30:02-0400",
+    "as_of": "2026-06-15T19:40:02-0400",
     "stale": false
   },
   "runner": {
     "alive": true,
-    "state": "yield-to-maintenance",
-    "idle_yield_cycles": 1,
-    "idle_yield_min_est": 10,
+    "state": "working",
+    "idle_yield_cycles": 0,
+    "idle_yield_min_est": 0,
     "current_detached_ingest": null,
     "current_ingest_proc": null,
-    "last_cycle_marker": "2026-06-15T19:12:51-04:00 === runner end ===",
-    "last_log_line": "2026-06-15T19:25:04-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
+    "last_cycle_marker": "2026-06-15T19:37:34-04:00 === runner end ===",
+    "last_log_line": "2026-06-15T19:37:34-04:00 === runner end ==="
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -30,15 +30,23 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-15": 14,
+      "2026-06-15": 16,
       "2026-06-14": 48,
       "2026-06-13": 57,
       "2026-06-12": 28,
       "2026-06-11": 38,
       "2026-06-10": 3
     },
-    "today": 14,
+    "today": 16,
     "recent_closes": [
+      {
+        "when": "2026-06-15 19:37",
+        "subject": "docs: SOLO-CLOSE #44 VA AG opinions freshness repair \u2014 backlog + campaign evidence log"
+      },
+      {
+        "when": "2026-06-15 19:36",
+        "subject": "VA AG opinions freshness repair: dynamic year-article discovery (frozen 2013\u21922022, +79)"
+      },
       {
         "when": "2026-06-15 19:09",
         "subject": "docs: SOLO-CLOSE #43 ME AG opinions freshness repair \u2014 backlog + campaign evidence log"
@@ -86,14 +94,6 @@
       {
         "when": "2026-06-15 07:37",
         "subject": "campaign: ID session laws freshness repair \u2014 route volume PDFs through resilient_fetch (exit node), id-keyed upsert, 170 election-relevant c"
-      },
-      {
-        "when": "2026-06-15 00:25",
-        "subject": "campaign: SOLO-CLOSE evidence + backlog \u2014 AR session laws freshness repair (9db145d, +174)"
-      },
-      {
-        "when": "2026-06-15 00:24",
-        "subject": "campaign: AR session laws freshness repair \u2014 direct session enumeration ingester, 174 election-relevant Acts (1987-2026, was frozen at 2019)"
       }
     ]
   },
