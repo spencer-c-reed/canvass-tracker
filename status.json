@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-15T18:50:01-0400",
-  "generated_human": "2026-06-15 06:50 PM EDT",
-  "generated_unix": 1781563801,
+  "generated_at": "2026-06-15T19:00:01-0400",
+  "generated_human": "2026-06-15 07:00 PM EDT",
+  "generated_unix": 1781564401,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-15",
   "corpus": {
     "documents": 329047,
-    "as_of": "2026-06-15T18:50:06-0400",
+    "as_of": "2026-06-15T19:00:02-0400",
     "stale": false
   },
   "runner": {
@@ -16,9 +16,9 @@
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
-    "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
-    "last_cycle_marker": "2026-06-15T18:50:03-04:00 === runner start ===",
-    "last_log_line": "2026-06-15T18:50:03-04:00 === runner start ==="
+    "current_ingest_proc": null,
+    "last_cycle_marker": "2026-06-15T18:54:00-04:00 === runner end ===",
+    "last_log_line": "2026-06-15T18:54:00-04:00 === runner end ==="
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -30,15 +30,19 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-15": 11,
+      "2026-06-15": 12,
       "2026-06-14": 48,
       "2026-06-13": 57,
       "2026-06-12": 28,
       "2026-06-11": 38,
       "2026-06-10": 3
     },
-    "today": 11,
+    "today": 12,
     "recent_closes": [
+      {
+        "when": "2026-06-15 18:53",
+        "subject": "docs: SOLO-CLOSE #42 NE whistleblower (Ch.81 Art.27) \u2014 backlog + campaign evidence log"
+      },
       {
         "when": "2026-06-15 16:46",
         "subject": "campaign: SOLO-CLOSE evidence \u2014 OH session laws GA 135 backfill (+81, 0 prior)"
@@ -90,10 +94,6 @@
       {
         "when": "2026-06-14 13:52",
         "subject": "campaign: AL session laws freshness repair \u2014 GraphQL acts ingester, 106 election-relevant Acts (2023-2026 RS) full text (was 0 rows/11yr sta"
-      },
-      {
-        "when": "2026-06-14 13:29",
-        "subject": "campaign: SOLO-CLOSE evidence + backlog \u2014 CO Independent Ethics Commission opinions (0961dfa, +170)"
       }
     ]
   },
