@@ -1,0 +1,207 @@
+{
+  "generated_at": "2026-06-15T15:09:51-0400",
+  "generated_human": "2026-06-15 03:09 PM EDT",
+  "generated_unix": 1781550591,
+  "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
+  "deadline": "2026-06-17",
+  "assessment_updated": "2026-06-15",
+  "corpus": {
+    "documents": 328898,
+    "as_of": "2026-06-15T15:09:51-0400",
+    "stale": false
+  },
+  "runner": {
+    "alive": true,
+    "state": "yield-to-maintenance",
+    "idle_yield_cycles": 13,
+    "idle_yield_min_est": 130,
+    "current_detached_ingest": "oh-session-136",
+    "current_ingest_proc": "flock -w 7200 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/election-law'",
+    "last_cycle_marker": "2026-06-15T12:51:33-04:00 === runner end ===",
+    "last_log_line": "2026-06-15T15:05:04-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
+  },
+  "queue": {
+    "staged_statute_ingesters": 10,
+    "statute_promote_specs": 7,
+    "gap_families_inventoried": 189,
+    "freshness_cells_total": 26,
+    "freshness_cells_done": 22,
+    "freshness_promote_specs": 24
+  },
+  "throughput": {
+    "by_day": {
+      "2026-06-15": 7,
+      "2026-06-14": 48,
+      "2026-06-13": 57,
+      "2026-06-12": 28,
+      "2026-06-11": 38,
+      "2026-06-10": 3
+    },
+    "today": 7,
+    "recent_closes": [
+      {
+        "when": "2026-06-15 12:35",
+        "subject": "campaign: SOLO-CLOSE evidence + backlog \u2014 CO session laws freshness repair (23af38c, +1316)"
+      },
+      {
+        "when": "2026-06-15 12:34",
+        "subject": "campaign: CO session laws freshness repair \u2014 GET-enumeration ingester, 1316 election-relevant chapters 2016-2026 (was POST-stalling)"
+      },
+      {
+        "when": "2026-06-15 07:38",
+        "subject": "campaign: evidence log \u2014 ID session laws freshness repair (5bebe5a)"
+      },
+      {
+        "when": "2026-06-15 07:37",
+        "subject": "campaign: SOLO-CLOSE evidence \u2014 ID session laws freshness repair (5bebe5a, +170)"
+      },
+      {
+        "when": "2026-06-15 07:37",
+        "subject": "campaign: ID session laws freshness repair \u2014 route volume PDFs through resilient_fetch (exit node), id-keyed upsert, 170 election-relevant c"
+      },
+      {
+        "when": "2026-06-15 00:25",
+        "subject": "campaign: SOLO-CLOSE evidence + backlog \u2014 AR session laws freshness repair (9db145d, +174)"
+      },
+      {
+        "when": "2026-06-15 00:24",
+        "subject": "campaign: AR session laws freshness repair \u2014 direct session enumeration ingester, 174 election-relevant Acts (1987-2026, was frozen at 2019)"
+      },
+      {
+        "when": "2026-06-14 13:53",
+        "subject": "campaign: SOLO-CLOSE evidence + backlog \u2014 AL session laws freshness repair (5e9efa5, +106)"
+      },
+      {
+        "when": "2026-06-14 13:52",
+        "subject": "campaign: AL session laws freshness repair \u2014 GraphQL acts ingester, 106 election-relevant Acts (2023-2026 RS) full text (was 0 rows/11yr sta"
+      },
+      {
+        "when": "2026-06-14 13:29",
+        "subject": "campaign: SOLO-CLOSE evidence + backlog \u2014 CO Independent Ethics Commission opinions (0961dfa, +170)"
+      },
+      {
+        "when": "2026-06-14 13:28",
+        "subject": "campaign: CO Independent Ethics Commission advisory opinions (AO/LR/PS) \u2014 170 docs full text, single-source win (+170)"
+      },
+      {
+        "when": "2026-06-14 13:08",
+        "subject": "campaign: SOLO-CLOSE evidence + backlog \u2014 WA Executive Ethics Board advisory opinions (86ba729, +96)"
+      },
+      {
+        "when": "2026-06-14 13:07",
+        "subject": "campaign: WA Executive Ethics Board advisory opinions (AO 1990s-2025) \u2014 96 opinions full text, single-source win (+96)"
+      },
+      {
+        "when": "2026-06-14 12:35",
+        "subject": "campaign: SOLO-CLOSE evidence + backlog \u2014 FL Commission on Ethics advisory opinions (6664c97, +2696)"
+      }
+    ]
+  },
+  "closure_criteria": [
+    {
+      "n": 1,
+      "title": "Per-jurisdiction \u00d7 per-category completeness",
+      "status": "in_progress",
+      "pct": 62,
+      "note": "Integrity-statute layer 50/51 (NJ sole residual, Folio-blocked). 189 statute families inventoried. Active discovery of NEW categories: PR seeded; tribal absent; emerging-tech (AI/deepfake/crypto) thin; pay-to-play thin; ballot-measure regime untracked; (c)(3)/(c)(4) depth shallow; money-movement matrix + union-political being built."
+    },
+    {
+      "n": 2,
+      "title": "All spec blocking items closed or honestly hard-blocked",
+      "status": "in_progress",
+      "pct": 55,
+      "note": "Open: G6 deploy helper stale; G3 automation not closed; municipal expansion ongoing. Hard-blocks documented (NJ Folio, ID/PA SPA, several VPS-IP-blocked session-law sites)."
+    },
+    {
+      "n": 3,
+      "title": "Freshness without human babysitting",
+      "status": "in_progress",
+      "pct": 50,
+      "note": "Freshness-repair workflow surfaced 73 stale category\u00d7juris cells behind a 94-100% presence matrix (silent-cron failures). 26 cells staged, ~22 fixed/dry-run-proven. Needs recency-gate monitor + 2 consecutive clean weekly + 1 clean monthly."
+    },
+    {
+      "n": 4,
+      "title": "Correct processing verified by tests/audits",
+      "status": "mostly_green",
+      "pct": 85,
+      "note": "236 citation regression tests + 27 canonical-fact tests green; integrity/FTS-parity checks green. Re-verify required after each ongoing ingest batch."
+    },
+    {
+      "n": 5,
+      "title": "/canvass passes blind + live benchmark gates",
+      "status": "blocked_spencer",
+      "pct": 30,
+      "note": "BLOCKED ON SPENCER: P5 blind benchmark budget approval. Retrieval 10/10 + eval 5/5 pass on current sources, but the blind production benchmark hasn't been run."
+    },
+    {
+      "n": 6,
+      "title": "Site + ops reliability through maintenance load",
+      "status": "in_progress",
+      "pct": 70,
+      "note": "canvasslaw.com up (gunicorn 4w, uptime cron */5). Backup/restore rewritten. G6 root deploy helper stale vs repo \u2014 needs clean verified reload path."
+    },
+    {
+      "n": 7,
+      "title": "Mutual assent \u2014 Codex confirms per jurisdiction",
+      "status": "in_progress",
+      "pct": 40,
+      "note": "Per-jurisdiction Codex SOLO-CLOSE packets flowing (50+ closes 6/11-6/14). No final per-jurisdiction mutual-assent sign-off yet. This is the last gate."
+    }
+  ],
+  "gates": [
+    {
+      "id": "G1",
+      "name": "Coverage",
+      "status": "amber",
+      "note": "49/51 effective 8/8; wide-scope expansion (territories/tribal/new categories) re-opens breadth."
+    },
+    {
+      "id": "G2",
+      "name": "Freshness",
+      "status": "amber",
+      "note": "Regressed \u2014 73 stale cells found behind presence matrix; repair in flight."
+    },
+    {
+      "id": "G3",
+      "name": "Automation",
+      "status": "red",
+      "note": "Not closed: last weekly had failures:3; need 2 consecutive clean weekly + 1 clean monthly."
+    },
+    {
+      "id": "G4",
+      "name": "Search / retrieval",
+      "status": "green",
+      "note": "Benchmarks + quality monitor passing."
+    },
+    {
+      "id": "G5",
+      "name": "Memo quality",
+      "status": "blocked",
+      "note": "Blocked on Spencer: blind benchmark budget."
+    },
+    {
+      "id": "G6",
+      "name": "Runtime / deploy",
+      "status": "red",
+      "note": "Root deploy helper stale vs repo; clean reload path pending."
+    },
+    {
+      "id": "G7",
+      "name": "Write safety",
+      "status": "green",
+      "note": "Flock-based single writer; integrity audit passing."
+    },
+    {
+      "id": "G8",
+      "name": "Hard-blocked documented",
+      "status": "green",
+      "note": "Honest gaps documented with failure mode + retries + alternates."
+    }
+  ],
+  "spencer_blockers": [
+    "G5 \u2014 approve P5 blind benchmark budget",
+    "G6 \u2014 authorize clean app deploy / root reload",
+    "Final Codex mutual-assent sign-off cadence"
+  ],
+  "overall_pct": 56
+}

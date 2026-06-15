@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Canvass — Production Standard Tracker</title>
+<style>
+  :root{
+    --bg:#0e1116; --panel:#161b22; --panel2:#1c2330; --line:#2a3340;
+    --txt:#e6edf3; --dim:#8b97a7; --accent:#7a8eef;
+    --green:#3fb950; --amber:#d29922; --red:#f85149; --blue:#58a6ff; --grey:#6e7681;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--txt);
+    font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  a{color:var(--blue)}
+  .wrap{max-width:960px;margin:0 auto;padding:16px 14px 60px}
+  header{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 12px;margin-bottom:4px}
+  h1{font-size:19px;margin:0;font-weight:650;letter-spacing:.2px}
+  .sub{color:var(--dim);font-size:12.5px}
+  .pulse{width:9px;height:9px;border-radius:50%;background:var(--green);display:inline-block;
+    margin-right:5px;box-shadow:0 0 0 0 rgba(63,185,80,.6);animation:p 2s infinite}
+  @keyframes p{0%{box-shadow:0 0 0 0 rgba(63,185,80,.5)}70%{box-shadow:0 0 0 7px rgba(63,185,80,0)}100%{box-shadow:0 0 0 0 rgba(63,185,80,0)}}
+  .pulse.stale{background:var(--amber);animation:none}
+  .hero{background:linear-gradient(135deg,#161b22,#1c2330);border:1px solid var(--line);
+    border-radius:14px;padding:18px 18px 16px;margin:12px 0 18px;display:flex;
+    flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
+  .ring{--p:0;width:118px;height:118px;border-radius:50%;flex:0 0 auto;
+    background:conic-gradient(var(--accent) calc(var(--p)*1%), #232b38 0);
+    display:grid;place-items:center;position:relative}
+  .ring::before{content:"";position:absolute;inset:10px;border-radius:50%;background:var(--panel)}
+  .ring b{position:relative;font-size:30px;font-weight:700}
+  .ring span{position:relative;display:block;text-align:center;color:var(--dim);font-size:11px;margin-top:-2px}
+  .herotxt{flex:1 1 280px;min-width:240px}
+  .herotxt .ns{font-size:13.5px;color:#cdd6e2}
+  .deadline{margin-top:8px;font-size:12.5px;color:var(--amber)}
+  h2{font-size:13px;text-transform:uppercase;letter-spacing:.7px;color:var(--dim);
+    margin:24px 0 10px;font-weight:600}
+  .crit{display:flex;flex-direction:column;gap:9px}
+  .row{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:11px 13px}
+  .rowtop{display:flex;align-items:center;gap:9px}
+  .badge{font-size:10.5px;font-weight:700;width:20px;height:20px;border-radius:6px;
+    display:grid;place-items:center;flex:0 0 auto;background:#222b38;color:var(--dim)}
+  .ctitle{font-size:14px;font-weight:600;flex:1}
+  .pct{font-variant-numeric:tabular-nums;color:var(--dim);font-size:13px}
+  .bar{height:6px;border-radius:4px;background:#222b38;margin:8px 0 0;overflow:hidden}
+  .bar i{display:block;height:100%;border-radius:4px}
+  .note{color:var(--dim);font-size:12px;margin-top:7px}
+  .tag{font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:20px;letter-spacing:.3px}
+  .s-green,.s-mostly_green{color:var(--green);background:rgba(63,185,80,.12)}
+  .s-in_progress{color:var(--amber);background:rgba(210,153,34,.13)}
+  .s-blocked_spencer,.s-blocked,.s-red{color:var(--red);background:rgba(248,81,73,.13)}
+  .s-amber{color:var(--amber);background:rgba(210,153,34,.13)}
+  .grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 13px}
+  .stat .k{color:var(--dim);font-size:11.5px;text-transform:uppercase;letter-spacing:.5px}
+  .stat .v{font-size:24px;font-weight:700;margin-top:3px;font-variant-numeric:tabular-nums}
+  .stat .m{color:var(--dim);font-size:11.5px;margin-top:2px}
+  .gates{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+  .gate{display:flex;align-items:center;gap:9px;background:var(--panel);border:1px solid var(--line);
+    border-radius:9px;padding:9px 11px}
+  .dot{width:10px;height:10px;border-radius:50%;flex:0 0 auto}
+  .gate .gid{font-weight:700;font-size:12.5px;width:24px}
+  .gate .gn{font-size:12.5px;flex:1}
+  .gate .gt{font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:var(--dim)}
+  .runner{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:13px}
+  .runner .line{display:flex;justify-content:space-between;gap:10px;padding:5px 0;border-bottom:1px solid #1d242f;font-size:13px}
+  .runner .line:last-child{border:0}
+  .runner .lk{color:var(--dim)}
+  .runner .lv{text-align:right;font-variant-numeric:tabular-nums}
+  .warn{color:var(--amber)} .ok{color:var(--green)} .bad{color:var(--red)}
+  .spark{display:flex;align-items:flex-end;gap:5px;height:54px;margin-top:6px}
+  .spark .b{flex:1;background:var(--accent);border-radius:3px 3px 0 0;min-height:3px;position:relative;opacity:.85}
+  .spark .b span{position:absolute;top:-16px;left:50%;transform:translateX(-50%);font-size:10px;color:var(--dim)}
+  .spark .b small{position:absolute;bottom:-16px;left:50%;transform:translateX(-50%);font-size:9.5px;color:var(--grey);white-space:nowrap}
+  .feed{display:flex;flex-direction:column;gap:0}
+  .fitem{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid #1b222d;font-size:12.5px}
+  .fitem:last-child{border:0}
+  .fwhen{color:var(--grey);flex:0 0 86px;font-variant-numeric:tabular-nums}
+  .fsub{color:#cbd5e2}
+  .block{background:rgba(248,81,73,.07);border:1px solid rgba(248,81,73,.3);border-radius:10px;padding:11px 13px}
+  .block li{margin:3px 0;font-size:13px}
+  footer{color:var(--grey);font-size:11.5px;margin-top:30px;text-align:center;line-height:1.7}
+  .err{color:var(--red);font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Canvass — Production-Standard Tracker</h1>
+    <span class="sub" id="updated">loading…</span>
+  </header>
+  <div class="sub" id="status-line"><span class="pulse"></span>connecting…</div>
+
+  <div class="hero">
+    <div class="ring" id="ring"><b id="overall">–</b><span>to standard</span></div>
+    <div class="herotxt">
+      <div class="ns" id="northstar"></div>
+      <div class="deadline" id="deadline"></div>
+    </div>
+  </div>
+
+  <div class="grid" id="stats"></div>
+
+  <h2>Loop-closure criteria — all 7 must be true to stop</h2>
+  <div class="crit" id="criteria"></div>
+
+  <h2>Live runner</h2>
+  <div class="runner" id="runner"></div>
+
+  <h2>Throughput — campaign closes / day (last 7d)</h2>
+  <div class="stat" style="padding-top:20px"><div class="spark" id="spark"></div></div>
+
+  <h2>Gates</h2>
+  <div class="gates" id="gates"></div>
+
+  <h2 id="blockhdr">Waiting on Spencer</h2>
+  <div class="block"><ul id="blockers" style="margin:0;padding-left:18px"></ul></div>
+
+  <h2>Recent closes</h2>
+  <div class="row feed" id="feed"></div>
+
+  <footer id="footer"></footer>
+</div>
+
+<script>
+const C = {green:'#3fb950',mostly_green:'#3fb950',in_progress:'#d29922',amber:'#d29922',
+  blocked_spencer:'#f85149',blocked:'#f85149',red:'#f85149'};
+const LABEL = {green:'green',mostly_green:'on track',in_progress:'in progress',amber:'at risk',
+  blocked_spencer:'needs Spencer',blocked:'needs Spencer',red:'blocked'};
+const fmt = n => n==null ? '–' : n.toLocaleString();
+
+async function load(){
+  let d;
+  try{
+    const r = await fetch('status.json?t='+Date.now());
+    d = await r.json();
+  }catch(e){
+    document.getElementById('status-line').innerHTML =
+      '<span class="pulse stale"></span><span class="err">could not load status.json</span>';
+    return;
+  }
+  render(d);
+}
+
+function render(d){
+  const ago = Math.round((Date.now()/1000 - (d.generated_unix||0))/60);
+  const stale = ago > 25;
+  document.getElementById('updated').textContent = 'updated '+(d.generated_human||'');
+  document.getElementById('status-line').innerHTML =
+    `<span class="pulse${stale?' stale':''}"></span>data ${ago<2?'just now':ago+' min ago'} · auto-refreshes`;
+
+  // hero
+  const o = d.overall_pct||0;
+  const ring = document.getElementById('ring');
+  ring.style.setProperty('--p', o);
+  document.getElementById('overall').textContent = o+'%';
+  document.getElementById('northstar').textContent = d.north_star||'';
+  if(d.deadline) document.getElementById('deadline').textContent = '⏱ Target full standard: '+d.deadline;
+
+  // stats
+  const q=d.queue||{}, t=d.throughput||{}, c=d.corpus||{};
+  const stats=[
+    ['Corpus documents', fmt(c.documents), c.stale?'cached':'live'],
+    ['Closes today', fmt(t.today), 'campaign commits'],
+    ['Statute ingesters staged', fmt(q.staged_statute_ingesters), (q.statute_promote_specs||0)+' specs ready'],
+    ['Freshness cells', (fmt(q.freshness_cells_done))+' / '+fmt(q.freshness_cells_total), 'dry-run proven'],
+    ['Gap families mapped', fmt(q.gap_families_inventoried), 'statute layer'],
+  ];
+  document.getElementById('stats').innerHTML = stats.map(s=>
+    `<div class="stat"><div class="k">${s[0]}</div><div class="v">${s[1]}</div><div class="m">${s[2]}</div></div>`).join('');
+
+  // criteria
+  document.getElementById('criteria').innerHTML = (d.closure_criteria||[]).map(c=>{
+    const col=C[c.status]||'#6e7681';
+    return `<div class="row"><div class="rowtop">
+      <span class="badge">${c.n}</span>
+      <span class="ctitle">${c.title}</span>
+      <span class="tag s-${c.status}">${LABEL[c.status]||c.status}</span>
+      <span class="pct">${c.pct!=null?c.pct+'%':''}</span></div>
+      <div class="bar"><i style="width:${c.pct||0}%;background:${col}"></i></div>
+      <div class="note">${c.note||''}</div></div>`;
+  }).join('');
+
+  // runner
+  const r=d.runner||{};
+  const yieldCls = (r.idle_yield_cycles>3)?'bad':(r.idle_yield_cycles>0?'warn':'ok');
+  const rows=[
+    ['Process', r.alive?'<span class="ok">alive</span>':'<span class="bad">down</span>'],
+    ['State', r.state==='working'?'<span class="ok">working</span>':`<span class="${yieldCls}">${r.state||'?'}</span>`],
+    ['Idle-yield streak', r.idle_yield_cycles?`<span class="${yieldCls}">${r.idle_yield_cycles} cycles (~${r.idle_yield_min_est} min)</span>`:'<span class="ok">none</span>'],
+    ['Current ingest', r.current_detached_ingest?`<span class="warn">${r.current_detached_ingest}</span>`:'—'],
+    ['Last log', `<span class="lk">${(r.last_log_line||'').replace(/</g,'&lt;')}</span>`],
+  ];
+  document.getElementById('runner').innerHTML = rows.map(x=>
+    `<div class="line"><span class="lk">${x[0]}</span><span class="lv">${x[1]}</span></div>`).join('');
+
+  // spark
+  const by=t.by_day||{}; const days=Object.keys(by).sort();
+  const max=Math.max(1,...days.map(k=>by[k]));
+  document.getElementById('spark').innerHTML = days.map(k=>{
+    const h=Math.round(by[k]/max*100);
+    return `<div class="b" style="height:${h}%"><span>${by[k]}</span><small>${k.slice(5)}</small></div>`;
+  }).join('') || '<span class="sub">no data</span>';
+
+  // gates
+  document.getElementById('gates').innerHTML = (d.gates||[]).map(g=>
+    `<div class="gate"><span class="dot" style="background:${C[g.status]||'#6e7681'}"></span>
+     <span class="gid">${g.id}</span><span class="gn">${g.name}</span>
+     <span class="gt">${LABEL[g.status]||g.status}</span></div>`).join('');
+
+  // blockers
+  const bl=d.spencer_blockers||[];
+  document.getElementById('blockhdr').style.display = bl.length?'':'none';
+  document.getElementById('blockers').innerHTML = bl.map(b=>`<li>${b}</li>`).join('');
+
+  // feed
+  document.getElementById('feed').innerHTML = (t.recent_closes||[]).map(f=>
+    `<div class="fitem"><span class="fwhen">${f.when}</span><span class="fsub">${(f.subject||'').replace(/</g,'&lt;')}</span></div>`).join('')
+    || '<span class="sub">no recent closes</span>';
+
+  document.getElementById('footer').innerHTML =
+    `Auto-generated sanitized metadata · regenerates every 10 min · assessment last reviewed ${d.assessment_updated||'?'}<br>`+
+    `Live metrics (corpus, runner, queue, throughput) are machine-read; criteria/gate status is human+Codex assessment.`;
+}
+
+load();
+setInterval(load, 60000);
+</script>
+</body>
+</html>
