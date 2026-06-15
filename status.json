@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-15T17:10:01-0400",
-  "generated_human": "2026-06-15 05:10 PM EDT",
-  "generated_unix": 1781557801,
+  "generated_at": "2026-06-15T17:20:02-0400",
+  "generated_human": "2026-06-15 05:20 PM EDT",
+  "generated_unix": 1781558402,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-15",
   "corpus": {
     "documents": 329036,
-    "as_of": "2026-06-15T17:10:01-0400",
+    "as_of": "2026-06-15T17:20:06-0400",
     "stale": false
   },
   "runner": {
@@ -16,9 +16,9 @@
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
-    "current_ingest_proc": null,
-    "last_cycle_marker": "2026-06-15T17:00:11-04:00 === runner end ===",
-    "last_log_line": "2026-06-15T17:00:11-04:00 === runner end ==="
+    "current_ingest_proc": "timeout 220 flock -w 160 /tmp/election-law-db.lock sg ellaw PYTHONPATH=/home/spe",
+    "last_cycle_marker": "2026-06-15T17:10:08-04:00 === runner end ===",
+    "last_log_line": "2026-06-15T17:10:08-04:00 === runner end ==="
   },
   "queue": {
     "staged_statute_ingesters": 10,
