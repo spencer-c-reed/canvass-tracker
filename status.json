@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-15T15:20:02-0400",
-  "generated_human": "2026-06-15 03:20 PM EDT",
-  "generated_unix": 1781551202,
+  "generated_at": "2026-06-15T15:23:59-0400",
+  "generated_human": "2026-06-15 03:23 PM EDT",
+  "generated_unix": 1781551439,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-15",
   "corpus": {
     "documents": 328898,
-    "as_of": "2026-06-15T15:20:07-0400",
+    "as_of": "2026-06-15T15:23:59-0400",
     "stale": false
   },
   "runner": {
@@ -117,7 +117,7 @@
       "title": "Freshness without human babysitting",
       "status": "in_progress",
       "pct": 50,
-      "note": "Freshness-repair workflow surfaced 73 stale category\u00d7juris cells behind a 94-100% presence matrix (silent-cron failures). 26 cells staged, ~22 fixed/dry-run-proven. Needs recency-gate monitor + 2 consecutive clean weekly + 1 clean monthly."
+      "note": "Runner is ACTIVELY doing freshness execution now (all of today's closes are session-law freshness repairs). 73 stale cells found; 26 staged, ~22 dry-run-proven. GAP: the DURABILITY/AUTOMATION layer (recency-gate monitor, 11 LLM audit jobs, pluggable inference, auto new-source/new-category discovery cadence) is NOT built by the autonomous runner \u2014 it's explicitly supervised work. Needs 2 consecutive clean weekly + 1 clean monthly to close."
     },
     {
       "n": 4,
@@ -136,9 +136,9 @@
     {
       "n": 6,
       "title": "Site + ops reliability through maintenance load",
-      "status": "in_progress",
-      "pct": 70,
-      "note": "canvasslaw.com up (gunicorn 4w, uptime cron */5). Backup/restore rewritten. G6 root deploy helper stale vs repo \u2014 needs clean verified reload path."
+      "status": "mostly_green",
+      "pct": 90,
+      "note": "G6 effectively CLOSED: app.py + fetch_json.py in sync with /srv/canvasslaw, service active, canvasslaw.com HTTP 200 through maintenance load, uptime cron */5, backup/restore rewritten. Residual: root deploy helper is a convenience, not a blocker."
     },
     {
       "n": 7,
@@ -182,8 +182,8 @@
     {
       "id": "G6",
       "name": "Runtime / deploy",
-      "status": "red",
-      "note": "Root deploy helper stale vs repo; clean reload path pending."
+      "status": "green",
+      "note": "App in sync with prod, service active, canvasslaw.com 200 through load. Closed (Spencer confirmed 2026-06-15)."
     },
     {
       "id": "G7",
@@ -200,8 +200,9 @@
   ],
   "spencer_blockers": [
     "G5 \u2014 approve P5 blind benchmark budget",
-    "G6 \u2014 authorize clean app deploy / root reload",
+    "Automation/durability layer (criterion 3) \u2014 supervised build, not autonomous-runner scope",
+    "Throughput rebuild (fetch/write split) \u2014 Codex review then supervised implement",
     "Final Codex mutual-assent sign-off cadence"
   ],
-  "overall_pct": 56
+  "overall_pct": 59
 }
