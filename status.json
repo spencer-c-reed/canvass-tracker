@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-15T16:10:01-0400",
-  "generated_human": "2026-06-15 04:10 PM EDT",
-  "generated_unix": 1781554201,
+  "generated_at": "2026-06-15T16:20:02-0400",
+  "generated_human": "2026-06-15 04:20 PM EDT",
+  "generated_unix": 1781554802,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-15",
   "corpus": {
-    "documents": 328899,
-    "as_of": "2026-06-15T16:10:01-0400",
+    "documents": 328919,
+    "as_of": "2026-06-15T16:20:07-0400",
     "stale": false
   },
   "runner": {
@@ -16,9 +16,9 @@
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
     "current_detached_ingest": "oh-session-136",
-    "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
-    "last_cycle_marker": "2026-06-15T15:52:55-04:00 === runner start ===",
-    "last_log_line": "2026-06-15T16:00:04-04:00 [skip] already running"
+    "current_ingest_proc": "flock -w 7200 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/election-law'",
+    "last_cycle_marker": "2026-06-15T16:12:10-04:00 === runner end ===",
+    "last_log_line": "2026-06-15T16:12:10-04:00 === runner end ==="
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -30,15 +30,23 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-15": 7,
+      "2026-06-15": 9,
       "2026-06-14": 48,
       "2026-06-13": 57,
       "2026-06-12": 28,
       "2026-06-11": 38,
       "2026-06-10": 3
     },
-    "today": 7,
+    "today": 9,
     "recent_closes": [
+      {
+        "when": "2026-06-15 16:11",
+        "subject": "campaign: evidence log \u2014 MN \u00a7 609.771 deep-fake election crime (684b9a7)"
+      },
+      {
+        "when": "2026-06-15 16:11",
+        "subject": "campaign: SOLO-CLOSE evidence \u2014 MN \u00a7 609.771 deep-fake election crime (684b9a7, +1)"
+      },
       {
         "when": "2026-06-15 12:35",
         "subject": "campaign: SOLO-CLOSE evidence + backlog \u2014 CO session laws freshness repair (23af38c, +1316)"
@@ -86,14 +94,6 @@
       {
         "when": "2026-06-14 13:08",
         "subject": "campaign: SOLO-CLOSE evidence + backlog \u2014 WA Executive Ethics Board advisory opinions (86ba729, +96)"
-      },
-      {
-        "when": "2026-06-14 13:07",
-        "subject": "campaign: WA Executive Ethics Board advisory opinions (AO 1990s-2025) \u2014 96 opinions full text, single-source win (+96)"
-      },
-      {
-        "when": "2026-06-14 12:35",
-        "subject": "campaign: SOLO-CLOSE evidence + backlog \u2014 FL Commission on Ethics advisory opinions (6664c97, +2696)"
       }
     ]
   },
