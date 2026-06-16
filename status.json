@@ -1,14 +1,19 @@
 {
-  "generated_at": "2026-06-16T01:10:02-0400",
-  "generated_human": "2026-06-16 01:10 AM EDT",
-  "generated_unix": 1781586602,
+  "generated_at": "2026-06-16T01:20:13-0400",
+  "generated_human": "2026-06-16 01:20 AM EDT",
+  "generated_unix": 1781587213,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-15",
   "corpus": {
     "documents": 330209,
-    "as_of": "2026-06-16T01:10:02-0400",
+    "as_of": "2026-06-16T01:20:13-0400",
     "stale": false
+  },
+  "live_today": {
+    "docs_added_today": 0,
+    "docs_added_7d": null,
+    "last_commit": "2026-06-16 01:14"
   },
   "runner": {
     "alive": true,
@@ -17,8 +22,8 @@
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
     "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
-    "last_cycle_marker": "2026-06-16T00:50:05-04:00 === runner start ===",
-    "last_log_line": "2026-06-16T01:00:06-04:00 [skip] already running"
+    "last_cycle_marker": "2026-06-16T01:20:05-04:00 === runner start ===",
+    "last_log_line": "2026-06-16T01:20:05-04:00 === runner start ==="
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -30,15 +35,20 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-15": 20,
+      "2026-06-16": 2,
+      "2026-06-15": 23,
       "2026-06-14": 48,
       "2026-06-13": 57,
-      "2026-06-12": 28,
-      "2026-06-11": 38,
+      "2026-06-12": 29,
+      "2026-06-11": 39,
       "2026-06-10": 3
     },
-    "today": 0,
+    "today": 2,
     "recent_closes": [
+      {
+        "when": "2026-06-16 01:14",
+        "subject": "SOLO-CLOSE #51: wire 10 orphaned integrity-statute ingesters into monthly cron (durability/freshness)"
+      },
       {
         "when": "2026-06-16 00:46",
         "subject": "SOLO-CLOSE #50: US Senate Select Committee on Ethics guidance + annual reports (NEW federal source family, +16 full-text, 10 OCR-pending)"
@@ -90,10 +100,6 @@
       {
         "when": "2026-06-15 18:53",
         "subject": "docs: SOLO-CLOSE #42 NE whistleblower (Ch.81 Art.27) \u2014 backlog + campaign evidence log"
-      },
-      {
-        "when": "2026-06-15 16:46",
-        "subject": "campaign: SOLO-CLOSE evidence \u2014 OH session laws GA 135 backfill (+81, 0 prior)"
       }
     ]
   },
@@ -103,51 +109,116 @@
       "title": "Per-jurisdiction \u00d7 per-category completeness",
       "status": "in_progress",
       "pct": 62,
-      "note": "Integrity-statute layer 50/51 (NJ sole residual, Folio-blocked). 189 statute families inventoried. Active discovery of NEW categories: PR seeded; tribal absent; emerging-tech (AI/deepfake/crypto) thin; pay-to-play thin; ballot-measure regime untracked; (c)(3)/(c)(4) depth shallow; money-movement matrix + union-political being built."
+      "note": "Integrity-statute layer 50/51 (NJ sole residual, Folio-blocked). 189 statute families inventoried. Active discovery of NEW categories: PR seeded; tribal absent; emerging-tech (AI/deepfake/crypto) thin; pay-to-play thin; ballot-measure regime untracked; (c)(3)/(c)(4) depth shallow; money-movement matrix + union-political being built.",
+      "auto": false
     },
     {
       "n": 2,
       "title": "All spec blocking items closed or honestly hard-blocked",
       "status": "in_progress",
       "pct": 55,
-      "note": "Open: G6 deploy helper stale; G3 automation not closed; municipal expansion ongoing. Hard-blocks documented (NJ Folio, ID/PA SPA, several VPS-IP-blocked session-law sites)."
+      "note": "Open: G6 deploy helper stale; G3 automation not closed; municipal expansion ongoing. Hard-blocks documented (NJ Folio, ID/PA SPA, several VPS-IP-blocked session-law sites).",
+      "auto": false
     },
     {
       "n": 3,
       "title": "Freshness without human babysitting",
       "status": "in_progress",
       "pct": 50,
-      "note": "Runner is ACTIVELY doing freshness execution now (all of today's closes are session-law freshness repairs). 73 stale cells found; 26 staged, ~22 dry-run-proven. GAP: the DURABILITY/AUTOMATION layer (recency-gate monitor, 11 LLM audit jobs, pluggable inference, auto new-source/new-category discovery cadence) is NOT built by the autonomous runner \u2014 it's explicitly supervised work. Needs 2 consecutive clean weekly + 1 clean monthly to close."
+      "note": "Runner is ACTIVELY doing freshness execution now (all of today's closes are session-law freshness repairs). 73 stale cells found; 26 staged, ~22 dry-run-proven. GAP: the DURABILITY/AUTOMATION layer (recency-gate monitor, 11 LLM audit jobs, pluggable inference, auto new-source/new-category discovery cadence) is NOT built by the autonomous runner \u2014 it's explicitly supervised work. Needs 2 consecutive clean weekly + 1 clean monthly to close.",
+      "auto": false
     },
     {
       "n": 4,
       "title": "Correct processing verified by tests/audits",
       "status": "mostly_green",
       "pct": 85,
-      "note": "236 citation regression tests + 27 canonical-fact tests green; integrity/FTS-parity checks green. Re-verify required after each ongoing ingest batch."
+      "note": "236 citation regression tests + 27 canonical-fact tests green; integrity/FTS-parity checks green. Re-verify required after each ongoing ingest batch.",
+      "auto": false
     },
     {
       "n": 5,
       "title": "/canvass passes blind + live benchmark gates",
       "status": "blocked_spencer",
       "pct": 30,
-      "note": "BLOCKED ON SPENCER: P5 blind benchmark budget approval. Retrieval 10/10 + eval 5/5 pass on current sources, but the blind production benchmark hasn't been run."
+      "note": "BLOCKED ON SPENCER: P5 blind benchmark budget approval. Retrieval 10/10 + eval 5/5 pass on current sources, but the blind production benchmark hasn't been run.",
+      "auto": false
     },
     {
       "n": 6,
       "title": "Site + ops reliability through maintenance load",
       "status": "mostly_green",
       "pct": 90,
-      "note": "G6 effectively CLOSED: app.py + fetch_json.py in sync with /srv/canvasslaw, service active, canvasslaw.com HTTP 200 through maintenance load, uptime cron */5, backup/restore rewritten. Residual: root deploy helper is a convenience, not a blocker."
+      "note": "G6 effectively CLOSED: app.py + fetch_json.py in sync with /srv/canvasslaw, service active, canvasslaw.com HTTP 200 through maintenance load, uptime cron */5, backup/restore rewritten. Residual: root deploy helper is a convenience, not a blocker.",
+      "auto": false
     },
     {
       "n": 7,
       "title": "Mutual assent \u2014 Codex confirms per jurisdiction",
       "status": "in_progress",
       "pct": 40,
-      "note": "Per-jurisdiction Codex SOLO-CLOSE packets flowing (50+ closes 6/11-6/14). No final per-jurisdiction mutual-assent sign-off yet. This is the last gate."
+      "note": "Per-jurisdiction Codex SOLO-CLOSE packets flowing (50+ closes 6/11-6/14). No final per-jurisdiction mutual-assent sign-off yet. This is the last gate.",
+      "auto": false
     }
   ],
+  "scorecard": {
+    "coverage_matrix": {
+      "juris": 51,
+      "raw_8of8": 41,
+      "eff_8of8": 50,
+      "raw_pct": 96.3,
+      "eff_pct": 99.8,
+      "families": [
+        {
+          "family": "State Statute",
+          "rate": 100.0
+        },
+        {
+          "family": "Court Opinions",
+          "rate": 100.0
+        },
+        {
+          "family": "AG Opinions",
+          "rate": 94.1
+        },
+        {
+          "family": "Constitutions",
+          "rate": 100.0
+        },
+        {
+          "family": "Advisory Opinions",
+          "rate": 86.3
+        },
+        {
+          "family": "Enforcement",
+          "rate": 90.2
+        },
+        {
+          "family": "Agency Guidance",
+          "rate": 100.0
+        },
+        {
+          "family": "Admin Rules",
+          "rate": 100.0
+        }
+      ],
+      "generated": "2026-06-15T06:50:42Z"
+    },
+    "benchmarks": {
+      "canonical": {
+        "passed": 27,
+        "total": 27,
+        "run_date": "2026-06-15"
+      },
+      "adversarial": {
+        "pass": 4,
+        "fail": 1,
+        "not_run": 6
+      }
+    },
+    "frontier_pct": null,
+    "frontier_categories": []
+  },
   "gates": [
     {
       "id": "G1",
@@ -204,5 +275,6 @@
     "Throughput rebuild (fetch/write split) \u2014 Codex review then supervised implement",
     "Final Codex mutual-assent sign-off cadence"
   ],
-  "overall_pct": 59
+  "overall_pct": 59,
+  "overall_auto": false
 }
