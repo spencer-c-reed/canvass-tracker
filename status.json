@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-16T05:30:20-0400",
-  "generated_human": "2026-06-16 05:30 AM EDT",
-  "generated_unix": 1781602220,
+  "generated_at": "2026-06-16T05:40:05-0400",
+  "generated_human": "2026-06-16 05:40 AM EDT",
+  "generated_unix": 1781602805,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 331047,
-    "as_of": "2026-06-16T05:30:20-0400",
+    "as_of": "2026-06-16T05:40:05-0400",
     "stale": false
   },
   "live_today": {
