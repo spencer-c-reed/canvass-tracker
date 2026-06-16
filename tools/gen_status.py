@@ -23,6 +23,8 @@ RUNNER_LOG = "/home/spencer/scripts/logs/canvass-runner.log"
 CACHE = os.path.join(TRACKER, "tools/corpus_count.cache")
 HISTORY = os.path.join(TRACKER, "tools/corpus_history.json")
 COVERAGE_MATRIX = os.path.join(ELAW, "docs/quality-reports/coverage-matrix-latest.md")
+LEDGER = os.path.join(ELAW, "docs/coverage-integrity-ledger.md")
+DISCOVERY_QUEUE = os.path.join(ELAW, "docs/codex-packets/discovery-queue.json")
 CANONICAL = os.path.join(ELAW, "test-questions/qualitative-evaluations/canonical-facts-report.json")
 ADVERSARIAL = os.path.join(ELAW, "test-questions/adversarial-observables/latest-run.json")
 
@@ -173,6 +175,62 @@ def queue():
         "freshness_promote_specs": n(f"{f}/*/promote-spec.md"),
     }
 
+# ---- real-work backlog burndown (the two axes of actual remaining work) ----
+def backlog():
+    """The work the runner is actually closing, rolled into two honest axes:
+    FRESHNESS (the DB-grounded coverage-integrity ledger) and BREADTH (the 189
+    missing statute families). Each shows done/remaining so closes are visible."""
+    out = {}
+
+    # Axis 1 — Freshness: the auto-generated coverage-integrity drain queue.
+    led = {"open": None, "resolved": None, "by_class": {}}
+    try:
+        txt = open(LEDGER, encoding="utf-8").read()
+        m = re.search(r"\*\*Open findings:\*\*\s*(\d+)\s*\(([^)]*)\)", txt)
+        if m:
+            led["open"] = int(m.group(1))
+            for part in m.group(2).split(","):
+                pm = re.match(r"\s*(A\d)\s*=\s*(\d+)", part)
+                if pm:
+                    led["by_class"][pm.group(1)] = int(pm.group(2))
+        rm = re.search(r"\*\*Resolved \(historical\):\*\*\s*(\d+)", txt)
+        if rm:
+            led["resolved"] = int(rm.group(1))
+    except Exception as e:
+        led["error"] = str(e)
+    out["freshness_ledger"] = led
+
+    # Freshness-repair cell pipeline (manual workflow that drains the A3 findings)
+    f = "docs/codex-packets/freshness-repair-2026-06-14"
+    cells = [d for d in glob.glob(os.path.join(ELAW, f, "*")) if os.path.isdir(d)
+             and not d.endswith("_monitor")]
+    done = [d for d in cells if os.path.exists(os.path.join(d, "result.json"))]
+    out["freshness_cells"] = {"total": len(cells), "done": len(done),
+                              "remaining": len(cells) - len(done)}
+
+    # Axis 2 — Breadth: per-state statute-integrity layer + the 189-family depth gap
+    promoted = glob.glob(os.path.join(ELAW, "ingest/*integrity_statutes*.py"))
+    out["statute_integrity_states"] = {"done": len(promoted), "total": 51,
+                                       "remaining": 51 - len(promoted)}
+    g = "docs/codex-packets/gap-audit-2026-06-13"
+    out["statute_families"] = {
+        "inventoried": 189,
+        "drafted_ingesters": len(glob.glob(os.path.join(ELAW, g, "ingesters/*.py"))),
+        "promote_specs": len(glob.glob(os.path.join(ELAW, g, "specs/*.md"))),
+        "reachability": {"vps": 105, "via_exit_node": 66, "spa_blocked": 18},
+        "top_families": {"whistleblower": 53, "open_records": 22, "open_meetings": 22,
+                         "ethics": 18, "conflict_of_interest": 17, "lobbying": 17},
+    }
+
+    # Discovery queue
+    try:
+        dq = json.load(open(DISCOVERY_QUEUE))
+        out["discovery_queue"] = {"pending": dq.get("pending"),
+                                  "candidates": len(dq.get("candidates", []))}
+    except Exception:
+        out["discovery_queue"] = {}
+    return out
+
 # ---- throughput ----
 def throughput():
     log = sh(f"cd {ELAW} && git log --since='7 days ago' --pretty='%cd|%s' "
@@ -307,6 +365,7 @@ def main():
         "runner": section(runner, {"alive": None}),
         "exit_node": section(exit_node, {"up": None}),
         "queue": q,
+        "backlog": section(backlog, {}),
         "throughput": section(throughput, {}),
         "closure_criteria": criteria,
         "scorecard": extras,

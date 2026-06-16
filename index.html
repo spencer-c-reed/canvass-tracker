@@ -94,6 +94,33 @@
   .block li{margin:3px 0;font-size:13px}
   footer{color:var(--grey);font-size:11.5px;margin-top:30px;text-align:center;line-height:1.7}
   .err{color:var(--red);font-size:12px}
+  /* exit-node pill */
+  .enpill{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;
+    padding:3px 10px;border-radius:20px;border:1px solid var(--line)}
+  .enpill.up{color:var(--green);background:rgba(63,185,80,.1);border-color:rgba(63,185,80,.3)}
+  .enpill.down{color:var(--red);background:rgba(248,81,73,.1);border-color:rgba(248,81,73,.35)}
+  .enpill .d{width:8px;height:8px;border-radius:50%;background:currentColor}
+  /* burndown */
+  .burn{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+  .axis{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 15px}
+  .axis h3{margin:0 0 3px;font-size:14.5px;font-weight:650}
+  .axis .ax-sub{color:var(--dim);font-size:11.5px;margin-bottom:11px}
+  .bd{margin:10px 0}
+  .bd .bdtop{display:flex;justify-content:space-between;align-items:baseline;font-size:12.5px;margin-bottom:5px}
+  .bd .bdk{color:#cbd5e2} .bd .bdv{font-variant-numeric:tabular-nums;color:var(--dim)}
+  .bd .bdv b{color:var(--txt);font-weight:700}
+  .pbar{height:9px;border-radius:5px;background:#222b38;overflow:hidden;display:flex}
+  .pbar i{height:100%;display:block}
+  .pbar i.done{background:var(--green)} .pbar i.prog{background:var(--amber)} .pbar i.todo{background:#2f3a49}
+  .chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
+  .chip{font-size:10.5px;padding:2px 8px;border-radius:20px;background:#222b38;color:var(--dim);
+    font-variant-numeric:tabular-nums}
+  .chip b{color:#cbd5e2;font-weight:700}
+  .reach{display:flex;gap:4px;margin-top:9px;font-size:10.5px}
+  .reach span{flex:1;text-align:center;padding:4px 2px;border-radius:6px}
+  .reach .r-ok{background:rgba(63,185,80,.12);color:var(--green)}
+  .reach .r-node{background:rgba(88,166,255,.12);color:var(--blue)}
+  .reach .r-blk{background:rgba(210,153,34,.12);color:var(--amber)}
 </style>
 </head>
 <body>
@@ -102,7 +129,10 @@
     <h1>Canvass — Production-Standard Tracker</h1>
     <span class="sub" id="updated">loading…</span>
   </header>
-  <div class="sub" id="status-line"><span class="pulse"></span>connecting…</div>
+  <div class="sub" id="status-line" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+    <span id="status-text"><span class="pulse"></span>connecting…</span>
+    <span class="enpill" id="enpill" style="display:none"></span>
+  </div>
 
   <div class="hero">
     <div class="ring" id="ring"><b id="overall">–</b><span>to standard</span></div>
@@ -114,6 +144,9 @@
   </div>
 
   <div class="livestrip" id="livestrip"></div>
+
+  <h2>Real-work burndown — what the runner is actually closing</h2>
+  <div class="burn" id="burn"></div>
 
   <div class="grid" id="stats"></div>
 
@@ -150,6 +183,63 @@ const LABEL = {green:'green',mostly_green:'on track',in_progress:'in progress',a
   blocked_spencer:'needs Spencer',blocked:'needs Spencer',red:'blocked'};
 const fmt = n => n==null ? '–' : n.toLocaleString();
 
+// progress bar: done (green) + in-progress (amber) + remaining (grey)
+function pbar(done, prog, total){
+  const t=Math.max(total,done+prog,1);
+  const dp=Math.round(done/t*100), pp=Math.round(prog/t*100);
+  return `<div class="pbar"><i class="done" style="width:${dp}%"></i>`
+    + `<i class="prog" style="width:${pp}%"></i><i class="todo" style="flex:1"></i></div>`;
+}
+function bdrow(label, done, prog, total, vtext){
+  return `<div class="bd"><div class="bdtop"><span class="bdk">${label}</span>`
+    + `<span class="bdv">${vtext}</span></div>${pbar(done,prog,total)}</div>`;
+}
+
+function renderBurndown(b){
+  const el=document.getElementById('burn');
+  if(!b || !b.freshness_ledger){ el.innerHTML='<span class="sub">no backlog data</span>'; return; }
+  const led=b.freshness_ledger||{}, fc=b.freshness_cells||{}, si=b.statute_integrity_states||{},
+        sf=b.statute_families||{}, dq=b.discovery_queue||{};
+  const cls=led.by_class||{};
+  const openTot=(led.open||0)+(led.resolved||0);
+
+  // Axis 1 — Freshness (DB-grounded ledger + repair pipeline)
+  const a1 = `<div class="axis">
+    <h3>🕐 Freshness (recency)</h3>
+    <div class="ax-sub">DB-grounded coverage-integrity ledger — every stale jurisdiction×category, auto-detected</div>
+    ${bdrow('Ledger findings resolved', led.resolved||0, 0, openTot,
+        `<b>${led.resolved||0}</b> resolved · ${led.open||0} open`)}
+    ${bdrow('Repair cells drained', fc.done||0, fc.remaining||0, fc.total||0,
+        `<b>${fc.done||0}</b> / ${fc.total||0} · ${fc.remaining||0} in flight`)}
+    <div class="chips">
+      <span class="chip">A3 staleness <b>${cls.A3||0}</b></span>
+      <span class="chip">A1 zero-match <b>${cls.A1||0}</b></span>
+      <span class="chip">A2 packet-only <b>${cls.A2||0}</b></span>
+    </div></div>`;
+
+  // Axis 2 — Breadth (statute integrity layer + 189-family depth gap)
+  const reach=sf.reachability||{}, tf=sf.top_families||{};
+  const topChips=Object.entries(tf).map(([k,v])=>
+    `<span class="chip">${k.replace(/_/g,' ')} <b>${v}</b></span>`).join('');
+  const a2 = `<div class="axis">
+    <h3>📚 Breadth (depth)</h3>
+    <div class="ax-sub">Per-state integrity layer + the 189 missing statute sub-families the matrix can't see</div>
+    ${bdrow('Per-state statute-integrity layer', si.done||0, 0, si.total||51,
+        `<b>${si.done||0}</b> / ${si.total||51} states${si.remaining?` · ${si.remaining} left (NJ)`:''}`)}
+    ${bdrow('189 families — ingesters drafted', 0, sf.drafted_ingesters||0, sf.inventoried||189,
+        `${sf.drafted_ingesters||0} drafted · ${sf.promote_specs||0} specs · <b>${sf.inventoried||189}</b> mapped`)}
+    <div class="reach">
+      <span class="r-ok">${reach.vps||0} VPS-direct</span>
+      <span class="r-node">${reach.via_exit_node||0} via node</span>
+      <span class="r-blk">${reach.spa_blocked||0} SPA-blocked</span>
+    </div>
+    <div class="chips">${topChips}</div>
+    <div class="chips"><span class="chip">discovery queue: <b>${dq.pending??'–'}</b> pending · ${dq.candidates??'–'} candidates</span></div>
+    </div>`;
+
+  el.innerHTML = a1 + a2;
+}
+
 async function load(){
   let d;
   try{
@@ -167,8 +257,19 @@ function render(d){
   const ago = Math.round((Date.now()/1000 - (d.generated_unix||0))/60);
   const stale = ago > 25;
   document.getElementById('updated').textContent = 'updated '+(d.generated_human||'');
-  document.getElementById('status-line').innerHTML =
+  document.getElementById('status-text').innerHTML =
     `<span class="pulse${stale?' stale':''}"></span>data ${ago<2?'just now':ago+' min ago'} · auto-refreshes`;
+
+  // exit-node pill — live ground truth, kills the recurring false 'down' claim
+  const en=d.exit_node;
+  const ep=document.getElementById('enpill');
+  if(en && en.up!=null){
+    ep.style.display='';
+    ep.className='enpill '+(en.up?'up':'down');
+    ep.innerHTML = `<span class="d"></span>Exit node ${en.up?'UP':'DOWN'}`
+      + (en.up&&en.egress_ip?` <span style="color:var(--dim);font-weight:400">· ${en.egress_ip}</span>`:'');
+    ep.title = (en.label||'')+(en.note?' — '+en.note:'');
+  } else { ep.style.display='none'; }
 
   // hero
   const o = d.overall_pct||0;
@@ -192,6 +293,9 @@ function render(d){
   ];
   document.getElementById('livestrip').innerHTML = live.map(x=>
     `<div class="liv"><span class="lk">${x[0]}</span><span class="lv">${x[1]}</span></div>`).join('');
+
+  // real-work burndown — the two axes the topline can't see
+  renderBurndown(d.backlog||{});
 
   // stats
   const q=d.queue||{}, t=d.throughput||{}, c=d.corpus||{};
