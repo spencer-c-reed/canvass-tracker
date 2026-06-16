@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-15T22:20:02-0400",
-  "generated_human": "2026-06-15 10:20 PM EDT",
-  "generated_unix": 1781576402,
+  "generated_at": "2026-06-15T22:30:02-0400",
+  "generated_human": "2026-06-15 10:30 PM EDT",
+  "generated_unix": 1781577002,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-15",
   "corpus": {
     "documents": 330096,
-    "as_of": "2026-06-15T22:20:08-0400",
+    "as_of": "2026-06-15T22:30:04-0400",
     "stale": false
   },
   "runner": {
@@ -16,9 +16,9 @@
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
-    "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
-    "last_cycle_marker": "2026-06-15T22:14:20-04:00 === runner start ===",
-    "last_log_line": "2026-06-15T22:20:05-04:00 [skip] already running"
+    "current_ingest_proc": null,
+    "last_cycle_marker": "2026-06-15T22:25:16-04:00 === runner end ===",
+    "last_log_line": "2026-06-15T22:25:16-04:00 === runner end ==="
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -39,6 +39,10 @@
     },
     "today": 19,
     "recent_closes": [
+      {
+        "when": "2026-06-15 22:24",
+        "subject": "SOLO-CLOSE #48: DC BEGA ethics/lobbying advisory opinions + enforcement (NEW source family, +165 full-text, 149 OCR-pending)"
+      },
       {
         "when": "2026-06-15 21:46",
         "subject": "docs: SOLO-CLOSE #47 IL EEC disciplinary decisions (+14 full-text, 56 OCR-pending) \u2014 backlog + campaign evidence log"
@@ -90,10 +94,6 @@
       {
         "when": "2026-06-15 16:11",
         "subject": "campaign: SOLO-CLOSE evidence \u2014 MN \u00a7 609.771 deep-fake election crime (684b9a7, +1)"
-      },
-      {
-        "when": "2026-06-15 12:35",
-        "subject": "campaign: SOLO-CLOSE evidence + backlog \u2014 CO session laws freshness repair (23af38c, +1316)"
       }
     ]
   },
