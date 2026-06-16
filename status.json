@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-16T06:10:05-0400",
-  "generated_human": "2026-06-16 06:10 AM EDT",
-  "generated_unix": 1781604605,
+  "generated_at": "2026-06-16T06:20:12-0400",
+  "generated_human": "2026-06-16 06:20 AM EDT",
+  "generated_unix": 1781605212,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 331081,
-    "as_of": "2026-06-16T06:10:04-0400",
+    "as_of": "2026-06-16T06:20:12-0400",
     "stale": false
   },
   "live_today": {
@@ -23,7 +23,7 @@
     "current_detached_ingest": null,
     "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
     "last_cycle_marker": "2026-06-16T06:03:03-04:00 === runner start ===",
-    "last_log_line": "2026-06-16T06:03:03-04:00 === runner start ==="
+    "last_log_line": "2026-06-16T06:20:06-04:00 [skip] already running"
   },
   "queue": {
     "staged_statute_ingesters": 10,
