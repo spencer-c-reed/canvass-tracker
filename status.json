@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-16T13:10:01-0400",
-  "generated_human": "2026-06-16 01:10 PM EDT",
-  "generated_unix": 1781629801,
+  "generated_at": "2026-06-16T13:20:10-0400",
+  "generated_human": "2026-06-16 01:20 PM EDT",
+  "generated_unix": 1781630410,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 331645,
-    "as_of": "2026-06-16T13:10:01-0400",
+    "as_of": "2026-06-16T13:20:10-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 1436,
     "docs_added_7d": null,
-    "last_commit": "2026-06-16 12:44"
+    "last_commit": "2026-06-16 13:13"
   },
   "runner": {
     "alive": true,
-    "state": "yield-to-maintenance",
-    "idle_yield_cycles": 15,
-    "idle_yield_min_est": 150,
+    "state": "working",
+    "idle_yield_cycles": 0,
+    "idle_yield_min_est": 0,
     "current_detached_ingest": null,
-    "current_ingest_proc": null,
-    "last_cycle_marker": "",
-    "last_log_line": "2026-06-16T13:05:05-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
+    "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
+    "last_cycle_marker": "2026-06-16T13:20:02-04:00 === runner start ===",
+    "last_log_line": "2026-06-16T13:20:02-04:00 === runner start ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-16T13:10:03-0400"
+    "checked_at": "2026-06-16T13:20:11-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -85,7 +85,7 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-16": 26,
+      "2026-06-16": 27,
       "2026-06-15": 23,
       "2026-06-14": 48,
       "2026-06-13": 57,
@@ -93,8 +93,12 @@
       "2026-06-11": 39,
       "2026-06-10": 3
     },
-    "today": 26,
+    "today": 27,
     "recent_closes": [
+      {
+        "when": "2026-06-16 13:13",
+        "subject": "docs: SOLO-CLOSE Missouri AG election opinions (+399, commit 6fb8018)"
+      },
       {
         "when": "2026-06-16 09:26",
         "subject": "campaign: evidence log \u2014 CO AG formal opinions ingester (+3 opinions)"
@@ -146,10 +150,6 @@
       {
         "when": "2026-06-16 05:56",
         "subject": "freshness: MN 2026 session-law ingest (+34 election-relevant acts)"
-      },
-      {
-        "when": "2026-06-16 05:15",
-        "subject": "campaign: evidence-log entry CT session laws freshness repair (201 acts)"
       }
     ]
   },
