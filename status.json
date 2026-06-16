@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-16T19:10:04-0400",
-  "generated_human": "2026-06-16 07:10 PM EDT",
-  "generated_unix": 1781651404,
+  "generated_at": "2026-06-16T19:20:04-0400",
+  "generated_human": "2026-06-16 07:20 PM EDT",
+  "generated_unix": 1781652004,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 331983,
-    "as_of": "2026-06-16T19:10:04-0400",
+    "as_of": "2026-06-16T19:20:04-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 1774,
     "docs_added_7d": null,
-    "last_commit": "2026-06-16 19:09"
+    "last_commit": "2026-06-16 19:19"
   },
   "runner": {
     "alive": true,
@@ -22,15 +22,15 @@
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
     "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
-    "last_cycle_marker": "2026-06-16T18:50:02-04:00 === runner start ===",
-    "last_log_line": "2026-06-16T19:10:02-04:00 [skip] already running"
+    "last_cycle_marker": "2026-06-16T19:20:02-04:00 === runner start ===",
+    "last_log_line": "2026-06-16T19:20:02-04:00 === runner start ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-16T19:10:05-0400"
+    "checked_at": "2026-06-16T19:20:05-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -86,7 +86,7 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-16": 33,
+      "2026-06-16": 34,
       "2026-06-15": 23,
       "2026-06-14": 48,
       "2026-06-13": 57,
@@ -94,8 +94,12 @@
       "2026-06-11": 39,
       "2026-06-10": 3
     },
-    "today": 33,
+    "today": 34,
     "recent_closes": [
+      {
+        "when": "2026-06-16 19:10",
+        "subject": "docs: SOLO-CLOSE item 46 \u2014 NH session-law stateful year-lock hardening + re-ID"
+      },
       {
         "when": "2026-06-16 19:09",
         "subject": "freshness: harden NH session-law ingester vs ASP.NET stateful year-lock + re-ID 6 mislabeled docs"
@@ -147,10 +151,6 @@
       {
         "when": "2026-06-16 07:30",
         "subject": "campaign: AZ session-law date defect \u2014 2487 undated docs \u2192 currency-verifiable (A3 ledger close)"
-      },
-      {
-        "when": "2026-06-16 07:07",
-        "subject": "campaign: SOLO-CLOSE WV 2026 session laws freshness repair (+9 acts, A3 ledger finding)"
       }
     ]
   },
