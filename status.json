@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-06-16T04:20:11-0400",
-  "generated_human": "2026-06-16 04:20 AM EDT",
-  "generated_unix": 1781598011,
+  "generated_at": "2026-06-16T04:30:02-0400",
+  "generated_human": "2026-06-16 04:30 AM EDT",
+  "generated_unix": 1781598602,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 330933,
-    "as_of": "2026-06-16T04:20:11-0400",
+    "documents": 330960,
+    "as_of": "2026-06-16T04:30:02-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 724,
+    "docs_added_today": 751,
     "docs_added_7d": null,
     "last_commit": "2026-06-16 03:06"
   },
   "runner": {
     "alive": true,
     "state": "yield-to-maintenance",
-    "idle_yield_cycles": 7,
-    "idle_yield_min_est": 70,
+    "idle_yield_cycles": 8,
+    "idle_yield_min_est": 80,
     "current_detached_ingest": "ct-session-laws",
     "current_ingest_proc": "flock -w 7200 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/election-law'",
     "last_cycle_marker": "2026-06-16T03:05:50-04:00 === runner end ===",
-    "last_log_line": "2026-06-16T04:20:07-04:00 runner account: claude-main"
+    "last_log_line": "2026-06-16T04:25:07-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -139,10 +139,10 @@
       "title": "Correct processing verified by tests/audits",
       "compute": "tests",
       "status": "mostly_green",
-      "pct": 93,
+      "pct": 100,
       "note": "Computed from live benchmark JSON: canonical-facts pass rate + adversarial-observables pass rate + citation regression. Re-verify after each ingest batch.",
       "auto": true,
-      "inputs": "canonical 27/27; adversarial 4/5 pass (6 not run); citation regression 236/236"
+      "inputs": "canonical 27/27; adversarial 5/5 pass (6 not run); citation regression 236/236"
     },
     {
       "n": 5,
@@ -223,8 +223,8 @@
         "run_date": "2026-06-15"
       },
       "adversarial": {
-        "pass": 4,
-        "fail": 1,
+        "pass": 5,
+        "fail": 0,
         "not_run": 6
       }
     },
@@ -333,6 +333,6 @@
     "Throughput rebuild (fetch/write split) \u2014 Codex review then supervised implement",
     "Final Codex mutual-assent sign-off cadence"
   ],
-  "overall_pct": 66,
+  "overall_pct": 67,
   "overall_auto": false
 }
