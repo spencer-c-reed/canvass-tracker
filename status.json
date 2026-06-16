@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-15T21:40:02-0400",
-  "generated_human": "2026-06-15 09:40 PM EDT",
-  "generated_unix": 1781574002,
+  "generated_at": "2026-06-15T21:50:01-0400",
+  "generated_human": "2026-06-15 09:50 PM EDT",
+  "generated_unix": 1781574601,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-15",
   "corpus": {
     "documents": 329931,
-    "as_of": "2026-06-15T21:40:02-0400",
+    "as_of": "2026-06-15T21:50:01-0400",
     "stale": false
   },
   "runner": {
@@ -17,8 +17,8 @@
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
     "current_ingest_proc": null,
-    "last_cycle_marker": "2026-06-15T21:38:46-04:00 === runner end ===",
-    "last_log_line": "2026-06-15T21:38:46-04:00 === runner end ==="
+    "last_cycle_marker": "2026-06-15T21:46:40-04:00 === runner end ===",
+    "last_log_line": "2026-06-15T21:46:40-04:00 === runner end ==="
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -30,15 +30,23 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-15": 18,
+      "2026-06-15": 19,
       "2026-06-14": 48,
       "2026-06-13": 57,
       "2026-06-12": 28,
       "2026-06-11": 38,
       "2026-06-10": 3
     },
-    "today": 18,
+    "today": 19,
     "recent_closes": [
+      {
+        "when": "2026-06-15 21:46",
+        "subject": "docs: SOLO-CLOSE #47 IL EEC disciplinary decisions (+14 full-text, 56 OCR-pending) \u2014 backlog + campaign evidence log"
+      },
+      {
+        "when": "2026-06-15 21:45",
+        "subject": "SOLO-CLOSE #47: IL EEC disciplinary decisions ingester (new source, +14 full-text, 56 OCR-pending)"
+      },
       {
         "when": "2026-06-15 21:20",
         "subject": "SOLO-CLOSE #46: WV AG opinions backfill (wv-ag 14\u219236, +22, 2013\u21922026)"
@@ -86,14 +94,6 @@
       {
         "when": "2026-06-15 12:35",
         "subject": "campaign: SOLO-CLOSE evidence + backlog \u2014 CO session laws freshness repair (23af38c, +1316)"
-      },
-      {
-        "when": "2026-06-15 12:34",
-        "subject": "campaign: CO session laws freshness repair \u2014 GET-enumeration ingester, 1316 election-relevant chapters 2016-2026 (was POST-stalling)"
-      },
-      {
-        "when": "2026-06-15 07:38",
-        "subject": "campaign: evidence log \u2014 ID session laws freshness repair (5bebe5a)"
       }
     ]
   },
