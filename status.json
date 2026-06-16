@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-15T22:10:02-0400",
-  "generated_human": "2026-06-15 10:10 PM EDT",
-  "generated_unix": 1781575802,
+  "generated_at": "2026-06-15T22:20:02-0400",
+  "generated_human": "2026-06-15 10:20 PM EDT",
+  "generated_unix": 1781576402,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-15",
   "corpus": {
-    "documents": 330057,
-    "as_of": "2026-06-15T22:10:02-0400",
+    "documents": 330096,
+    "as_of": "2026-06-15T22:20:08-0400",
     "stale": false
   },
   "runner": {
@@ -15,10 +15,10 @@
     "state": "working",
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
-    "current_detached_ingest": "dc-bega",
-    "current_ingest_proc": "flock -w 7200 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/election-law'",
-    "last_cycle_marker": "2026-06-15T22:04:04-04:00 === runner end ===",
-    "last_log_line": "2026-06-15T22:04:04-04:00 === runner end ==="
+    "current_detached_ingest": null,
+    "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
+    "last_cycle_marker": "2026-06-15T22:14:20-04:00 === runner start ===",
+    "last_log_line": "2026-06-15T22:20:05-04:00 [skip] already running"
   },
   "queue": {
     "staged_statute_ingesters": 10,
