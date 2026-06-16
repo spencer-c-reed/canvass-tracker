@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-16T01:20:13-0400",
-  "generated_human": "2026-06-16 01:20 AM EDT",
-  "generated_unix": 1781587213,
+  "generated_at": "2026-06-16T01:27:41-0400",
+  "generated_human": "2026-06-16 01:27 AM EDT",
+  "generated_unix": 1781587661,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
-  "assessment_updated": "2026-06-15",
+  "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 330209,
-    "as_of": "2026-06-16T01:20:13-0400",
+    "as_of": "2026-06-16T01:27:41-0400",
     "stale": false
   },
   "live_today": {
@@ -107,57 +107,69 @@
     {
       "n": 1,
       "title": "Per-jurisdiction \u00d7 per-category completeness",
+      "compute": "coverage_matrix",
       "status": "in_progress",
-      "pct": 62,
-      "note": "Integrity-statute layer 50/51 (NJ sole residual, Folio-blocked). 189 statute families inventoried. Active discovery of NEW categories: PR seeded; tribal absent; emerging-tech (AI/deepfake/crypto) thin; pay-to-play thin; ballot-measure regime untracked; (c)(3)/(c)(4) depth shallow; money-movement matrix + union-political being built.",
-      "auto": false
+      "pct": 71,
+      "note": "Computed from the coverage matrix (effective + raw 8/8 across 8 tracked families \u00d7 51 jurisdictions) blended with the wide-scope frontier checklist. Tracked families are near-complete; frontier categories (tribal, territories, emerging-tech, ballot-measure, c3/c4 depth) are the real remaining breadth.",
+      "auto": true,
+      "inputs": "tracked families 50/51 effective (99.8%), 41/51 raw 8/8 (96.3%); wide-scope frontier 30%"
     },
     {
       "n": 2,
       "title": "All spec blocking items closed or honestly hard-blocked",
+      "compute": "gates_closed",
       "status": "in_progress",
-      "pct": 55,
-      "note": "Open: G6 deploy helper stale; G3 automation not closed; municipal expansion ongoing. Hard-blocks documented (NJ Folio, ID/PA SPA, several VPS-IP-blocked session-law sites).",
-      "auto": false
+      "pct": 75,
+      "note": "Computed from gate statuses (green/blocked-documented count as closed; amber/red partial). Open: G3 automation red; G1/G2 amber on wide-scope breadth + freshness repair. Hard-blocks documented (NJ Folio, ID/PA SPA, VPS-IP-blocked session-law sites).",
+      "auto": true,
+      "inputs": "2 amber, 1 blocked, 4 green, 1 red"
     },
     {
       "n": 3,
       "title": "Freshness without human babysitting",
+      "compute": "freshness",
       "status": "in_progress",
       "pct": 50,
-      "note": "Runner is ACTIVELY doing freshness execution now (all of today's closes are session-law freshness repairs). 73 stale cells found; 26 staged, ~22 dry-run-proven. GAP: the DURABILITY/AUTOMATION layer (recency-gate monitor, 11 LLM audit jobs, pluggable inference, auto new-source/new-category discovery cadence) is NOT built by the autonomous runner \u2014 it's explicitly supervised work. Needs 2 consecutive clean weekly + 1 clean monthly to close.",
-      "auto": false
+      "note": "Computed: 50% freshness-repair cell progress + 50% durability-automation gate (G3). G3 stays red until 2 consecutive clean weekly + 1 clean monthly. The durability layer (recency-gate monitor, LLM audit jobs, pluggable inference) is supervised work, not autonomous-runner scope.",
+      "auto": true,
+      "inputs": "repair cells 22/26 (85%); durability automation gate G3 = red"
     },
     {
       "n": 4,
       "title": "Correct processing verified by tests/audits",
+      "compute": "tests",
       "status": "mostly_green",
-      "pct": 85,
-      "note": "236 citation regression tests + 27 canonical-fact tests green; integrity/FTS-parity checks green. Re-verify required after each ongoing ingest batch.",
-      "auto": false
+      "pct": 93,
+      "note": "Computed from live benchmark JSON: canonical-facts pass rate + adversarial-observables pass rate + citation regression. Re-verify after each ingest batch.",
+      "auto": true,
+      "inputs": "canonical 27/27; adversarial 4/5 pass (6 not run); citation regression 236/236"
     },
     {
       "n": 5,
       "title": "/canvass passes blind + live benchmark gates",
+      "compute": "manual",
       "status": "blocked_spencer",
       "pct": 30,
-      "note": "BLOCKED ON SPENCER: P5 blind benchmark budget approval. Retrieval 10/10 + eval 5/5 pass on current sources, but the blind production benchmark hasn't been run.",
+      "note": "BLOCKED ON SPENCER: P5 blind benchmark budget approval. Retrieval 10/10 + eval 5/5 pass on current sources, but the blind production benchmark hasn't been run \u2014 no machine signal until it is.",
       "auto": false
     },
     {
       "n": 6,
       "title": "Site + ops reliability through maintenance load",
+      "compute": "ops_gates",
       "status": "mostly_green",
-      "pct": 90,
-      "note": "G6 effectively CLOSED: app.py + fetch_json.py in sync with /srv/canvasslaw, service active, canvasslaw.com HTTP 200 through maintenance load, uptime cron */5, backup/restore rewritten. Residual: root deploy helper is a convenience, not a blocker.",
-      "auto": false
+      "pct": 100,
+      "note": "Computed from runtime (G6), write-safety (G7), and documentation (G8) gates. G6 closed (Spencer confirmed 2026-06-15); canvasslaw.com 200 through load; flock single-writer; backups rewritten.",
+      "auto": true,
+      "inputs": "runtime G6=green, write-safety G7=green, docs G8=green"
     },
     {
       "n": 7,
       "title": "Mutual assent \u2014 Codex confirms per jurisdiction",
+      "compute": "manual",
       "status": "in_progress",
       "pct": 40,
-      "note": "Per-jurisdiction Codex SOLO-CLOSE packets flowing (50+ closes 6/11-6/14). No final per-jurisdiction mutual-assent sign-off yet. This is the last gate.",
+      "note": "No machine signal \u2014 this is the human/Codex sign-off gate. Per-jurisdiction SOLO-CLOSE packets flowing (50+ closes 6/11-6/16); no final per-jurisdiction mutual-assent sign-off yet. This is the last gate.",
       "auto": false
     }
   ],
@@ -216,8 +228,54 @@
         "not_run": 6
       }
     },
-    "frontier_pct": null,
-    "frontier_categories": []
+    "frontier_pct": 30,
+    "frontier_categories": [
+      {
+        "name": "Territories (PR/GU/VI/AS/MP)",
+        "status": "seeded",
+        "note": "PR seeded; GU/VI/AS/MP absent."
+      },
+      {
+        "name": "Tribal nations",
+        "status": "absent",
+        "note": "No tribal election/ethics coverage yet."
+      },
+      {
+        "name": "Emerging-tech (AI / deepfake / crypto)",
+        "status": "thin",
+        "note": "Scattered statutes; no systematic family."
+      },
+      {
+        "name": "Pay-to-play / contractor contribution bans",
+        "status": "thin",
+        "note": "Present in a few states; not matrixed."
+      },
+      {
+        "name": "Ballot-measure / initiative finance regime",
+        "status": "untracked",
+        "note": "Not a tracked family yet."
+      },
+      {
+        "name": "501(c)(3)/(c)(4) political-activity depth",
+        "status": "thin",
+        "note": "Federal core present; state-level depth shallow."
+      },
+      {
+        "name": "Money-movement matrix (transfers/JFCs/earmarking)",
+        "status": "building",
+        "note": "Under construction."
+      },
+      {
+        "name": "Union-political (PAC/dues/independent expenditure)",
+        "status": "building",
+        "note": "Under construction."
+      },
+      {
+        "name": "Local / municipal breadth beyond priority cities",
+        "status": "building",
+        "note": "KC/NYC/Minneapolis done; long tail ongoing."
+      }
+    ]
   },
   "gates": [
     {
@@ -275,6 +333,6 @@
     "Throughput rebuild (fetch/write split) \u2014 Codex review then supervised implement",
     "Final Codex mutual-assent sign-off cadence"
   ],
-  "overall_pct": 59,
+  "overall_pct": 66,
   "overall_auto": false
 }
