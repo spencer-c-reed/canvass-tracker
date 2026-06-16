@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-06-16T02:40:01-0400",
-  "generated_human": "2026-06-16 02:40 AM EDT",
-  "generated_unix": 1781592001,
+  "generated_at": "2026-06-16T02:50:03-0400",
+  "generated_human": "2026-06-16 02:50 AM EDT",
+  "generated_unix": 1781592603,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 330750,
-    "as_of": "2026-06-16T02:40:01-0400",
+    "documents": 330846,
+    "as_of": "2026-06-16T02:50:03-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 541,
+    "docs_added_today": 637,
     "docs_added_7d": null,
-    "last_commit": "2026-06-16 02:37"
+    "last_commit": "2026-06-16 02:49"
   },
   "runner": {
     "alive": true,
-    "state": "yield-to-maintenance",
-    "idle_yield_cycles": 1,
-    "idle_yield_min_est": 10,
-    "current_detached_ingest": "nc-ethics-ao",
-    "current_ingest_proc": "flock -w 7200 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/election-law'",
-    "last_cycle_marker": "2026-06-16T02:26:05-04:00 === runner end ===",
-    "last_log_line": "2026-06-16T02:35:05-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
+    "state": "working",
+    "idle_yield_cycles": 0,
+    "idle_yield_min_est": 0,
+    "current_detached_ingest": null,
+    "current_ingest_proc": null,
+    "last_cycle_marker": "2026-06-16T02:49:33-04:00 === runner end ===",
+    "last_log_line": "2026-06-16T02:49:33-04:00 === runner end ==="
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -35,7 +35,7 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-16": 7,
+      "2026-06-16": 10,
       "2026-06-15": 23,
       "2026-06-14": 48,
       "2026-06-13": 57,
@@ -43,8 +43,20 @@
       "2026-06-11": 39,
       "2026-06-10": 3
     },
-    "today": 7,
+    "today": 10,
     "recent_closes": [
+      {
+        "when": "2026-06-16 02:49",
+        "subject": "campaign: evidence-log entry NC ethics advisory opinions (96 docs)"
+      },
+      {
+        "when": "2026-06-16 02:48",
+        "subject": "codex-backlog: SOLO-CLOSE NC ethics advisory opinions (96 docs)"
+      },
+      {
+        "when": "2026-06-16 02:40",
+        "subject": "coverage-integrity: A5 SOLO-CLOSE + campaign ALL-CLOSED summary (6/6)"
+      },
       {
         "when": "2026-06-16 02:29",
         "subject": "coverage-integrity A2: SOLO-CLOSE + plan status (Item 5 done)"
@@ -88,18 +100,6 @@
       {
         "when": "2026-06-15 21:46",
         "subject": "docs: SOLO-CLOSE #47 IL EEC disciplinary decisions (+14 full-text, 56 OCR-pending) \u2014 backlog + campaign evidence log"
-      },
-      {
-        "when": "2026-06-15 21:45",
-        "subject": "SOLO-CLOSE #47: IL EEC disciplinary decisions ingester (new source, +14 full-text, 56 OCR-pending)"
-      },
-      {
-        "when": "2026-06-15 21:20",
-        "subject": "SOLO-CLOSE #46: WV AG opinions backfill (wv-ag 14\u219236, +22, 2013\u21922026)"
-      },
-      {
-        "when": "2026-06-15 20:14",
-        "subject": "docs: SOLO-CLOSE #45 RI AG open-government opinions (OMA+APRA, +765) \u2014 backlog + campaign evidence log"
       }
     ]
   },
