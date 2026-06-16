@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-16T19:00:08-0400",
-  "generated_human": "2026-06-16 07:00 PM EDT",
-  "generated_unix": 1781650809,
+  "generated_at": "2026-06-16T19:10:04-0400",
+  "generated_human": "2026-06-16 07:10 PM EDT",
+  "generated_unix": 1781651404,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 331983,
-    "as_of": "2026-06-16T19:00:08-0400",
+    "as_of": "2026-06-16T19:10:04-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 1774,
     "docs_added_7d": null,
-    "last_commit": "2026-06-16 18:54"
+    "last_commit": "2026-06-16 19:09"
   },
   "runner": {
     "alive": true,
@@ -23,14 +23,14 @@
     "current_detached_ingest": null,
     "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
     "last_cycle_marker": "2026-06-16T18:50:02-04:00 === runner start ===",
-    "last_log_line": "2026-06-16T19:00:04-04:00 [skip] already running"
+    "last_log_line": "2026-06-16T19:10:02-04:00 [skip] already running"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-16T19:00:10-0400"
+    "checked_at": "2026-06-16T19:10:05-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -42,7 +42,7 @@
   },
   "backlog": {
     "freshness_ledger": {
-      "open": 130,
+      "open": 139,
       "resolved": 7,
       "by_class": {
         "A1": 1,
@@ -81,12 +81,12 @@
     },
     "discovery_queue": {
       "pending": 17,
-      "candidates": 24
+      "candidates": 30
     }
   },
   "throughput": {
     "by_day": {
-      "2026-06-16": 31,
+      "2026-06-16": 33,
       "2026-06-15": 23,
       "2026-06-14": 48,
       "2026-06-13": 57,
@@ -94,8 +94,16 @@
       "2026-06-11": 39,
       "2026-06-10": 3
     },
-    "today": 31,
+    "today": 33,
     "recent_closes": [
+      {
+        "when": "2026-06-16 19:09",
+        "subject": "freshness: harden NH session-law ingester vs ASP.NET stateful year-lock + re-ID 6 mislabeled docs"
+      },
+      {
+        "when": "2026-06-16 19:09",
+        "subject": "adv-review: entry-44 CONFIRMED (AZ session-law date backfill) + ingest concern"
+      },
       {
         "when": "2026-06-16 18:47",
         "subject": "adv-review: seed 36 historical ingestion solo-closes with @review: AWAITING"
@@ -143,14 +151,6 @@
       {
         "when": "2026-06-16 07:07",
         "subject": "campaign: SOLO-CLOSE WV 2026 session laws freshness repair (+9 acts, A3 ledger finding)"
-      },
-      {
-        "when": "2026-06-16 06:58",
-        "subject": "freshness-monitor: fix false-positive stale for wa_legislature and court-direct-ca5"
-      },
-      {
-        "when": "2026-06-16 06:33",
-        "subject": "campaign: evidence-log entry A1 registry coverage (41 states grounded, 2f638a4)"
       }
     ]
   },
