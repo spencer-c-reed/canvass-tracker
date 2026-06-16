@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-06-15T20:00:01-0400",
-  "generated_human": "2026-06-15 08:00 PM EDT",
-  "generated_unix": 1781568001,
+  "generated_at": "2026-06-15T20:10:02-0400",
+  "generated_human": "2026-06-15 08:10 PM EDT",
+  "generated_unix": 1781568602,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-15",
   "corpus": {
-    "documents": 329722,
-    "as_of": "2026-06-15T20:00:02-0400",
+    "documents": 329895,
+    "as_of": "2026-06-15T20:10:02-0400",
     "stale": false
   },
   "runner": {
     "alive": true,
-    "state": "yield-to-maintenance",
-    "idle_yield_cycles": 1,
-    "idle_yield_min_est": 10,
-    "current_detached_ingest": "ri-opengov",
-    "current_ingest_proc": "flock -w 7200 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/election-law'",
-    "last_cycle_marker": "2026-06-15T19:44:53-04:00 === runner end ===",
-    "last_log_line": "2026-06-15T19:55:04-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
+    "state": "working",
+    "idle_yield_cycles": 0,
+    "idle_yield_min_est": 0,
+    "current_detached_ingest": null,
+    "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
+    "last_cycle_marker": "2026-06-15T20:04:28-04:00 === runner start ===",
+    "last_log_line": "2026-06-15T20:04:28-04:00 === runner start ==="
   },
   "queue": {
     "staged_statute_ingesters": 10,
