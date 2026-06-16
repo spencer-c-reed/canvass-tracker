@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-06-16T05:10:02-0400",
-  "generated_human": "2026-06-16 05:10 AM EDT",
-  "generated_unix": 1781601003,
+  "generated_at": "2026-06-16T05:20:01-0400",
+  "generated_human": "2026-06-16 05:20 AM EDT",
+  "generated_unix": 1781601601,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 331047,
-    "as_of": "2026-06-16T05:10:02-0400",
+    "as_of": "2026-06-16T05:20:01-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 838,
     "docs_added_7d": null,
-    "last_commit": "2026-06-16 05:04"
+    "last_commit": "2026-06-16 05:15"
   },
   "runner": {
     "alive": true,
-    "state": "yield-to-maintenance",
-    "idle_yield_cycles": 12,
-    "idle_yield_min_est": 120,
+    "state": "working",
+    "idle_yield_cycles": 0,
+    "idle_yield_min_est": 0,
     "current_detached_ingest": null,
     "current_ingest_proc": null,
-    "last_cycle_marker": "2026-06-16T03:05:50-04:00 === runner end ===",
-    "last_log_line": "2026-06-16T05:05:07-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
+    "last_cycle_marker": "2026-06-16T05:15:40-04:00 === runner end ===",
+    "last_log_line": "2026-06-16T05:15:40-04:00 === runner end ==="
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -35,7 +35,7 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-16": 10,
+      "2026-06-16": 13,
       "2026-06-15": 23,
       "2026-06-14": 48,
       "2026-06-13": 57,
@@ -43,8 +43,20 @@
       "2026-06-11": 39,
       "2026-06-10": 3
     },
-    "today": 10,
+    "today": 13,
     "recent_closes": [
+      {
+        "when": "2026-06-16 05:15",
+        "subject": "campaign: evidence-log entry CT session laws freshness repair (201 acts)"
+      },
+      {
+        "when": "2026-06-16 05:15",
+        "subject": "codex-backlog: SOLO-CLOSE CT session laws freshness repair (201 acts)"
+      },
+      {
+        "when": "2026-06-16 05:14",
+        "subject": "freshness: CT session laws direct-enumeration repair (+201 acts, 2023-2026)"
+      },
       {
         "when": "2026-06-16 02:49",
         "subject": "campaign: evidence-log entry NC ethics advisory opinions (96 docs)"
@@ -88,18 +100,6 @@
       {
         "when": "2026-06-15 23:58",
         "subject": "docs: SOLO-CLOSE #49 US House Committee on Ethics reports/enforcement (+97 full-text, 40 OCR-pending) \u2014 backlog + campaign evidence log"
-      },
-      {
-        "when": "2026-06-15 23:58",
-        "subject": "SOLO-CLOSE #49: US House Committee on Ethics reports/enforcement (NEW federal source family, +97 full-text, 40 OCR-pending)"
-      },
-      {
-        "when": "2026-06-15 22:24",
-        "subject": "SOLO-CLOSE #48: DC BEGA ethics/lobbying advisory opinions + enforcement (NEW source family, +165 full-text, 149 OCR-pending)"
-      },
-      {
-        "when": "2026-06-15 21:46",
-        "subject": "docs: SOLO-CLOSE #47 IL EEC disciplinary decisions (+14 full-text, 56 OCR-pending) \u2014 backlog + campaign evidence log"
       }
     ]
   },
