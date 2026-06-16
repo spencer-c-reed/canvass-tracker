@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-16T09:20:11-0400",
-  "generated_human": "2026-06-16 09:20 AM EDT",
-  "generated_unix": 1781616011,
+  "generated_at": "2026-06-16T09:30:16-0400",
+  "generated_human": "2026-06-16 09:30 AM EDT",
+  "generated_unix": 1781616616,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 331155,
-    "as_of": "2026-06-16T09:20:11-0400",
+    "as_of": "2026-06-16T09:30:16-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 946,
     "docs_added_7d": null,
-    "last_commit": "2026-06-16 08:36"
+    "last_commit": "2026-06-16 09:26"
   },
   "runner": {
     "alive": true,
@@ -22,8 +22,8 @@
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
     "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
-    "last_cycle_marker": "2026-06-16T09:20:04-04:00 === runner start ===",
-    "last_log_line": "2026-06-16T09:20:04-04:00 === runner start ==="
+    "last_cycle_marker": "2026-06-16T09:30:06-04:00 === runner start ===",
+    "last_log_line": "2026-06-16T09:30:06-04:00 === runner start ==="
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -35,7 +35,7 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-16": 24,
+      "2026-06-16": 26,
       "2026-06-15": 23,
       "2026-06-14": 48,
       "2026-06-13": 57,
@@ -43,8 +43,16 @@
       "2026-06-11": 39,
       "2026-06-10": 3
     },
-    "today": 24,
+    "today": 26,
     "recent_closes": [
+      {
+        "when": "2026-06-16 09:26",
+        "subject": "campaign: evidence log \u2014 CO AG formal opinions ingester (+3 opinions)"
+      },
+      {
+        "when": "2026-06-16 09:26",
+        "subject": "campaign: CO AG formal opinions ingester (+3 election-relevant opinions)"
+      },
       {
         "when": "2026-06-16 08:36",
         "subject": "campaign: evidence log \u2014 IN 2026 session laws freshness repair (+62 acts)"
@@ -92,14 +100,6 @@
       {
         "when": "2026-06-16 05:15",
         "subject": "campaign: evidence-log entry CT session laws freshness repair (201 acts)"
-      },
-      {
-        "when": "2026-06-16 05:15",
-        "subject": "codex-backlog: SOLO-CLOSE CT session laws freshness repair (201 acts)"
-      },
-      {
-        "when": "2026-06-16 05:14",
-        "subject": "freshness: CT session laws direct-enumeration repair (+201 acts, 2023-2026)"
       }
     ]
   },
