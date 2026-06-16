@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-16T12:50:05-0400",
-  "generated_human": "2026-06-16 12:50 PM EDT",
-  "generated_unix": 1781628605,
+  "generated_at": "2026-06-16T13:00:03-0400",
+  "generated_human": "2026-06-16 01:00 PM EDT",
+  "generated_unix": 1781629203,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 331606,
-    "as_of": "2026-06-16T12:50:05-0400",
+    "as_of": "2026-06-16T13:00:03-0400",
     "stale": false
   },
   "live_today": {
@@ -23,14 +23,14 @@
     "current_detached_ingest": "a1-resweep-me",
     "current_ingest_proc": "flock -w 7200 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/election-law'",
     "last_cycle_marker": "",
-    "last_log_line": "2026-06-16T12:50:02-04:00 runner account: claude-main"
+    "last_log_line": "2026-06-16T12:55:02-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-16T12:50:06-0400"
+    "checked_at": "2026-06-16T13:00:05-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
