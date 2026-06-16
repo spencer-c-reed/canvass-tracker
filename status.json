@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-16T07:30:17-0400",
-  "generated_human": "2026-06-16 07:30 AM EDT",
-  "generated_unix": 1781609417,
+  "generated_at": "2026-06-16T07:40:01-0400",
+  "generated_human": "2026-06-16 07:40 AM EDT",
+  "generated_unix": 1781610001,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 331090,
-    "as_of": "2026-06-16T07:30:17-0400",
+    "as_of": "2026-06-16T07:40:01-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 881,
     "docs_added_7d": null,
-    "last_commit": "2026-06-16 07:27"
+    "last_commit": "2026-06-16 07:30"
   },
   "runner": {
     "alive": true,
@@ -21,9 +21,9 @@
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
-    "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
-    "last_cycle_marker": "2026-06-16T07:10:06-04:00 === runner start ===",
-    "last_log_line": "2026-06-16T07:30:07-04:00 [skip] already running"
+    "current_ingest_proc": null,
+    "last_cycle_marker": "2026-06-16T07:30:45-04:00 === runner end ===",
+    "last_log_line": "2026-06-16T07:30:45-04:00 === runner end ==="
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -35,7 +35,7 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-16": 20,
+      "2026-06-16": 21,
       "2026-06-15": 23,
       "2026-06-14": 48,
       "2026-06-13": 57,
@@ -43,8 +43,12 @@
       "2026-06-11": 39,
       "2026-06-10": 3
     },
-    "today": 20,
+    "today": 21,
     "recent_closes": [
+      {
+        "when": "2026-06-16 07:30",
+        "subject": "campaign: AZ session-law date defect \u2014 2487 undated docs \u2192 currency-verifiable (A3 ledger close)"
+      },
       {
         "when": "2026-06-16 07:07",
         "subject": "campaign: SOLO-CLOSE WV 2026 session laws freshness repair (+9 acts, A3 ledger finding)"
@@ -96,10 +100,6 @@
       {
         "when": "2026-06-16 02:40",
         "subject": "coverage-integrity: A5 SOLO-CLOSE + campaign ALL-CLOSED summary (6/6)"
-      },
-      {
-        "when": "2026-06-16 02:29",
-        "subject": "coverage-integrity A2: SOLO-CLOSE + plan status (Item 5 done)"
       }
     ]
   },
