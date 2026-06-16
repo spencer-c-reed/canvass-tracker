@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-16T11:17:14-0400",
-  "generated_human": "2026-06-16 11:17 AM EDT",
-  "generated_unix": 1781623034,
+  "generated_at": "2026-06-16T11:20:02-0400",
+  "generated_human": "2026-06-16 11:20 AM EDT",
+  "generated_unix": 1781623202,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 331554,
-    "as_of": "2026-06-16T11:17:14-0400",
+    "as_of": "2026-06-16T11:20:02-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 1345,
     "docs_added_7d": null,
-    "last_commit": "2026-06-16 11:12"
+    "last_commit": "2026-06-16 11:18"
   },
   "runner": {
     "alive": true,
@@ -30,7 +30,7 @@
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-16T11:17:15-0400"
+    "checked_at": "2026-06-16T11:20:03-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -39,6 +39,49 @@
     "freshness_cells_total": 27,
     "freshness_cells_done": 23,
     "freshness_promote_specs": 24
+  },
+  "backlog": {
+    "freshness_ledger": {
+      "open": 128,
+      "resolved": 3,
+      "by_class": {
+        "A1": 1,
+        "A2": 1,
+        "A3": 126
+      }
+    },
+    "freshness_cells": {
+      "total": 26,
+      "done": 23,
+      "remaining": 3
+    },
+    "statute_integrity_states": {
+      "done": 50,
+      "total": 51,
+      "remaining": 1
+    },
+    "statute_families": {
+      "inventoried": 189,
+      "drafted_ingesters": 10,
+      "promote_specs": 7,
+      "reachability": {
+        "vps": 105,
+        "via_exit_node": 66,
+        "spa_blocked": 18
+      },
+      "top_families": {
+        "whistleblower": 53,
+        "open_records": 22,
+        "open_meetings": 22,
+        "ethics": 18,
+        "conflict_of_interest": 17,
+        "lobbying": 17
+      }
+    },
+    "discovery_queue": {
+      "pending": 17,
+      "candidates": 24
+    }
   },
   "throughput": {
     "by_day": {
