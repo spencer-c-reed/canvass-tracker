@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-16T08:30:02-0400",
-  "generated_human": "2026-06-16 08:30 AM EDT",
-  "generated_unix": 1781613002,
+  "generated_at": "2026-06-16T08:40:03-0400",
+  "generated_human": "2026-06-16 08:40 AM EDT",
+  "generated_unix": 1781613603,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 331152,
-    "as_of": "2026-06-16T08:30:02-0400",
+    "as_of": "2026-06-16T08:40:02-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 943,
     "docs_added_7d": null,
-    "last_commit": "2026-06-16 08:27"
+    "last_commit": "2026-06-16 08:36"
   },
   "runner": {
     "alive": true,
@@ -21,21 +21,21 @@
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
-    "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
-    "last_cycle_marker": "2026-06-16T08:20:42-04:00 === runner start ===",
-    "last_log_line": "2026-06-16T08:20:42-04:00 === runner start ==="
+    "current_ingest_proc": null,
+    "last_cycle_marker": "2026-06-16T08:36:38-04:00 === runner end ===",
+    "last_log_line": "2026-06-16T08:36:38-04:00 === runner end ==="
   },
   "queue": {
     "staged_statute_ingesters": 10,
     "statute_promote_specs": 7,
     "gap_families_inventoried": 189,
-    "freshness_cells_total": 26,
-    "freshness_cells_done": 22,
+    "freshness_cells_total": 27,
+    "freshness_cells_done": 23,
     "freshness_promote_specs": 24
   },
   "throughput": {
     "by_day": {
-      "2026-06-16": 21,
+      "2026-06-16": 24,
       "2026-06-15": 23,
       "2026-06-14": 48,
       "2026-06-13": 57,
@@ -43,8 +43,20 @@
       "2026-06-11": 39,
       "2026-06-10": 3
     },
-    "today": 21,
+    "today": 24,
     "recent_closes": [
+      {
+        "when": "2026-06-16 08:36",
+        "subject": "campaign: evidence log \u2014 IN 2026 session laws freshness repair (+62 acts)"
+      },
+      {
+        "when": "2026-06-16 08:35",
+        "subject": "backlog: SOLO-CLOSE IN 2026 session laws freshness repair (+62 acts)"
+      },
+      {
+        "when": "2026-06-16 08:35",
+        "subject": "campaign: IN 2026 session laws freshness repair (+62 acts, A3 ledger close)"
+      },
       {
         "when": "2026-06-16 07:30",
         "subject": "campaign: AZ session-law date defect \u2014 2487 undated docs \u2192 currency-verifiable (A3 ledger close)"
@@ -88,18 +100,6 @@
       {
         "when": "2026-06-16 05:14",
         "subject": "freshness: CT session laws direct-enumeration repair (+201 acts, 2023-2026)"
-      },
-      {
-        "when": "2026-06-16 02:49",
-        "subject": "campaign: evidence-log entry NC ethics advisory opinions (96 docs)"
-      },
-      {
-        "when": "2026-06-16 02:48",
-        "subject": "codex-backlog: SOLO-CLOSE NC ethics advisory opinions (96 docs)"
-      },
-      {
-        "when": "2026-06-16 02:40",
-        "subject": "coverage-integrity: A5 SOLO-CLOSE + campaign ALL-CLOSED summary (6/6)"
       }
     ]
   },
@@ -132,7 +132,7 @@
       "pct": 50,
       "note": "Computed: 50% freshness-repair cell progress + 50% durability-automation gate (G3). G3 stays red until 2 consecutive clean weekly + 1 clean monthly. The durability layer (recency-gate monitor, LLM audit jobs, pluggable inference) is supervised work, not autonomous-runner scope.",
       "auto": true,
-      "inputs": "repair cells 22/26 (85%); durability automation gate G3 = red"
+      "inputs": "repair cells 23/27 (85%); durability automation gate G3 = red"
     },
     {
       "n": 4,
