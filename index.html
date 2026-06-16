@@ -35,6 +35,17 @@
   .herotxt{flex:1 1 280px;min-width:240px}
   .herotxt .ns{font-size:13.5px;color:#cdd6e2}
   .deadline{margin-top:8px;font-size:12.5px;color:var(--amber)}
+  .autonote{margin-top:6px;font-size:11.5px;color:var(--dim)}
+  .livestrip{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin:0 0 18px}
+  .liv{background:rgba(122,142,239,.08);border:1px solid rgba(122,142,239,.28);border-radius:10px;
+    padding:11px 13px;display:flex;flex-direction:column;gap:2px}
+  .liv .lk{color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+  .liv .lv{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums}
+  .leg{font-size:10.5px;text-transform:none;letter-spacing:0;color:var(--grey);font-weight:400;margin-left:6px}
+  .srctag{font-size:10px;font-weight:700;padding:1px 6px;border-radius:20px}
+  .srctag.auto{color:var(--green);background:rgba(63,185,80,.12)}
+  .srctag.gate{color:var(--blue);background:rgba(88,166,255,.12)}
+  .inputs{color:#9db0c7;font-size:11.5px;margin-top:7px;font-variant-numeric:tabular-nums}
   h2{font-size:13px;text-transform:uppercase;letter-spacing:.7px;color:var(--dim);
     margin:24px 0 10px;font-weight:600}
   .crit{display:flex;flex-direction:column;gap:9px}
@@ -98,13 +109,21 @@
     <div class="herotxt">
       <div class="ns" id="northstar"></div>
       <div class="deadline" id="deadline"></div>
+      <div class="autonote" id="autonote"></div>
     </div>
   </div>
 
+  <div class="livestrip" id="livestrip"></div>
+
   <div class="grid" id="stats"></div>
 
-  <h2>Loop-closure criteria — all 7 must be true to stop</h2>
+  <h2>Loop-closure criteria — all 7 must be true to stop <span class="leg"><span class="srctag auto">● live</span> computed from data · <span class="srctag gate">◆ gate</span> human/Codex sign-off</span></h2>
   <div class="crit" id="criteria"></div>
+
+  <div id="frontierwrap" style="display:none">
+    <h2>Wide-scope frontier — what's left beyond tracked families <span class="pct" id="frontierpct"></span></h2>
+    <div class="gates" id="frontier"></div>
+  </div>
 
   <h2>Live runner</h2>
   <div class="runner" id="runner"></div>
@@ -158,6 +177,21 @@ function render(d){
   document.getElementById('overall').textContent = o+'%';
   document.getElementById('northstar').textContent = d.north_star||'';
   if(d.deadline) document.getElementById('deadline').textContent = '⏱ Target full standard: '+d.deadline;
+  const nAuto=(d.closure_criteria||[]).filter(x=>x.auto).length, nTot=(d.closure_criteria||[]).length;
+  document.getElementById('autonote').textContent =
+    `${nAuto}/${nTot} criteria computed live from data · ${nTot-nAuto} human/Codex gate${nTot-nAuto===1?'':'s'}`;
+
+  // live work strip — answers "is it moving right now"
+  const lt=d.live_today||{}, th=d.throughput||{};
+  const sign = v => v==null?'—':(v>0?'+':'')+fmt(v);
+  const live=[
+    ['Docs added today', sign(lt.docs_added_today)],
+    ['Added last 7d', sign(lt.docs_added_7d)],
+    ['Closes today', fmt(th.today)],
+    ['Last commit', lt.last_commit||'—'],
+  ];
+  document.getElementById('livestrip').innerHTML = live.map(x=>
+    `<div class="liv"><span class="lk">${x[0]}</span><span class="lv">${x[1]}</span></div>`).join('');
 
   // stats
   const q=d.queue||{}, t=d.throughput||{}, c=d.corpus||{};
@@ -174,14 +208,29 @@ function render(d){
   // criteria
   document.getElementById('criteria').innerHTML = (d.closure_criteria||[]).map(c=>{
     const col=C[c.status]||'#6e7681';
+    const src = c.auto ? '<span class="srctag auto">● live</span>'
+                       : '<span class="srctag gate">◆ gate</span>';
     return `<div class="row"><div class="rowtop">
       <span class="badge">${c.n}</span>
       <span class="ctitle">${c.title}</span>
+      ${src}
       <span class="tag s-${c.status}">${LABEL[c.status]||c.status}</span>
       <span class="pct">${c.pct!=null?c.pct+'%':''}</span></div>
       <div class="bar"><i style="width:${c.pct||0}%;background:${col}"></i></div>
+      ${c.inputs?`<div class="inputs">▸ ${c.inputs.replace(/</g,'&lt;')}</div>`:''}
       <div class="note">${c.note||''}</div></div>`;
   }).join('');
+
+  // wide-scope frontier checklist
+  const sc=d.scorecard||{}, fr=sc.frontier_categories||[];
+  if(fr.length){
+    document.getElementById('frontierwrap').style.display='';
+    document.getElementById('frontierpct').textContent = sc.frontier_pct!=null?sc.frontier_pct+'% built':'';
+    const FC={done:'#3fb950',building:'#d29922',partial:'#d29922',seeded:'#58a6ff',thin:'#58a6ff',untracked:'#6e7681',absent:'#f85149'};
+    document.getElementById('frontier').innerHTML = fr.map(f=>
+      `<div class="gate"><span class="dot" style="background:${FC[f.status]||'#6e7681'}"></span>
+       <span class="gn">${f.name}</span><span class="gt">${f.status}</span></div>`).join('');
+  }
 
   // runner
   const r=d.runner||{};
@@ -221,8 +270,8 @@ function render(d){
     || '<span class="sub">no recent closes</span>';
 
   document.getElementById('footer').innerHTML =
-    `Auto-generated sanitized metadata · regenerates every 10 min · assessment last reviewed ${d.assessment_updated||'?'}<br>`+
-    `Live metrics (corpus, runner, queue, throughput) are machine-read; criteria/gate status is human+Codex assessment.`;
+    `Auto-generated sanitized metadata · regenerates every 10 min · inputs last reviewed ${d.assessment_updated||'?'}<br>`+
+    `Topline % and ● live criteria are computed every tick from the coverage matrix, freshness cells, gate states, and benchmark runs. ◆ gate criteria (blind benchmark, Codex sign-off) have no machine signal and show the last human estimate.`;
 }
 
 load();

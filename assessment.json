@@ -1,23 +1,35 @@
 {
-  "_comment": "Slow-changing human/Codex assessment. Live metrics (corpus, runner, queue, throughput) are auto-generated and OVERWRITE nothing here. Edit this file when criteria/gate status changes; the generator merges it into status.json.",
-  "assessment_updated": "2026-06-15",
+  "_comment": "Slow-changing human/Codex inputs. The topline % and per-criterion bars are now COMPUTED by tools/gen_status.py from real signals (coverage matrix, freshness cells, gates, benchmarks). Each criterion's 'compute' key picks the signal. 'pct' here is only a fallback shown if the signal is unavailable. Edit gates[], frontier_categories[], and citation_regression when the underlying truth changes; the score follows automatically.",
+  "assessment_updated": "2026-06-16",
   "deadline": "2026-06-17",
   "north_star": "Better than the best local expert lawyer — more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category × EVERY jurisdiction (federal + 50 + DC + territories + local).",
+  "citation_regression": {"passed": 236, "total": 236, "as_of": "2026-06-15"},
+  "frontier_categories": [
+    {"name": "Territories (PR/GU/VI/AS/MP)", "status": "seeded", "note": "PR seeded; GU/VI/AS/MP absent."},
+    {"name": "Tribal nations", "status": "absent", "note": "No tribal election/ethics coverage yet."},
+    {"name": "Emerging-tech (AI / deepfake / crypto)", "status": "thin", "note": "Scattered statutes; no systematic family."},
+    {"name": "Pay-to-play / contractor contribution bans", "status": "thin", "note": "Present in a few states; not matrixed."},
+    {"name": "Ballot-measure / initiative finance regime", "status": "untracked", "note": "Not a tracked family yet."},
+    {"name": "501(c)(3)/(c)(4) political-activity depth", "status": "thin", "note": "Federal core present; state-level depth shallow."},
+    {"name": "Money-movement matrix (transfers/JFCs/earmarking)", "status": "building", "note": "Under construction."},
+    {"name": "Union-political (PAC/dues/independent expenditure)", "status": "building", "note": "Under construction."},
+    {"name": "Local / municipal breadth beyond priority cities", "status": "building", "note": "KC/NYC/Minneapolis done; long tail ongoing."}
+  ],
   "closure_criteria": [
-    {"n": 1, "title": "Per-jurisdiction × per-category completeness", "status": "in_progress", "pct": 62,
-     "note": "Integrity-statute layer 50/51 (NJ sole residual, Folio-blocked). 189 statute families inventoried. Active discovery of NEW categories: PR seeded; tribal absent; emerging-tech (AI/deepfake/crypto) thin; pay-to-play thin; ballot-measure regime untracked; (c)(3)/(c)(4) depth shallow; money-movement matrix + union-political being built."},
-    {"n": 2, "title": "All spec blocking items closed or honestly hard-blocked", "status": "in_progress", "pct": 55,
-     "note": "Open: G6 deploy helper stale; G3 automation not closed; municipal expansion ongoing. Hard-blocks documented (NJ Folio, ID/PA SPA, several VPS-IP-blocked session-law sites)."},
-    {"n": 3, "title": "Freshness without human babysitting", "status": "in_progress", "pct": 50,
-     "note": "Freshness-repair workflow surfaced 73 stale category×juris cells behind a 94-100% presence matrix (silent-cron failures). 26 cells staged, ~22 fixed/dry-run-proven. Needs recency-gate monitor + 2 consecutive clean weekly + 1 clean monthly."},
-    {"n": 4, "title": "Correct processing verified by tests/audits", "status": "mostly_green", "pct": 85,
-     "note": "236 citation regression tests + 27 canonical-fact tests green; integrity/FTS-parity checks green. Re-verify required after each ongoing ingest batch."},
-    {"n": 5, "title": "/canvass passes blind + live benchmark gates", "status": "blocked_spencer", "pct": 30,
-     "note": "BLOCKED ON SPENCER: P5 blind benchmark budget approval. Retrieval 10/10 + eval 5/5 pass on current sources, but the blind production benchmark hasn't been run."},
-    {"n": 6, "title": "Site + ops reliability through maintenance load", "status": "in_progress", "pct": 70,
-     "note": "canvasslaw.com up (gunicorn 4w, uptime cron */5). Backup/restore rewritten. G6 root deploy helper stale vs repo — needs clean verified reload path."},
-    {"n": 7, "title": "Mutual assent — Codex confirms per jurisdiction", "status": "in_progress", "pct": 40,
-     "note": "Per-jurisdiction Codex SOLO-CLOSE packets flowing (50+ closes 6/11-6/14). No final per-jurisdiction mutual-assent sign-off yet. This is the last gate."}
+    {"n": 1, "title": "Per-jurisdiction × per-category completeness", "compute": "coverage_matrix", "status": "in_progress", "pct": 62,
+     "note": "Computed from the coverage matrix (effective + raw 8/8 across 8 tracked families × 51 jurisdictions) blended with the wide-scope frontier checklist. Tracked families are near-complete; frontier categories (tribal, territories, emerging-tech, ballot-measure, c3/c4 depth) are the real remaining breadth."},
+    {"n": 2, "title": "All spec blocking items closed or honestly hard-blocked", "compute": "gates_closed", "status": "in_progress", "pct": 55,
+     "note": "Computed from gate statuses (green/blocked-documented count as closed; amber/red partial). Open: G3 automation red; G1/G2 amber on wide-scope breadth + freshness repair. Hard-blocks documented (NJ Folio, ID/PA SPA, VPS-IP-blocked session-law sites)."},
+    {"n": 3, "title": "Freshness without human babysitting", "compute": "freshness", "status": "in_progress", "pct": 50,
+     "note": "Computed: 50% freshness-repair cell progress + 50% durability-automation gate (G3). G3 stays red until 2 consecutive clean weekly + 1 clean monthly. The durability layer (recency-gate monitor, LLM audit jobs, pluggable inference) is supervised work, not autonomous-runner scope."},
+    {"n": 4, "title": "Correct processing verified by tests/audits", "compute": "tests", "status": "mostly_green", "pct": 85,
+     "note": "Computed from live benchmark JSON: canonical-facts pass rate + adversarial-observables pass rate + citation regression. Re-verify after each ingest batch."},
+    {"n": 5, "title": "/canvass passes blind + live benchmark gates", "compute": "manual", "status": "blocked_spencer", "pct": 30,
+     "note": "BLOCKED ON SPENCER: P5 blind benchmark budget approval. Retrieval 10/10 + eval 5/5 pass on current sources, but the blind production benchmark hasn't been run — no machine signal until it is."},
+    {"n": 6, "title": "Site + ops reliability through maintenance load", "compute": "ops_gates", "status": "mostly_green", "pct": 90,
+     "note": "Computed from runtime (G6), write-safety (G7), and documentation (G8) gates. G6 closed (Spencer confirmed 2026-06-15); canvasslaw.com 200 through load; flock single-writer; backups rewritten."},
+    {"n": 7, "title": "Mutual assent — Codex confirms per jurisdiction", "compute": "manual", "status": "in_progress", "pct": 40,
+     "note": "No machine signal — this is the human/Codex sign-off gate. Per-jurisdiction SOLO-CLOSE packets flowing (50+ closes 6/11-6/16); no final per-jurisdiction mutual-assent sign-off yet. This is the last gate."}
   ],
   "gates": [
     {"id": "G1", "name": "Coverage", "status": "amber", "note": "49/51 effective 8/8; wide-scope expansion (territories/tribal/new categories) re-opens breadth."},
@@ -25,13 +37,14 @@
     {"id": "G3", "name": "Automation", "status": "red", "note": "Not closed: last weekly had failures:3; need 2 consecutive clean weekly + 1 clean monthly."},
     {"id": "G4", "name": "Search / retrieval", "status": "green", "note": "Benchmarks + quality monitor passing."},
     {"id": "G5", "name": "Memo quality", "status": "blocked", "note": "Blocked on Spencer: blind benchmark budget."},
-    {"id": "G6", "name": "Runtime / deploy", "status": "red", "note": "Root deploy helper stale vs repo; clean reload path pending."},
+    {"id": "G6", "name": "Runtime / deploy", "status": "green", "note": "App in sync with prod, service active, canvasslaw.com 200 through load. Closed (Spencer confirmed 2026-06-15)."},
     {"id": "G7", "name": "Write safety", "status": "green", "note": "Flock-based single writer; integrity audit passing."},
     {"id": "G8", "name": "Hard-blocked documented", "status": "green", "note": "Honest gaps documented with failure mode + retries + alternates."}
   ],
   "spencer_blockers": [
     "G5 — approve P5 blind benchmark budget",
-    "G6 — authorize clean app deploy / root reload",
+    "Automation/durability layer (criterion 3) — supervised build, not autonomous-runner scope",
+    "Throughput rebuild (fetch/write split) — Codex review then supervised implement",
     "Final Codex mutual-assent sign-off cadence"
   ]
 }
