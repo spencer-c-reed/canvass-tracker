@@ -113,6 +113,22 @@ def live_today(corp):
         "last_commit": last_commit or None,
     }
 
+# ---- exit-node liveness (ground truth, kills the recurring false 'down' verdict) ----
+def exit_node():
+    """Live SOCKS5 probe of the always-on Beryl exit node. The dashboard shows this
+    so nobody ever has to read a stale doc to know if the node is up. Almost always UP."""
+    ip = sh("timeout 20 curl -s --connect-timeout 8 --socks5-hostname "
+            "100.77.29.6:1080 https://api.ipify.org", timeout=25)
+    up = bool(re.match(r"^\d{1,3}(\.\d{1,3}){3}$", ip or ""))
+    return {
+        "up": up,
+        "egress_ip": ip if up else None,
+        "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
+        "note": ("needs-exit-node = route via node, not a blocker"
+                 if up else "probe failed — verify with scripts/exit-node-status.sh before asserting down"),
+        "checked_at": now_iso(),
+    }
+
 # ---- runner state ----
 def runner():
     tail = sh(f"tail -30 {RUNNER_LOG}", timeout=10).splitlines()
@@ -289,6 +305,7 @@ def main():
         "corpus": corp,
         "live_today": section(lambda: live_today(corp), {}),
         "runner": section(runner, {"alive": None}),
+        "exit_node": section(exit_node, {"up": None}),
         "queue": q,
         "throughput": section(throughput, {}),
         "closure_criteria": criteria,
