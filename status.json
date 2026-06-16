@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-06-16T05:50:02-0400",
-  "generated_human": "2026-06-16 05:50 AM EDT",
-  "generated_unix": 1781603402,
+  "generated_at": "2026-06-16T06:00:14-0400",
+  "generated_human": "2026-06-16 06:00 AM EDT",
+  "generated_unix": 1781604014,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 331047,
-    "as_of": "2026-06-16T05:50:02-0400",
+    "documents": 331081,
+    "as_of": "2026-06-16T06:00:14-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 838,
+    "docs_added_today": 872,
     "docs_added_7d": null,
-    "last_commit": "2026-06-16 05:15"
+    "last_commit": "2026-06-16 05:57"
   },
   "runner": {
     "alive": true,
     "state": "working",
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
-    "current_detached_ingest": "mn-session-2026",
-    "current_ingest_proc": "flock -w 7200 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/election-law'",
-    "last_cycle_marker": "2026-06-16T05:49:28-04:00 === runner end ===",
-    "last_log_line": "2026-06-16T05:49:28-04:00 === runner end ==="
+    "current_detached_ingest": null,
+    "current_ingest_proc": null,
+    "last_cycle_marker": "2026-06-16T05:57:55-04:00 === runner end ===",
+    "last_log_line": "2026-06-16T06:00:05-04:00 runner account: claude-main"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -35,7 +35,7 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-16": 13,
+      "2026-06-16": 16,
       "2026-06-15": 23,
       "2026-06-14": 48,
       "2026-06-13": 57,
@@ -43,8 +43,20 @@
       "2026-06-11": 39,
       "2026-06-10": 3
     },
-    "today": 13,
+    "today": 16,
     "recent_closes": [
+      {
+        "when": "2026-06-16 05:57",
+        "subject": "campaign: evidence-log entry MN session laws freshness repair (+34 acts)"
+      },
+      {
+        "when": "2026-06-16 05:57",
+        "subject": "codex-backlog: SOLO-CLOSE MN session laws freshness repair (+34 acts)"
+      },
+      {
+        "when": "2026-06-16 05:56",
+        "subject": "freshness: MN 2026 session-law ingest (+34 election-relevant acts)"
+      },
       {
         "when": "2026-06-16 05:15",
         "subject": "campaign: evidence-log entry CT session laws freshness repair (201 acts)"
@@ -88,18 +100,6 @@
       {
         "when": "2026-06-16 01:56",
         "subject": "SOLO-CLOSE #43: NJ State Ethics Commission NEW source family (+537: 5 advisory + 532 adjudicative final actions via Socrata)"
-      },
-      {
-        "when": "2026-06-16 01:14",
-        "subject": "SOLO-CLOSE #51: wire 10 orphaned integrity-statute ingesters into monthly cron (durability/freshness)"
-      },
-      {
-        "when": "2026-06-16 00:46",
-        "subject": "SOLO-CLOSE #50: US Senate Select Committee on Ethics guidance + annual reports (NEW federal source family, +16 full-text, 10 OCR-pending)"
-      },
-      {
-        "when": "2026-06-15 23:58",
-        "subject": "docs: SOLO-CLOSE #49 US House Committee on Ethics reports/enforcement (+97 full-text, 40 OCR-pending) \u2014 backlog + campaign evidence log"
       }
     ]
   },
@@ -112,7 +112,7 @@
       "pct": 71,
       "note": "Computed from the coverage matrix (effective + raw 8/8 across 8 tracked families \u00d7 51 jurisdictions) blended with the wide-scope frontier checklist. Tracked families are near-complete; frontier categories (tribal, territories, emerging-tech, ballot-measure, c3/c4 depth) are the real remaining breadth.",
       "auto": true,
-      "inputs": "tracked families 50/51 effective (99.8%), 41/51 raw 8/8 (96.3%); wide-scope frontier 30%"
+      "inputs": "tracked families 50/51 effective (99.8%), 41/51 raw 8/8 (96.6%); wide-scope frontier 30%"
     },
     {
       "n": 2,
@@ -178,7 +178,7 @@
       "juris": 51,
       "raw_8of8": 41,
       "eff_8of8": 50,
-      "raw_pct": 96.3,
+      "raw_pct": 96.6,
       "eff_pct": 99.8,
       "families": [
         {
@@ -203,7 +203,7 @@
         },
         {
           "family": "Enforcement",
-          "rate": 90.2
+          "rate": 92.2
         },
         {
           "family": "Agency Guidance",
@@ -214,13 +214,13 @@
           "rate": 100.0
         }
       ],
-      "generated": "2026-06-15T06:50:42Z"
+      "generated": "2026-06-16T09:57:56Z"
     },
     "benchmarks": {
       "canonical": {
         "passed": 27,
         "total": 27,
-        "run_date": "2026-06-15"
+        "run_date": "2026-06-16"
       },
       "adversarial": {
         "pass": 5,
