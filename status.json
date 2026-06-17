@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-17T05:20:05-0400",
-  "generated_human": "2026-06-17 05:20 AM EDT",
-  "generated_unix": 1781688005,
+  "generated_at": "2026-06-17T05:30:06-0400",
+  "generated_human": "2026-06-17 05:30 AM EDT",
+  "generated_unix": 1781688606,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 332252,
-    "as_of": "2026-06-17T05:20:05-0400",
+    "as_of": "2026-06-17T05:30:06-0400",
     "stale": false
   },
   "live_today": {
@@ -23,14 +23,14 @@
     "current_detached_ingest": null,
     "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
     "last_cycle_marker": "2026-06-17T05:20:02-04:00 === runner start ===",
-    "last_log_line": "2026-06-17T05:20:02-04:00 === runner start ==="
+    "last_log_line": "2026-06-17T05:30:04-04:00 [skip] already running"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-17T05:20:06-0400"
+    "checked_at": "2026-06-17T05:30:08-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -84,7 +84,7 @@
     },
     "discovery_queue": {
       "pending": 17,
-      "candidates": 42
+      "candidates": 43
     }
   },
   "throughput": {
@@ -417,15 +417,15 @@
     "note": "Deferred per Spencer \u2014 canvass/memo validation begins once the corpus is production-ready"
   },
   "qa_backlog": {
-    "total": 29,
+    "total": 31,
     "done": 17,
     "in_progress": 2,
-    "open": 10,
+    "open": 12,
     "blocked_spencer": 0,
     "by_status": {
       "DONE": 17,
       "IN-PROGRESS": 2,
-      "OPEN": 10
+      "OPEN": 12
     }
   }
 }
