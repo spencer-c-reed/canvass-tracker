@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-17T14:30:02-0400",
-  "generated_human": "2026-06-17 02:30 PM EDT",
-  "generated_unix": 1781721002,
+  "generated_at": "2026-06-17T14:40:01-0400",
+  "generated_human": "2026-06-17 02:40 PM EDT",
+  "generated_unix": 1781721601,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 332782,
-    "as_of": "2026-06-17T14:30:02-0400",
+    "as_of": "2026-06-17T14:40:01-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 537,
     "docs_added_7d": 2573,
-    "last_commit": "2026-06-17 14:28"
+    "last_commit": "2026-06-17 14:31"
   },
   "runner": {
     "alive": true,
     "state": "yield-to-maintenance",
-    "idle_yield_cycles": 3,
-    "idle_yield_min_est": 30,
+    "idle_yield_cycles": 4,
+    "idle_yield_min_est": 40,
     "current_detached_ingest": "ms-session-laws-gap",
     "current_ingest_proc": "flock -w 7200 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/election-law'",
     "last_cycle_marker": "2026-06-17T13:55:42-04:00 === runner end ===",
-    "last_log_line": "2026-06-17T14:25:03-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
+    "last_log_line": "2026-06-17T14:35:04-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-17T14:30:03-0400"
+    "checked_at": "2026-06-17T14:40:02-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -89,7 +89,7 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-17": 25,
+      "2026-06-17": 26,
       "2026-06-16": 44,
       "2026-06-15": 23,
       "2026-06-14": 48,
@@ -98,8 +98,12 @@
       "2026-06-11": 39,
       "2026-06-10": 1
     },
-    "today": 25,
+    "today": 26,
     "recent_closes": [
+      {
+        "when": "2026-06-17 14:31",
+        "subject": "adv-review: QA-12 KY KLEC CHANGES-REQUESTED-OPEN (year range 1993-2016 wrong; 18-01 is Dec 2018) + null-date freshness radar concern"
+      },
       {
         "when": "2026-06-17 13:34",
         "subject": "adv-verify: CONFIRMED item-62 (MA session-law class-D freshness fix)"
@@ -151,10 +155,6 @@
       {
         "when": "2026-06-17 05:01",
         "subject": "docs: ME admin_rules A2 STEP-0 SOLO-CLOSE (item 55) \u2014 last_amended_date stamp fix"
-      },
-      {
-        "when": "2026-06-17 04:42",
-        "subject": "A2 ME admin_rules SOLO-CLOSE: live resolver refreshed 3 ethics rule chapters (Ch.1\u2192Feb 2026)"
       }
     ]
   },
