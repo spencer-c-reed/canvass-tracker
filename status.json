@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-17T19:00:02-0400",
-  "generated_human": "2026-06-17 07:00 PM EDT",
-  "generated_unix": 1781737202,
+  "generated_at": "2026-06-17T19:10:02-0400",
+  "generated_human": "2026-06-17 07:10 PM EDT",
+  "generated_unix": 1781737802,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 332993,
-    "as_of": "2026-06-17T19:00:02-0400",
+    "as_of": "2026-06-17T19:10:02-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 748,
     "docs_added_7d": 2784,
-    "last_commit": "2026-06-17 18:55"
+    "last_commit": "2026-06-17 19:04"
   },
   "runner": {
     "alive": true,
-    "state": "yield-to-maintenance",
-    "idle_yield_cycles": 15,
-    "idle_yield_min_est": 150,
+    "state": "working",
+    "idle_yield_cycles": 0,
+    "idle_yield_min_est": 0,
     "current_detached_ingest": null,
     "current_ingest_proc": null,
-    "last_cycle_marker": "",
-    "last_log_line": "2026-06-17T18:55:02-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
+    "last_cycle_marker": "2026-06-17T19:04:38-04:00 === runner end ===",
+    "last_log_line": "2026-06-17T19:04:38-04:00 === runner end ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-17T19:00:04-0400"
+    "checked_at": "2026-06-17T19:10:03-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -88,7 +88,7 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-17": 26,
+      "2026-06-17": 27,
       "2026-06-16": 44,
       "2026-06-15": 23,
       "2026-06-14": 48,
@@ -96,8 +96,12 @@
       "2026-06-12": 29,
       "2026-06-11": 39
     },
-    "today": 26,
+    "today": 27,
     "recent_closes": [
+      {
+        "when": "2026-06-17 19:04",
+        "subject": "MS session-law freshness gap closed: corpus 2018\u21922026 (236 ingested, detached close)"
+      },
       {
         "when": "2026-06-17 14:31",
         "subject": "adv-review: QA-12 KY KLEC CHANGES-REQUESTED-OPEN (year range 1993-2016 wrong; 18-01 is Dec 2018) + null-date freshness radar concern"
@@ -149,10 +153,6 @@
       {
         "when": "2026-06-17 05:17",
         "subject": "docs: A2 ME admin_rules item-56 SOLO-CLOSE (thin-only FP suppressed, verified complete)"
-      },
-      {
-        "when": "2026-06-17 05:01",
-        "subject": "docs: ME admin_rules A2 STEP-0 SOLO-CLOSE (item 55) \u2014 last_amended_date stamp fix"
       }
     ]
   },
