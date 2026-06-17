@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-17T19:20:04-0400",
-  "generated_human": "2026-06-17 07:20 PM EDT",
-  "generated_unix": 1781738404,
+  "generated_at": "2026-06-17T19:30:06-0400",
+  "generated_human": "2026-06-17 07:30 PM EDT",
+  "generated_unix": 1781739006,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 332993,
-    "as_of": "2026-06-17T19:20:04-0400",
+    "as_of": "2026-06-17T19:30:06-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 748,
     "docs_added_7d": 2784,
-    "last_commit": "2026-06-17 19:17"
+    "last_commit": "2026-06-17 19:28"
   },
   "runner": {
     "alive": true,
@@ -23,14 +23,14 @@
     "current_detached_ingest": null,
     "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
     "last_cycle_marker": "2026-06-17T19:20:02-04:00 === runner start ===",
-    "last_log_line": "2026-06-17T19:20:02-04:00 === runner start ==="
+    "last_log_line": "2026-06-17T19:30:04-04:00 [skip] already running"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-17T19:20:05-0400"
+    "checked_at": "2026-06-17T19:30:07-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -83,12 +83,12 @@
     },
     "discovery_queue": {
       "pending": 23,
-      "candidates": 71
+      "candidates": 72
     }
   },
   "throughput": {
     "by_day": {
-      "2026-06-17": 27,
+      "2026-06-17": 28,
       "2026-06-16": 44,
       "2026-06-15": 23,
       "2026-06-14": 48,
@@ -96,8 +96,12 @@
       "2026-06-12": 29,
       "2026-06-11": 39
     },
-    "today": 27,
+    "today": 28,
     "recent_closes": [
+      {
+        "when": "2026-06-17 19:23",
+        "subject": "QA-33: migrate 82 pre-protocol SOLO-CLOSE entries into the @review: protocol"
+      },
       {
         "when": "2026-06-17 19:04",
         "subject": "MS session-law freshness gap closed: corpus 2018\u21922026 (236 ingested, detached close)"
@@ -149,10 +153,6 @@
       {
         "when": "2026-06-17 06:50",
         "subject": "backlog: SOLO-CLOSE A2 ME auto-resolve + ME/MN override retired"
-      },
-      {
-        "when": "2026-06-17 05:17",
-        "subject": "docs: A2 ME admin_rules item-56 SOLO-CLOSE (thin-only FP suppressed, verified complete)"
       }
     ]
   },
@@ -415,14 +415,15 @@
     "note": "Deferred per Spencer \u2014 canvass/memo validation begins once the corpus is production-ready"
   },
   "qa_backlog": {
-    "total": 52,
-    "done": 39,
+    "total": 54,
+    "done": 40,
     "in_progress": 4,
     "open": 9,
-    "blocked_spencer": 0,
+    "blocked_spencer": 1,
     "by_status": {
-      "DONE": 39,
+      "DONE": 40,
       "IN-PROGRESS": 4,
+      "BLOCKED-SPENCER": 1,
       "OPEN": 9
     }
   }
