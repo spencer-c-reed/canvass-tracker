@@ -28,6 +28,27 @@ LEDGER = os.path.join(ELAW, "docs/coverage-integrity-ledger.md")
 DISCOVERY_QUEUE = os.path.join(ELAW, "docs/codex-packets/discovery-queue.json")
 CANONICAL = os.path.join(ELAW, "test-questions/qualitative-evaluations/canonical-facts-report.json")
 ADVERSARIAL = os.path.join(ELAW, "test-questions/adversarial-observables/latest-run.json")
+RECENCY_SIDECAR = os.path.join(ELAW, "logs/freshness-latest.json")
+
+def _recency_not_fresh_cells():
+    """Set of (jurisdiction, category) the LIVE recency gate currently flags as
+    not production-fresh. Read from the daily freshness sidecar (written by
+    scripts/freshness_monitor.py from recency_gate, DB-grounded) so a repair
+    packet counts as 'done' ONLY when the DB is actually fresh — never merely
+    because a result.json was written. Caught 2026-06-17: every repair packet's
+    result.json says status=fixed even for dry-runs that never landed, so the
+    old file-count metric over-credited freshness (e.g. MA session laws frozen
+    at 2020, DE ethics 115/115 NULL dates, GA AG frozen at 2024-1 all counted
+    'done'). 'undated' is treated as not-fresh: a cell whose currency cannot be
+    verified is not production-fresh. Returns None if the sidecar is unreadable
+    so the caller can fall back to the legacy count rather than report 0."""
+    try:
+        d = json.load(open(RECENCY_SIDECAR))
+        flags = d.get("recency_gate", {}).get("flags", [])
+        return {(f.get("jurisdiction"), f.get("category")) for f in flags
+                if f.get("status") in ("stale", "behind_year", "missing", "undated")}
+    except Exception:
+        return None
 
 def sh(cmd, timeout=30):
     try:
@@ -167,12 +188,33 @@ def queue():
     f = "docs/codex-packets/freshness-repair-2026-06-14"
     def n(p):
         return len(glob.glob(os.path.join(ELAW, p)))
+    # Freshness cells = repair-packet dirs ({STATE}_{category}); exclude the
+    # _monitor scaffold dir. A cell is DONE only when the live recency gate no
+    # longer flags its (state, category) as not-fresh — NOT when a result.json
+    # exists (that flag is set even for un-landed dry-runs; see
+    # _recency_not_fresh_cells). Fall back to the legacy file count only if the
+    # sidecar is unreadable.
+    cell_dirs = [d for d in glob.glob(os.path.join(ELAW, f, "*"))
+                 if os.path.isdir(d) and not os.path.basename(d).startswith("_")]
+    not_fresh = _recency_not_fresh_cells()
+    if not_fresh is None:
+        done_cnt = n(f"{f}/*/result.json")
+        method = "result.json (fallback — sidecar unreadable)"
+    else:
+        done_cnt = 0
+        for d in cell_dirs:
+            st, _, cat = os.path.basename(d).partition("_")  # MA_session_laws -> MA, session_laws
+            if (st, cat) not in not_fresh:
+                done_cnt += 1
+        method = "live recency_gate (DB-grounded)"
     return {
         "staged_statute_ingesters": n(f"{g}/ingesters/*.py"),
         "statute_promote_specs": n(f"{g}/specs/*.md"),
         "gap_families_inventoried": 189,
-        "freshness_cells_total": len([d for d in glob.glob(os.path.join(ELAW, f, "*")) if os.path.isdir(d)]),
-        "freshness_cells_done": n(f"{f}/*/result.json"),
+        "freshness_cells_total": len(cell_dirs),
+        "freshness_cells_done": done_cnt,
+        "freshness_cells_done_method": method,
+        "freshness_packets_written": n(f"{f}/*/result.json"),
         "freshness_promote_specs": n(f"{f}/*/promote-spec.md"),
     }
 
