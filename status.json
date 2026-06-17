@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-17T11:00:05-0400",
-  "generated_human": "2026-06-17 11:00 AM EDT",
-  "generated_unix": 1781708405,
+  "generated_at": "2026-06-17T11:10:02-0400",
+  "generated_human": "2026-06-17 11:10 AM EDT",
+  "generated_unix": 1781709002,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 332613,
-    "as_of": "2026-06-17T11:00:05-0400",
+    "as_of": "2026-06-17T11:10:02-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 368,
     "docs_added_7d": 2404,
-    "last_commit": "2026-06-17 11:00"
+    "last_commit": "2026-06-17 11:02"
   },
   "runner": {
     "alive": true,
@@ -23,14 +23,14 @@
     "current_detached_ingest": null,
     "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
     "last_cycle_marker": "2026-06-17T10:50:02-04:00 === runner start ===",
-    "last_log_line": "2026-06-17T11:00:04-04:00 [skip] already running"
+    "last_log_line": "2026-06-17T11:10:02-04:00 [skip] already running"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-17T11:00:07-0400"
+    "checked_at": "2026-06-17T11:10:03-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -95,7 +95,7 @@
       "2026-06-13": 57,
       "2026-06-12": 29,
       "2026-06-11": 39,
-      "2026-06-10": 3
+      "2026-06-10": 2
     },
     "today": 22,
     "recent_closes": [
