@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-17T00:20:04-0400",
-  "generated_human": "2026-06-17 12:20 AM EDT",
-  "generated_unix": 1781670004,
+  "generated_at": "2026-06-17T00:30:07-0400",
+  "generated_human": "2026-06-17 12:30 AM EDT",
+  "generated_unix": 1781670607,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 332245,
-    "as_of": "2026-06-17T00:20:04-0400",
+    "as_of": "2026-06-17T00:30:07-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 0,
     "docs_added_7d": 2036,
-    "last_commit": "2026-06-17 00:15"
+    "last_commit": "2026-06-17 00:24"
   },
   "runner": {
     "alive": true,
@@ -22,22 +22,24 @@
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
     "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
-    "last_cycle_marker": "2026-06-17T00:20:02-04:00 === runner start ===",
-    "last_log_line": "2026-06-17T00:20:02-04:00 === runner start ==="
+    "last_cycle_marker": "2026-06-17T00:30:04-04:00 === runner start ===",
+    "last_log_line": "2026-06-17T00:30:04-04:00 === runner start ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-17T00:20:05-0400"
+    "checked_at": "2026-06-17T00:30:08-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
     "statute_promote_specs": 7,
     "gap_families_inventoried": 189,
-    "freshness_cells_total": 27,
-    "freshness_cells_done": 23,
+    "freshness_cells_total": 26,
+    "freshness_cells_done": 8,
+    "freshness_cells_done_method": "live recency_gate (DB-grounded)",
+    "freshness_packets_written": 23,
     "freshness_promote_specs": 24
   },
   "backlog": {
@@ -82,7 +84,7 @@
     },
     "discovery_queue": {
       "pending": 17,
-      "candidates": 36
+      "candidates": 38
     }
   },
   "throughput": {
@@ -183,11 +185,11 @@
       "title": "Freshness without human babysitting",
       "compute": "freshness",
       "status": "in_progress",
-      "pct": 50,
+      "pct": 23,
       "note": "Computed: 50% freshness-repair cell progress + 50% durability-automation gate (G3). G3 stays red until 2 consecutive clean weekly + 1 clean monthly. The durability layer (recency-gate monitor, LLM audit jobs, pluggable inference) is supervised work, not autonomous-runner scope.",
       "phase": 1,
       "auto": true,
-      "inputs": "repair cells 23/27 (85%); durability automation gate G3 = red"
+      "inputs": "repair cells 8/26 (31%); durability automation gate G3 = red"
     },
     {
       "n": 4,
@@ -275,7 +277,7 @@
           "rate": 100.0
         }
       ],
-      "generated": "2026-06-17T01:15:02Z"
+      "generated": "2026-06-17T04:27:54Z"
     },
     "benchmarks": {
       "canonical": {
@@ -394,7 +396,7 @@
     "Throughput rebuild (fetch/write split) \u2014 Codex review then supervised implement",
     "Final Codex mutual-assent sign-off cadence"
   ],
-  "overall_pct": 79,
+  "overall_pct": 74,
   "overall_label": "corpus production-readiness (Phase 1)",
   "overall_auto": true,
   "phase2": {
@@ -414,14 +416,14 @@
     "note": "Deferred per Spencer \u2014 canvass/memo validation begins once the corpus is production-ready"
   },
   "qa_backlog": {
-    "total": 22,
+    "total": 23,
     "done": 9,
-    "in_progress": 1,
+    "in_progress": 2,
     "open": 12,
     "blocked_spencer": 0,
     "by_status": {
       "DONE": 9,
-      "IN-PROGRESS": 1,
+      "IN-PROGRESS": 2,
       "OPEN": 12
     }
   }
