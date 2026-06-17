@@ -243,13 +243,27 @@ def backlog():
         led["error"] = str(e)
     out["freshness_ledger"] = led
 
-    # Freshness-repair cell pipeline (manual workflow that drains the A3 findings)
+    # Freshness-repair cell pipeline (manual workflow that drains the A3 findings).
+    # A cell is DONE only when the LIVE recency gate no longer flags its
+    # (state, category) — NOT when a result.json exists (that flag is set even
+    # for un-landed dry-runs; see _recency_not_fresh_cells). This MUST match the
+    # queue() count or the same doc reports two different numbers for one metric.
     f = "docs/codex-packets/freshness-repair-2026-06-14"
     cells = [d for d in glob.glob(os.path.join(ELAW, f, "*")) if os.path.isdir(d)
-             and not d.endswith("_monitor")]
-    done = [d for d in cells if os.path.exists(os.path.join(d, "result.json"))]
-    out["freshness_cells"] = {"total": len(cells), "done": len(done),
-                              "remaining": len(cells) - len(done)}
+             and not d.endswith("_monitor") and not os.path.basename(d).startswith("_")]
+    not_fresh = _recency_not_fresh_cells()
+    if not_fresh is None:
+        done = [d for d in cells if os.path.exists(os.path.join(d, "result.json"))]
+        done_cnt, method = len(done), "result.json (fallback — sidecar unreadable)"
+    else:
+        done_cnt = 0
+        for d in cells:
+            st, _, cat = os.path.basename(d).partition("_")
+            if (st, cat) not in not_fresh:
+                done_cnt += 1
+        method = "live recency_gate (DB-grounded)"
+    out["freshness_cells"] = {"total": len(cells), "done": done_cnt,
+                              "remaining": len(cells) - done_cnt, "method": method}
 
     # Axis 2 — Breadth: per-state statute-integrity layer + the 189-family depth gap
     promoted = glob.glob(os.path.join(ELAW, "ingest/*integrity_statutes*.py"))
