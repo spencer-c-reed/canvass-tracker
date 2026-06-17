@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-17T10:10:02-0400",
-  "generated_human": "2026-06-17 10:10 AM EDT",
-  "generated_unix": 1781705402,
+  "generated_at": "2026-06-17T10:20:07-0400",
+  "generated_human": "2026-06-17 10:20 AM EDT",
+  "generated_unix": 1781706008,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 332242,
-    "as_of": "2026-06-17T10:10:02-0400",
+    "as_of": "2026-06-17T10:20:07-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": -3,
     "docs_added_7d": 2033,
-    "last_commit": "2026-06-17 10:05"
+    "last_commit": "2026-06-17 10:17"
   },
   "runner": {
     "alive": true,
@@ -21,16 +21,16 @@
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
-    "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
-    "last_cycle_marker": "2026-06-17T10:00:04-04:00 === runner start ===",
-    "last_log_line": "2026-06-17T10:00:04-04:00 === runner start ==="
+    "current_ingest_proc": "timeout 240 python3 ingest/ingest_session_laws_batch.py --state MO --dry-run --l",
+    "last_cycle_marker": "2026-06-17T10:20:02-04:00 === runner start ===",
+    "last_log_line": "2026-06-17T10:20:02-04:00 === runner start ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-17T10:10:03-0400"
+    "checked_at": "2026-06-17T10:20:09-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -88,7 +88,7 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-17": 20,
+      "2026-06-17": 21,
       "2026-06-16": 44,
       "2026-06-15": 23,
       "2026-06-14": 48,
@@ -97,8 +97,12 @@
       "2026-06-11": 39,
       "2026-06-10": 3
     },
-    "today": 20,
+    "today": 21,
     "recent_closes": [
+      {
+        "when": "2026-06-17 10:16",
+        "subject": "wire 17 orphaned freshness-gap ingesters into monthly cron (+ca_crc exception)"
+      },
       {
         "when": "2026-06-17 09:36",
         "subject": "a8-dates: SOLO-CLOSE backlog entry + campaign evidence log"
@@ -150,10 +154,6 @@
       {
         "when": "2026-06-17 02:51",
         "subject": "docs: SOLO-CLOSE item 53 (ME ethics_decisions A3) + campaign evidence log"
-      },
-      {
-        "when": "2026-06-17 02:50",
-        "subject": "freshness: close A3 ME ethics_decisions \u2014 fix meeting-guidance mis-type + bounded verified-current suppression"
       }
     ]
   },
