@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-16T20:10:02-0400",
-  "generated_human": "2026-06-16 08:10 PM EDT",
-  "generated_unix": 1781655002,
+  "generated_at": "2026-06-16T20:20:04-0400",
+  "generated_human": "2026-06-16 08:20 PM EDT",
+  "generated_unix": 1781655604,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 331988,
-    "as_of": "2026-06-16T20:10:02-0400",
+    "as_of": "2026-06-16T20:20:04-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 1779,
     "docs_added_7d": null,
-    "last_commit": "2026-06-16 20:08"
+    "last_commit": "2026-06-16 20:16"
   },
   "runner": {
     "alive": true,
@@ -22,15 +22,15 @@
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
     "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
-    "last_cycle_marker": "2026-06-16T20:10:02-04:00 === runner start ===",
-    "last_log_line": "2026-06-16T20:10:02-04:00 === runner start ==="
+    "last_cycle_marker": "2026-06-16T20:20:02-04:00 === runner start ===",
+    "last_log_line": "2026-06-16T20:20:02-04:00 === runner start ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-16T20:10:04-0400"
+    "checked_at": "2026-06-16T20:20:05-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -82,12 +82,12 @@
     },
     "discovery_queue": {
       "pending": 17,
-      "candidates": 30
+      "candidates": 32
     }
   },
   "throughput": {
     "by_day": {
-      "2026-06-16": 36,
+      "2026-06-16": 37,
       "2026-06-15": 23,
       "2026-06-14": 48,
       "2026-06-13": 57,
@@ -95,8 +95,12 @@
       "2026-06-11": 39,
       "2026-06-10": 3
     },
-    "today": 36,
+    "today": 37,
     "recent_closes": [
+      {
+        "when": "2026-06-16 20:11",
+        "subject": "docs: SOLO-CLOSE \u2014 WI Ethics CF refresh verify-and-close (+3 lobbyist-window memos)"
+      },
       {
         "when": "2026-06-16 20:08",
         "subject": "docs: SOLO-CLOSE item 48 \u2014 WI Ethics CF ingester silent-parser restore + evidence log"
@@ -148,10 +152,6 @@
       {
         "when": "2026-06-16 08:36",
         "subject": "campaign: evidence log \u2014 IN 2026 session laws freshness repair (+62 acts)"
-      },
-      {
-        "when": "2026-06-16 08:35",
-        "subject": "backlog: SOLO-CLOSE IN 2026 session laws freshness repair (+62 acts)"
       }
     ]
   },
