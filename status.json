@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-17T02:50:01-0400",
-  "generated_human": "2026-06-17 02:50 AM EDT",
-  "generated_unix": 1781679001,
+  "generated_at": "2026-06-17T03:00:11-0400",
+  "generated_human": "2026-06-17 03:00 AM EDT",
+  "generated_unix": 1781679611,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 332252,
-    "as_of": "2026-06-17T02:50:01-0400",
+    "as_of": "2026-06-17T03:00:11-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 7,
     "docs_added_7d": 2043,
-    "last_commit": "2026-06-17 02:40"
+    "last_commit": "2026-06-17 02:53"
   },
   "runner": {
     "alive": true,
@@ -21,16 +21,16 @@
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
-    "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
-    "last_cycle_marker": "2026-06-17T02:32:06-04:00 === runner start ===",
-    "last_log_line": "2026-06-17T02:40:02-04:00 [skip] already running"
+    "current_ingest_proc": null,
+    "last_cycle_marker": "2026-06-17T02:52:01-04:00 === runner end ===",
+    "last_log_line": "2026-06-17T03:00:04-04:00 runner account: claude-main"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-17T02:50:03-0400"
+    "checked_at": "2026-06-17T03:00:13-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -44,12 +44,12 @@
   },
   "backlog": {
     "freshness_ledger": {
-      "open": 160,
-      "resolved": 8,
+      "open": 159,
+      "resolved": 11,
       "by_class": {
         "A1": 1,
         "A2": 1,
-        "A3": 121,
+        "A3": 120,
         "A6": 6,
         "A8": 5
       }
@@ -89,7 +89,7 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-17": 4,
+      "2026-06-17": 6,
       "2026-06-16": 44,
       "2026-06-15": 23,
       "2026-06-14": 48,
@@ -98,8 +98,16 @@
       "2026-06-11": 39,
       "2026-06-10": 3
     },
-    "today": 4,
+    "today": 6,
     "recent_closes": [
+      {
+        "when": "2026-06-17 02:51",
+        "subject": "docs: SOLO-CLOSE item 53 (ME ethics_decisions A3) + campaign evidence log"
+      },
+      {
+        "when": "2026-06-17 02:50",
+        "subject": "freshness: close A3 ME ethics_decisions \u2014 fix meeting-guidance mis-type + bounded verified-current suppression"
+      },
       {
         "when": "2026-06-17 02:24",
         "subject": "orphan-triage: resolve 20 candidates \u2192 exceptions, surface 17 real freshness gaps"
@@ -147,14 +155,6 @@
       {
         "when": "2026-06-16 19:43",
         "subject": "docs: SOLO-CLOSE item 47 \u2014 Philly Ethics enforcement resilient_fetch rewrite + 204-row date backfill"
-      },
-      {
-        "when": "2026-06-16 19:10",
-        "subject": "docs: SOLO-CLOSE item 46 \u2014 NH session-law stateful year-lock hardening + re-ID"
-      },
-      {
-        "when": "2026-06-16 19:09",
-        "subject": "freshness: harden NH session-law ingester vs ASP.NET stateful year-lock + re-ID 6 mislabeled docs"
       }
     ]
   },
