@@ -278,9 +278,15 @@ function render(d){
   document.getElementById('overall').textContent = o+'%';
   document.getElementById('northstar').textContent = d.north_star||'';
   if(d.deadline) document.getElementById('deadline').textContent = '⏱ Target full standard: '+d.deadline;
-  const nAuto=(d.closure_criteria||[]).filter(x=>x.auto).length, nTot=(d.closure_criteria||[]).length;
-  document.getElementById('autonote').textContent =
-    `${nAuto}/${nTot} criteria computed live from data · ${nTot-nAuto} human/Codex gate${nTot-nAuto===1?'':'s'}`;
+  // ring sublabel reflects the headline scope (corpus-readiness, Phase 1)
+  const ringSpan = document.querySelector('#ring span'); if(ringSpan) ringSpan.textContent = 'corpus-ready';
+  const p2 = d.phase2||{};
+  const p1crit=(d.closure_criteria||[]).filter(c=>c.phase!==2);
+  const nAuto=p1crit.filter(x=>x.auto).length, nTot=p1crit.length;
+  document.getElementById('autonote').innerHTML =
+    `Headline = <b>corpus production-readiness</b> (Phase 1: ${nTot} corpus criteria, ${nAuto} live-computed).<br>`+
+    `Phase 2 (canvass/memo validation — blind benchmark + Codex sign-off): <b>${p2.pct!=null?p2.pct+'%':'—'}</b>, `+
+    `<span style="color:var(--dim)">deferred until corpus is production-ready (not in the headline)</span>.`;
 
   // live work strip — answers "is it moving right now"
   const lt=d.live_today||{}, th=d.throughput||{};
@@ -298,11 +304,12 @@ function render(d){
   renderBurndown(d.backlog||{});
 
   // stats
-  const q=d.queue||{}, t=d.throughput||{}, c=d.corpus||{};
+  const q=d.queue||{}, t=d.throughput||{}, c=d.corpus||{}, qa=d.qa_backlog||{};
   const stats=[
     ['Corpus documents', fmt(c.documents), c.stale?'cached':'live'],
     ['Closes today', fmt(t.today), 'campaign commits'],
-    ['Statute ingesters staged', fmt(q.staged_statute_ingesters), (q.statute_promote_specs||0)+' specs ready'],
+    ['QA backlog', (fmt(qa.done))+' / '+fmt(qa.total)+' done',
+       (qa.in_progress||0)+' in-progress · '+(qa.open||0)+' open'],
     ['Freshness cells', (fmt(q.freshness_cells_done))+' / '+fmt(q.freshness_cells_total), 'dry-run proven'],
     ['Gap families mapped', fmt(q.gap_families_inventoried), 'statute layer'],
   ];
@@ -314,10 +321,11 @@ function render(d){
     const col=C[c.status]||'#6e7681';
     const src = c.auto ? '<span class="srctag auto">● live</span>'
                        : '<span class="srctag gate">◆ gate</span>';
-    return `<div class="row"><div class="rowtop">
+    const ph2 = c.phase===2 ? '<span class="tag" style="color:var(--dim);background:#222b38">Phase 2 · deferred</span>' : '';
+    return `<div class="row" style="${c.phase===2?'opacity:.62':''}"><div class="rowtop">
       <span class="badge">${c.n}</span>
       <span class="ctitle">${c.title}</span>
-      ${src}
+      ${ph2}${src}
       <span class="tag s-${c.status}">${LABEL[c.status]||c.status}</span>
       <span class="pct">${c.pct!=null?c.pct+'%':''}</span></div>
       <div class="bar"><i style="width:${c.pct||0}%;background:${col}"></i></div>

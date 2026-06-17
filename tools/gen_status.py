@@ -23,6 +23,7 @@ RUNNER_LOG = "/home/spencer/scripts/logs/canvass-runner.log"
 CACHE = os.path.join(TRACKER, "tools/corpus_count.cache")
 HISTORY = os.path.join(TRACKER, "tools/corpus_history.json")
 COVERAGE_MATRIX = os.path.join(ELAW, "docs/quality-reports/coverage-matrix-latest.md")
+QA_BACKLOG = os.path.join(ELAW, "docs/qa-runner-backlog.md")
 LEDGER = os.path.join(ELAW, "docs/coverage-integrity-ledger.md")
 DISCOVERY_QUEUE = os.path.join(ELAW, "docs/codex-packets/discovery-queue.json")
 CANONICAL = os.path.join(ELAW, "test-questions/qualitative-evaluations/canonical-facts-report.json")
@@ -335,6 +336,26 @@ def _frontier_pct(assessment):
     pct = round(sum(vals) / len(vals) * 100) if vals else None
     return pct, cats
 
+def qa_backlog():
+    """Progress of the NON-INGESTION QA runner backlog (docs/qa-runner-backlog.md):
+    the actual ongoing work the dashboard wasn't surfacing. Counts items by the
+    leading status word of each item body."""
+    txt = open(QA_BACKLOG, encoding="utf-8").read()
+    items = re.findall(r"^### (QA-\d+)\b", txt, re.M)
+    statuses = re.findall(r"^(OPEN|IN-PROGRESS|DONE|BLOCKED-SPENCER|NEEDS-REVIEW)\b", txt, re.M)
+    tally = {}
+    for s in statuses:
+        tally[s] = tally.get(s, 0) + 1
+    return {
+        "total": len(items),
+        "done": tally.get("DONE", 0),
+        "in_progress": tally.get("IN-PROGRESS", 0),
+        "open": tally.get("OPEN", 0),
+        "blocked_spencer": tally.get("BLOCKED-SPENCER", 0),
+        "by_status": tally,
+    }
+
+
 def main():
     assessment = {}
     try:
@@ -372,9 +393,24 @@ def main():
         "gates": assessment.get("gates", []),
         "spencer_blockers": assessment.get("spencer_blockers", []),
     }
-    pcts = [c.get("pct", 0) for c in criteria if isinstance(c.get("pct"), (int, float))]
+    # Headline = CORPUS production-readiness (Phase 1) only. Phase-2 criteria
+    # (canvass/memo validation: blind benchmark + Codex per-jurisdiction) are
+    # DEFERRED per Spencer's sequencing and must NOT drag the headline — they're
+    # surfaced separately. (Fixes "stuck at 67%": the two deferred criteria were
+    # averaging down a corpus that is actually ~Phase-1-79%.)
+    p1 = [c for c in criteria if c.get("phase") != 2]
+    pcts = [c.get("pct", 0) for c in p1 if isinstance(c.get("pct"), (int, float))]
     status["overall_pct"] = round(sum(pcts) / len(pcts)) if pcts else None
-    status["overall_auto"] = all(c.get("auto") for c in criteria) if criteria else False
+    status["overall_label"] = "corpus production-readiness (Phase 1)"
+    status["overall_auto"] = all(c.get("auto") for c in p1) if p1 else False
+    p2 = [c for c in criteria if c.get("phase") == 2]
+    p2pcts = [c.get("pct", 0) for c in p2 if isinstance(c.get("pct"), (int, float))]
+    status["phase2"] = {
+        "pct": round(sum(p2pcts) / len(p2pcts)) if p2pcts else None,
+        "criteria": [{"n": c["n"], "title": c["title"], "pct": c.get("pct")} for c in p2],
+        "note": "Deferred per Spencer — canvass/memo validation begins once the corpus is production-ready",
+    }
+    status["qa_backlog"] = section(qa_backlog, {})
 
     with open(os.path.join(TRACKER, "status.json"), "w") as fh:
         json.dump(status, fh, indent=2)

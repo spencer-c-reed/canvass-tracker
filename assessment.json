@@ -2,49 +2,184 @@
   "_comment": "Slow-changing human/Codex inputs. The topline % and per-criterion bars are now COMPUTED by tools/gen_status.py from real signals (coverage matrix, freshness cells, gates, benchmarks). Each criterion's 'compute' key picks the signal. 'pct' here is only a fallback shown if the signal is unavailable. Edit gates[], frontier_categories[], and citation_regression when the underlying truth changes; the score follows automatically.",
   "assessment_updated": "2026-06-16",
   "deadline": "2026-06-17",
-  "north_star": "Better than the best local expert lawyer — more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category × EVERY jurisdiction (federal + 50 + DC + territories + local).",
-  "citation_regression": {"passed": 236, "total": 236, "as_of": "2026-06-15"},
+  "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
+  "citation_regression": {
+    "passed": 236,
+    "total": 236,
+    "as_of": "2026-06-15"
+  },
   "frontier_categories": [
-    {"name": "Territories (PR/GU/VI/AS/MP)", "status": "seeded", "note": "PR seeded; GU/VI/AS/MP absent."},
-    {"name": "Tribal nations", "status": "absent", "note": "No tribal election/ethics coverage yet."},
-    {"name": "Emerging-tech (AI / deepfake / crypto)", "status": "thin", "note": "Scattered statutes; no systematic family."},
-    {"name": "Pay-to-play / contractor contribution bans", "status": "thin", "note": "Present in a few states; not matrixed."},
-    {"name": "Ballot-measure / initiative finance regime", "status": "untracked", "note": "Not a tracked family yet."},
-    {"name": "501(c)(3)/(c)(4) political-activity depth", "status": "thin", "note": "Federal core present; state-level depth shallow."},
-    {"name": "Money-movement matrix (transfers/JFCs/earmarking)", "status": "building", "note": "Under construction."},
-    {"name": "Union-political (PAC/dues/independent expenditure)", "status": "building", "note": "Under construction."},
-    {"name": "Local / municipal breadth beyond priority cities", "status": "building", "note": "KC/NYC/Minneapolis done; long tail ongoing."}
+    {
+      "name": "Territories (PR/GU/VI/AS/MP)",
+      "status": "seeded",
+      "note": "PR seeded; GU/VI/AS/MP absent."
+    },
+    {
+      "name": "Tribal nations",
+      "status": "absent",
+      "note": "No tribal election/ethics coverage yet."
+    },
+    {
+      "name": "Emerging-tech (AI / deepfake / crypto)",
+      "status": "thin",
+      "note": "Scattered statutes; no systematic family."
+    },
+    {
+      "name": "Pay-to-play / contractor contribution bans",
+      "status": "thin",
+      "note": "Present in a few states; not matrixed."
+    },
+    {
+      "name": "Ballot-measure / initiative finance regime",
+      "status": "untracked",
+      "note": "Not a tracked family yet."
+    },
+    {
+      "name": "501(c)(3)/(c)(4) political-activity depth",
+      "status": "thin",
+      "note": "Federal core present; state-level depth shallow."
+    },
+    {
+      "name": "Money-movement matrix (transfers/JFCs/earmarking)",
+      "status": "building",
+      "note": "Under construction."
+    },
+    {
+      "name": "Union-political (PAC/dues/independent expenditure)",
+      "status": "building",
+      "note": "Under construction."
+    },
+    {
+      "name": "Local / municipal breadth beyond priority cities",
+      "status": "building",
+      "note": "KC/NYC/Minneapolis done; long tail ongoing."
+    }
   ],
   "closure_criteria": [
-    {"n": 1, "title": "Per-jurisdiction × per-category completeness", "compute": "coverage_matrix", "status": "in_progress", "pct": 62,
-     "note": "Computed from the coverage matrix (effective + raw 8/8 across 8 tracked families × 51 jurisdictions) blended with the wide-scope frontier checklist. Tracked families are near-complete; frontier categories (tribal, territories, emerging-tech, ballot-measure, c3/c4 depth) are the real remaining breadth."},
-    {"n": 2, "title": "All spec blocking items closed or honestly hard-blocked", "compute": "gates_closed", "status": "in_progress", "pct": 55,
-     "note": "Computed from gate statuses (green/blocked-documented count as closed; amber/red partial). Open: G3 automation red; G1/G2 amber on wide-scope breadth + freshness repair. Genuine hard-blocks are stateful-JS apps needing a session/Playwright build (NJ Folio statutes) and JS SPAs needing browser-render (ID legislature). IP blocks are NOT hard-blocks — always-on SOCKS5 exit node routes around them automatically in resilient_fetch."},
-    {"n": 3, "title": "Freshness without human babysitting", "compute": "freshness", "status": "in_progress", "pct": 50,
-     "note": "Computed: 50% freshness-repair cell progress + 50% durability-automation gate (G3). G3 stays red until 2 consecutive clean weekly + 1 clean monthly. The durability layer (recency-gate monitor, LLM audit jobs, pluggable inference) is supervised work, not autonomous-runner scope."},
-    {"n": 4, "title": "Correct processing verified by tests/audits", "compute": "tests", "status": "mostly_green", "pct": 85,
-     "note": "Computed from live benchmark JSON: canonical-facts pass rate + adversarial-observables pass rate + citation regression. Re-verify after each ingest batch."},
-    {"n": 5, "title": "/canvass passes blind + live benchmark gates", "compute": "manual", "status": "blocked_spencer", "pct": 30,
-     "note": "BLOCKED ON SPENCER: P5 blind benchmark budget approval. Retrieval 10/10 + eval 5/5 pass on current sources, but the blind production benchmark hasn't been run — no machine signal until it is."},
-    {"n": 6, "title": "Site + ops reliability through maintenance load", "compute": "ops_gates", "status": "mostly_green", "pct": 90,
-     "note": "Computed from runtime (G6), write-safety (G7), and documentation (G8) gates. G6 closed (Spencer confirmed 2026-06-15); canvasslaw.com 200 through load; flock single-writer; backups rewritten."},
-    {"n": 7, "title": "Mutual assent — Codex confirms per jurisdiction", "compute": "manual", "status": "in_progress", "pct": 40,
-     "note": "No machine signal — this is the human/Codex sign-off gate. Per-jurisdiction SOLO-CLOSE packets flowing (50+ closes 6/11-6/16); no final per-jurisdiction mutual-assent sign-off yet. This is the last gate."}
+    {
+      "n": 1,
+      "title": "Per-jurisdiction \u00d7 per-category completeness",
+      "compute": "coverage_matrix",
+      "status": "in_progress",
+      "pct": 62,
+      "note": "Computed from the coverage matrix (effective + raw 8/8 across 8 tracked families \u00d7 51 jurisdictions) blended with the wide-scope frontier checklist. Tracked families are near-complete; frontier categories (tribal, territories, emerging-tech, ballot-measure, c3/c4 depth) are the real remaining breadth.",
+      "phase": 1
+    },
+    {
+      "n": 2,
+      "title": "All spec blocking items closed or honestly hard-blocked",
+      "compute": "gates_closed",
+      "status": "in_progress",
+      "pct": 55,
+      "note": "Computed from gate statuses (green/blocked-documented count as closed; amber/red partial). Open: G3 automation red; G1/G2 amber on wide-scope breadth + freshness repair. Genuine hard-blocks are stateful-JS apps needing a session/Playwright build (NJ Folio statutes) and JS SPAs needing browser-render (ID legislature). IP blocks are NOT hard-blocks \u2014 always-on SOCKS5 exit node routes around them automatically in resilient_fetch.",
+      "phase": 1
+    },
+    {
+      "n": 3,
+      "title": "Freshness without human babysitting",
+      "compute": "freshness",
+      "status": "in_progress",
+      "pct": 50,
+      "note": "Computed: 50% freshness-repair cell progress + 50% durability-automation gate (G3). G3 stays red until 2 consecutive clean weekly + 1 clean monthly. The durability layer (recency-gate monitor, LLM audit jobs, pluggable inference) is supervised work, not autonomous-runner scope.",
+      "phase": 1
+    },
+    {
+      "n": 4,
+      "title": "Correct processing verified by tests/audits",
+      "compute": "tests",
+      "status": "mostly_green",
+      "pct": 85,
+      "note": "Computed from live benchmark JSON: canonical-facts pass rate + adversarial-observables pass rate + citation regression. Re-verify after each ingest batch.",
+      "phase": 1
+    },
+    {
+      "n": 5,
+      "title": "/canvass passes blind + live benchmark gates",
+      "compute": "manual",
+      "status": "blocked_spencer",
+      "pct": 30,
+      "note": "BLOCKED ON SPENCER: P5 blind benchmark budget approval. Retrieval 10/10 + eval 5/5 pass on current sources, but the blind production benchmark hasn't been run \u2014 no machine signal until it is.",
+      "phase": 2,
+      "deferred_reason": "Spencer-sequenced: canvass/memo validation is Phase 2 \u2014 deferred until the corpus is production-ready. Does NOT gate the corpus-readiness headline."
+    },
+    {
+      "n": 6,
+      "title": "Site + ops reliability through maintenance load",
+      "compute": "ops_gates",
+      "status": "mostly_green",
+      "pct": 90,
+      "note": "Computed from runtime (G6), write-safety (G7), and documentation (G8) gates. G6 closed (Spencer confirmed 2026-06-15); canvasslaw.com 200 through load; flock single-writer; backups rewritten.",
+      "phase": 1
+    },
+    {
+      "n": 7,
+      "title": "Mutual assent \u2014 Codex confirms per jurisdiction",
+      "compute": "manual",
+      "status": "in_progress",
+      "pct": 40,
+      "note": "No machine signal \u2014 this is the human/Codex sign-off gate. Per-jurisdiction SOLO-CLOSE packets flowing (50+ closes 6/11-6/16); no final per-jurisdiction mutual-assent sign-off yet. This is the last gate.",
+      "phase": 2,
+      "deferred_reason": "Spencer-sequenced: canvass/memo validation is Phase 2 \u2014 deferred until the corpus is production-ready. Does NOT gate the corpus-readiness headline."
+    }
   ],
   "gates": [
-    {"id": "G1", "name": "Coverage", "status": "amber", "note": "49/51 effective 8/8; wide-scope expansion (territories/tribal/new categories) re-opens breadth."},
-    {"id": "G2", "name": "Freshness", "status": "amber", "note": "Regressed — 73 stale cells found behind presence matrix; repair in flight."},
-    {"id": "G3", "name": "Automation", "status": "red", "note": "Not closed: last weekly had failures:3; need 2 consecutive clean weekly + 1 clean monthly."},
-    {"id": "G4", "name": "Search / retrieval", "status": "green", "note": "Benchmarks + quality monitor passing."},
-    {"id": "G5", "name": "Memo quality", "status": "blocked", "note": "Blocked on Spencer: blind benchmark budget."},
-    {"id": "G6", "name": "Runtime / deploy", "status": "green", "note": "App in sync with prod, service active, canvasslaw.com 200 through load. Closed (Spencer confirmed 2026-06-15)."},
-    {"id": "G7", "name": "Write safety", "status": "green", "note": "Flock-based single writer; integrity audit passing."},
-    {"id": "G8", "name": "Hard-blocked documented", "status": "green", "note": "Honest gaps documented with failure mode + retries + alternates."}
+    {
+      "id": "G1",
+      "name": "Coverage",
+      "status": "amber",
+      "note": "49/51 effective 8/8; wide-scope expansion (territories/tribal/new categories) re-opens breadth."
+    },
+    {
+      "id": "G2",
+      "name": "Freshness",
+      "status": "amber",
+      "note": "Regressed \u2014 73 stale cells found behind presence matrix; repair in flight."
+    },
+    {
+      "id": "G3",
+      "name": "Automation",
+      "status": "red",
+      "note": "Not closed: last weekly had failures:3; need 2 consecutive clean weekly + 1 clean monthly."
+    },
+    {
+      "id": "G4",
+      "name": "Search / retrieval",
+      "status": "green",
+      "note": "Benchmarks + quality monitor passing."
+    },
+    {
+      "id": "G5",
+      "name": "Memo quality",
+      "status": "blocked",
+      "note": "Blocked on Spencer: blind benchmark budget."
+    },
+    {
+      "id": "G6",
+      "name": "Runtime / deploy",
+      "status": "green",
+      "note": "App in sync with prod, service active, canvasslaw.com 200 through load. Closed (Spencer confirmed 2026-06-15)."
+    },
+    {
+      "id": "G7",
+      "name": "Write safety",
+      "status": "green",
+      "note": "Flock-based single writer; integrity audit passing."
+    },
+    {
+      "id": "G8",
+      "name": "Hard-blocked documented",
+      "status": "green",
+      "note": "Honest gaps documented with failure mode + retries + alternates."
+    }
   ],
   "spencer_blockers": [
-    "G5 — approve P5 blind benchmark budget",
-    "Automation/durability layer (criterion 3) — supervised build, not autonomous-runner scope",
-    "Throughput rebuild (fetch/write split) — Codex review then supervised implement",
+    "G5 \u2014 approve P5 blind benchmark budget",
+    "Automation/durability layer (criterion 3) \u2014 supervised build, not autonomous-runner scope",
+    "Throughput rebuild (fetch/write split) \u2014 Codex review then supervised implement",
     "Final Codex mutual-assent sign-off cadence"
-  ]
+  ],
+  "phasing": {
+    "1": "Corpus production-readiness (current phase) \u2014 coverage, freshness, correct processing, write-safety, ops. The headline % measures THIS.",
+    "2": "Canvass/memo validation (DEFERRED per Spencer) \u2014 blind benchmark + Codex per-jurisdiction sign-off. Shown separately; not in the headline until Phase 1 is done."
+  }
 }

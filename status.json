@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-16T23:30:06-0400",
-  "generated_human": "2026-06-16 11:30 PM EDT",
-  "generated_unix": 1781667006,
+  "generated_at": "2026-06-16T23:32:40-0400",
+  "generated_human": "2026-06-16 11:32 PM EDT",
+  "generated_unix": 1781667160,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 332128,
-    "as_of": "2026-06-16T23:30:06-0400",
+    "as_of": "2026-06-16T23:32:40-0400",
     "stale": false
   },
   "live_today": {
@@ -17,20 +17,20 @@
   },
   "runner": {
     "alive": true,
-    "state": "yield-to-maintenance",
-    "idle_yield_cycles": 2,
-    "idle_yield_min_est": 20,
-    "current_detached_ingest": "ks-a6-fts-repair",
-    "current_ingest_proc": null,
-    "last_cycle_marker": "2026-06-16T23:00:55-04:00 === runner end ===",
-    "last_log_line": "2026-06-16T23:30:04-04:00 runner account: claude-main"
+    "state": "working",
+    "idle_yield_cycles": 0,
+    "idle_yield_min_est": 0,
+    "current_detached_ingest": null,
+    "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
+    "last_cycle_marker": "2026-06-16T23:30:12-04:00 === runner start ===",
+    "last_log_line": "2026-06-16T23:30:12-04:00 === runner start ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-16T23:30:07-0400"
+    "checked_at": "2026-06-16T23:32:41-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -163,6 +163,7 @@
       "status": "in_progress",
       "pct": 71,
       "note": "Computed from the coverage matrix (effective + raw 8/8 across 8 tracked families \u00d7 51 jurisdictions) blended with the wide-scope frontier checklist. Tracked families are near-complete; frontier categories (tribal, territories, emerging-tech, ballot-measure, c3/c4 depth) are the real remaining breadth.",
+      "phase": 1,
       "auto": true,
       "inputs": "tracked families 50/51 effective (99.8%), 42/51 raw 8/8 (96.8%); wide-scope frontier 30%"
     },
@@ -173,6 +174,7 @@
       "status": "in_progress",
       "pct": 75,
       "note": "Computed from gate statuses (green/blocked-documented count as closed; amber/red partial). Open: G3 automation red; G1/G2 amber on wide-scope breadth + freshness repair. Genuine hard-blocks are stateful-JS apps needing a session/Playwright build (NJ Folio statutes) and JS SPAs needing browser-render (ID legislature). IP blocks are NOT hard-blocks \u2014 always-on SOCKS5 exit node routes around them automatically in resilient_fetch.",
+      "phase": 1,
       "auto": true,
       "inputs": "2 amber, 1 blocked, 4 green, 1 red"
     },
@@ -183,6 +185,7 @@
       "status": "in_progress",
       "pct": 50,
       "note": "Computed: 50% freshness-repair cell progress + 50% durability-automation gate (G3). G3 stays red until 2 consecutive clean weekly + 1 clean monthly. The durability layer (recency-gate monitor, LLM audit jobs, pluggable inference) is supervised work, not autonomous-runner scope.",
+      "phase": 1,
       "auto": true,
       "inputs": "repair cells 23/27 (85%); durability automation gate G3 = red"
     },
@@ -193,6 +196,7 @@
       "status": "mostly_green",
       "pct": 100,
       "note": "Computed from live benchmark JSON: canonical-facts pass rate + adversarial-observables pass rate + citation regression. Re-verify after each ingest batch.",
+      "phase": 1,
       "auto": true,
       "inputs": "canonical 27/27; adversarial 5/5 pass (6 not run); citation regression 236/236"
     },
@@ -203,6 +207,8 @@
       "status": "blocked_spencer",
       "pct": 30,
       "note": "BLOCKED ON SPENCER: P5 blind benchmark budget approval. Retrieval 10/10 + eval 5/5 pass on current sources, but the blind production benchmark hasn't been run \u2014 no machine signal until it is.",
+      "phase": 2,
+      "deferred_reason": "Spencer-sequenced: canvass/memo validation is Phase 2 \u2014 deferred until the corpus is production-ready. Does NOT gate the corpus-readiness headline.",
       "auto": false
     },
     {
@@ -212,6 +218,7 @@
       "status": "mostly_green",
       "pct": 100,
       "note": "Computed from runtime (G6), write-safety (G7), and documentation (G8) gates. G6 closed (Spencer confirmed 2026-06-15); canvasslaw.com 200 through load; flock single-writer; backups rewritten.",
+      "phase": 1,
       "auto": true,
       "inputs": "runtime G6=green, write-safety G7=green, docs G8=green"
     },
@@ -222,6 +229,8 @@
       "status": "in_progress",
       "pct": 40,
       "note": "No machine signal \u2014 this is the human/Codex sign-off gate. Per-jurisdiction SOLO-CLOSE packets flowing (50+ closes 6/11-6/16); no final per-jurisdiction mutual-assent sign-off yet. This is the last gate.",
+      "phase": 2,
+      "deferred_reason": "Spencer-sequenced: canvass/memo validation is Phase 2 \u2014 deferred until the corpus is production-ready. Does NOT gate the corpus-readiness headline.",
       "auto": false
     }
   ],
@@ -385,6 +394,35 @@
     "Throughput rebuild (fetch/write split) \u2014 Codex review then supervised implement",
     "Final Codex mutual-assent sign-off cadence"
   ],
-  "overall_pct": 67,
-  "overall_auto": false
+  "overall_pct": 79,
+  "overall_label": "corpus production-readiness (Phase 1)",
+  "overall_auto": true,
+  "phase2": {
+    "pct": 35,
+    "criteria": [
+      {
+        "n": 5,
+        "title": "/canvass passes blind + live benchmark gates",
+        "pct": 30
+      },
+      {
+        "n": 7,
+        "title": "Mutual assent \u2014 Codex confirms per jurisdiction",
+        "pct": 40
+      }
+    ],
+    "note": "Deferred per Spencer \u2014 canvass/memo validation begins once the corpus is production-ready"
+  },
+  "qa_backlog": {
+    "total": 22,
+    "done": 8,
+    "in_progress": 1,
+    "open": 13,
+    "blocked_spencer": 0,
+    "by_status": {
+      "DONE": 8,
+      "IN-PROGRESS": 1,
+      "OPEN": 13
+    }
+  }
 }
