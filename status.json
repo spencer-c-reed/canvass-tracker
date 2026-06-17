@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-17T13:30:05-0400",
-  "generated_human": "2026-06-17 01:30 PM EDT",
-  "generated_unix": 1781717405,
+  "generated_at": "2026-06-17T13:40:01-0400",
+  "generated_human": "2026-06-17 01:40 PM EDT",
+  "generated_unix": 1781718001,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 333001,
-    "as_of": "2026-06-17T13:30:05-0400",
+    "as_of": "2026-06-17T13:40:01-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 756,
     "docs_added_7d": 2792,
-    "last_commit": "2026-06-17 13:29"
+    "last_commit": "2026-06-17 13:38"
   },
   "runner": {
     "alive": true,
@@ -30,7 +30,7 @@
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-17T13:30:07-0400"
+    "checked_at": "2026-06-17T13:40:03-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -88,7 +88,7 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-17": 23,
+      "2026-06-17": 24,
       "2026-06-16": 44,
       "2026-06-15": 23,
       "2026-06-14": 48,
@@ -97,8 +97,12 @@
       "2026-06-11": 39,
       "2026-06-10": 2
     },
-    "today": 23,
+    "today": 24,
     "recent_closes": [
+      {
+        "when": "2026-06-17 13:34",
+        "subject": "adv-verify: CONFIRMED item-62 (MA session-law class-D freshness fix)"
+      },
       {
         "when": "2026-06-17 13:28",
         "subject": "campaign: SOLO-CLOSE item 62 \u2014 MA session-law class-D freshness fix (296ac62)"
@@ -150,10 +154,6 @@
       {
         "when": "2026-06-17 04:42",
         "subject": "A2 ME admin_rules SOLO-CLOSE: live resolver refreshed 3 ethics rule chapters (Ch.1\u2192Feb 2026)"
-      },
-      {
-        "when": "2026-06-17 03:59",
-        "subject": "docs: SOLO-CLOSE #54 MN admin_rules A3 undated (date parser) + detached backfill launched"
       }
     ]
   },
@@ -417,13 +417,13 @@
   },
   "qa_backlog": {
     "total": 47,
-    "done": 31,
-    "in_progress": 3,
+    "done": 32,
+    "in_progress": 2,
     "open": 13,
     "blocked_spencer": 0,
     "by_status": {
-      "DONE": 31,
-      "IN-PROGRESS": 3,
+      "DONE": 32,
+      "IN-PROGRESS": 2,
       "OPEN": 13
     }
   }
