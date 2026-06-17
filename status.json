@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-17T05:10:05-0400",
-  "generated_human": "2026-06-17 05:10 AM EDT",
-  "generated_unix": 1781687405,
+  "generated_at": "2026-06-17T05:20:05-0400",
+  "generated_human": "2026-06-17 05:20 AM EDT",
+  "generated_unix": 1781688005,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 332252,
-    "as_of": "2026-06-17T05:10:05-0400",
+    "as_of": "2026-06-17T05:20:05-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 7,
     "docs_added_7d": 2043,
-    "last_commit": "2026-06-17 05:09"
+    "last_commit": "2026-06-17 05:18"
   },
   "runner": {
     "alive": true,
@@ -22,15 +22,15 @@
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
     "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
-    "last_cycle_marker": "2026-06-17T05:10:02-04:00 === runner start ===",
-    "last_log_line": "2026-06-17T05:10:02-04:00 === runner start ==="
+    "last_cycle_marker": "2026-06-17T05:20:02-04:00 === runner start ===",
+    "last_log_line": "2026-06-17T05:20:02-04:00 === runner start ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-17T05:10:06-0400"
+    "checked_at": "2026-06-17T05:20:06-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -89,7 +89,7 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-17": 10,
+      "2026-06-17": 11,
       "2026-06-16": 44,
       "2026-06-15": 23,
       "2026-06-14": 48,
@@ -98,8 +98,12 @@
       "2026-06-11": 39,
       "2026-06-10": 3
     },
-    "today": 10,
+    "today": 11,
     "recent_closes": [
+      {
+        "when": "2026-06-17 05:17",
+        "subject": "docs: A2 ME admin_rules item-56 SOLO-CLOSE (thin-only FP suppressed, verified complete)"
+      },
       {
         "when": "2026-06-17 05:01",
         "subject": "docs: ME admin_rules A2 STEP-0 SOLO-CLOSE (item 55) \u2014 last_amended_date stamp fix"
@@ -151,10 +155,6 @@
       {
         "when": "2026-06-16 20:56",
         "subject": "campaign: evidence-log item-43 nj-sec garbled-tilde RECLOSE (11 flagged, 8 readable preserved)"
-      },
-      {
-        "when": "2026-06-16 20:45",
-        "subject": "campaign: evidence-log IN AG Official Opinions close (115 docs, item 49)"
       }
     ]
   },
@@ -418,14 +418,14 @@
   },
   "qa_backlog": {
     "total": 29,
-    "done": 16,
+    "done": 17,
     "in_progress": 2,
-    "open": 11,
+    "open": 10,
     "blocked_spencer": 0,
     "by_status": {
-      "DONE": 16,
+      "DONE": 17,
       "IN-PROGRESS": 2,
-      "OPEN": 11
+      "OPEN": 10
     }
   }
 }
