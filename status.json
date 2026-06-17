@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-17T06:10:01-0400",
-  "generated_human": "2026-06-17 06:10 AM EDT",
-  "generated_unix": 1781691001,
+  "generated_at": "2026-06-17T06:20:10-0400",
+  "generated_human": "2026-06-17 06:20 AM EDT",
+  "generated_unix": 1781691610,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 332252,
-    "as_of": "2026-06-17T06:10:01-0400",
+    "documents": 332279,
+    "as_of": "2026-06-17T06:20:10-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 7,
-    "docs_added_7d": 2043,
-    "last_commit": "2026-06-17 06:05"
+    "docs_added_today": 34,
+    "docs_added_7d": 2070,
+    "last_commit": "2026-06-17 06:15"
   },
   "runner": {
     "alive": true,
     "state": "working",
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
-    "current_detached_ingest": "me-session-law-a1-resweep",
-    "current_ingest_proc": "sg ellaw cd '/home/spencer/election-law' && PYTHONPATH='/home/spencer/election-l",
-    "last_cycle_marker": "2026-06-17T06:00:54-04:00 === runner end ===",
-    "last_log_line": "2026-06-17T06:00:54-04:00 === runner end ==="
+    "current_detached_ingest": null,
+    "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
+    "last_cycle_marker": "2026-06-17T06:20:03-04:00 === runner start ===",
+    "last_log_line": "2026-06-17T06:20:03-04:00 === runner start ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-17T06:10:03-0400"
+    "checked_at": "2026-06-17T06:20:12-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -419,13 +419,13 @@
   "qa_backlog": {
     "total": 31,
     "done": 18,
-    "in_progress": 2,
-    "open": 11,
+    "in_progress": 3,
+    "open": 10,
     "blocked_spencer": 0,
     "by_status": {
       "DONE": 18,
-      "IN-PROGRESS": 2,
-      "OPEN": 11
+      "IN-PROGRESS": 3,
+      "OPEN": 10
     }
   }
 }
