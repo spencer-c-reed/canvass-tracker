@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-17T23:20:05-0400",
-  "generated_human": "2026-06-17 11:20 PM EDT",
-  "generated_unix": 1781752805,
+  "generated_at": "2026-06-17T23:30:05-0400",
+  "generated_human": "2026-06-17 11:30 PM EDT",
+  "generated_unix": 1781753405,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 333516,
-    "as_of": "2026-06-17T23:20:05-0400",
+    "documents": 333520,
+    "as_of": "2026-06-17T23:30:05-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 1271,
-    "docs_added_7d": 3307,
-    "last_commit": "2026-06-17 23:19"
+    "docs_added_today": 1275,
+    "docs_added_7d": 3311,
+    "last_commit": "2026-06-17 23:29"
   },
   "runner": {
     "alive": true,
-    "state": "yield-to-maintenance",
-    "idle_yield_cycles": 1,
-    "idle_yield_min_est": 10,
-    "current_detached_ingest": "ut-session-2026",
-    "current_ingest_proc": "flock -w 7200 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/election-law'",
-    "last_cycle_marker": "2026-06-17T23:07:34-04:00 === runner end ===",
-    "last_log_line": "2026-06-17T23:20:03-04:00 runner account: claude-main"
+    "state": "working",
+    "idle_yield_cycles": 0,
+    "idle_yield_min_est": 0,
+    "current_detached_ingest": null,
+    "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
+    "last_cycle_marker": "2026-06-17T23:30:04-04:00 === runner start ===",
+    "last_log_line": "2026-06-17T23:30:04-04:00 === runner start ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-17T23:20:06-0400"
+    "checked_at": "2026-06-17T23:30:07-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -83,12 +83,12 @@
     },
     "discovery_queue": {
       "pending": 23,
-      "candidates": 76
+      "candidates": 77
     }
   },
   "throughput": {
     "by_day": {
-      "2026-06-17": 36,
+      "2026-06-17": 37,
       "2026-06-16": 44,
       "2026-06-15": 23,
       "2026-06-14": 48,
@@ -96,8 +96,12 @@
       "2026-06-12": 29,
       "2026-06-11": 39
     },
-    "today": 36,
+    "today": 37,
     "recent_closes": [
+      {
+        "when": "2026-06-17 23:29",
+        "subject": "adv-review: CONFIRMED AZ Title 19 ballot-measure backfill (b8070d7)"
+      },
       {
         "when": "2026-06-17 22:47",
         "subject": "A6-ID: SOLO-CLOSE entry (item 65) in codex-review-backlog"
@@ -149,10 +153,6 @@
       {
         "when": "2026-06-17 10:16",
         "subject": "wire 17 orphaned freshness-gap ingesters into monthly cron (+ca_crc exception)"
-      },
-      {
-        "when": "2026-06-17 09:36",
-        "subject": "a8-dates: SOLO-CLOSE backlog entry + campaign evidence log"
       }
     ]
   },
@@ -415,16 +415,16 @@
     "note": "Deferred per Spencer \u2014 canvass/memo validation begins once the corpus is production-ready"
   },
   "qa_backlog": {
-    "total": 57,
+    "total": 59,
     "done": 48,
     "in_progress": 4,
-    "open": 4,
+    "open": 6,
     "blocked_spencer": 1,
     "by_status": {
       "DONE": 48,
       "IN-PROGRESS": 4,
       "BLOCKED-SPENCER": 1,
-      "OPEN": 4
+      "OPEN": 6
     }
   }
 }
