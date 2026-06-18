@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-18T02:50:02-0400",
-  "generated_human": "2026-06-18 02:50 AM EDT",
-  "generated_unix": 1781765402,
+  "generated_at": "2026-06-18T03:00:02-0400",
+  "generated_human": "2026-06-18 03:00 AM EDT",
+  "generated_unix": 1781766002,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 333739,
-    "as_of": "2026-06-18T02:50:02-0400",
+    "as_of": "2026-06-18T03:00:02-0400",
     "stale": false
   },
   "live_today": {
@@ -23,21 +23,21 @@
     "current_detached_ingest": null,
     "current_ingest_proc": null,
     "last_cycle_marker": "2026-06-18T01:50:07-04:00 === runner end ===",
-    "last_log_line": "2026-06-18T02:40:02-04:00 [skip] all Claude accounts capped \u2014 yielding this cycle"
+    "last_log_line": "2026-06-18T02:50:03-04:00 [skip] all Claude accounts capped \u2014 yielding this cycle"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-18T02:50:03-0400"
+    "checked_at": "2026-06-18T03:00:04-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
     "statute_promote_specs": 7,
     "gap_families_inventoried": 189,
     "freshness_cells_total": 26,
-    "freshness_cells_done": 11,
+    "freshness_cells_done": 12,
     "freshness_cells_done_method": "live recency_gate (DB-grounded)",
     "freshness_packets_written": 23,
     "freshness_promote_specs": 24
@@ -54,8 +54,8 @@
     },
     "freshness_cells": {
       "total": 26,
-      "done": 11,
-      "remaining": 15,
+      "done": 12,
+      "remaining": 14,
       "method": "live recency_gate (DB-grounded)"
     },
     "statute_integrity_states": {
@@ -167,7 +167,7 @@
       "note": "Computed from the coverage matrix (effective + raw 8/8 across 8 tracked families \u00d7 51 jurisdictions) blended with the wide-scope frontier checklist. Tracked families are near-complete; frontier categories (tribal, territories, emerging-tech, ballot-measure, c3/c4 depth) are the real remaining breadth.",
       "phase": 1,
       "auto": true,
-      "inputs": "tracked families 50/51 effective (99.8%), 42/51 raw 8/8 (96.8%); wide-scope frontier 30%"
+      "inputs": "tracked families 49/51 effective (99.3%), 42/51 raw 8/8 (96.8%); wide-scope frontier 30%"
     },
     {
       "n": 2,
@@ -185,11 +185,11 @@
       "title": "Freshness without human babysitting",
       "compute": "freshness",
       "status": "in_progress",
-      "pct": 29,
+      "pct": 31,
       "note": "Computed: 50% freshness-repair cell progress + 50% durability-automation gate (G3). G3 stays red until 2 consecutive clean weekly + 1 clean monthly. The durability layer (recency-gate monitor, LLM audit jobs, pluggable inference) is supervised work, not autonomous-runner scope.",
       "phase": 1,
       "auto": true,
-      "inputs": "repair cells 11/26 (42%); durability automation gate G3 = red"
+      "inputs": "repair cells 12/26 (46%); durability automation gate G3 = red"
     },
     {
       "n": 4,
@@ -240,9 +240,9 @@
     "coverage_matrix": {
       "juris": 51,
       "raw_8of8": 42,
-      "eff_8of8": 50,
+      "eff_8of8": 49,
       "raw_pct": 96.8,
-      "eff_pct": 99.8,
+      "eff_pct": 99.3,
       "families": [
         {
           "family": "State Statute",
@@ -277,13 +277,13 @@
           "rate": 100.0
         }
       ],
-      "generated": "2026-06-17T08:00:53Z"
+      "generated": "2026-06-18T06:55:47Z"
     },
     "benchmarks": {
       "canonical": {
         "passed": 27,
         "total": 27,
-        "run_date": "2026-06-17"
+        "run_date": "2026-06-18"
       },
       "adversarial": {
         "pass": 5,
