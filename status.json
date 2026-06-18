@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-17T22:20:05-0400",
-  "generated_human": "2026-06-17 10:20 PM EDT",
-  "generated_unix": 1781749205,
+  "generated_at": "2026-06-17T22:30:02-0400",
+  "generated_human": "2026-06-17 10:30 PM EDT",
+  "generated_unix": 1781749802,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 333114,
-    "as_of": "2026-06-17T22:20:05-0400",
+    "documents": 333118,
+    "as_of": "2026-06-17T22:30:02-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 869,
-    "docs_added_7d": 2905,
-    "last_commit": "2026-06-17 22:17"
+    "docs_added_today": 873,
+    "docs_added_7d": 2909,
+    "last_commit": "2026-06-17 22:28"
   },
   "runner": {
     "alive": true,
@@ -21,16 +21,16 @@
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
-    "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
-    "last_cycle_marker": "2026-06-17T22:10:02-04:00 === runner start ===",
-    "last_log_line": "2026-06-17T22:20:03-04:00 [skip] already running"
+    "current_ingest_proc": null,
+    "last_cycle_marker": "2026-06-17T22:29:11-04:00 === runner end ===",
+    "last_log_line": "2026-06-17T22:29:11-04:00 === runner end ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-17T22:20:06-0400"
+    "checked_at": "2026-06-17T22:30:03-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -88,7 +88,7 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-17": 33,
+      "2026-06-17": 34,
       "2026-06-16": 44,
       "2026-06-15": 23,
       "2026-06-14": 48,
@@ -96,8 +96,12 @@
       "2026-06-12": 29,
       "2026-06-11": 39
     },
-    "today": 33,
+    "today": 34,
     "recent_closes": [
+      {
+        "when": "2026-06-17 22:28",
+        "subject": "A6-WA: SOLO-CLOSE (item 64) + campaign evidence log"
+      },
       {
         "when": "2026-06-17 22:03",
         "subject": "AS-close: SOLO-CLOSE + evidence log for A.S.C.A. Title 6 (109 docs)"
@@ -149,10 +153,6 @@
       {
         "when": "2026-06-17 08:33",
         "subject": "ca-crc: SOLO-CLOSE entry #60 in codex-review-backlog (AWAITING)"
-      },
-      {
-        "when": "2026-06-17 07:51",
-        "subject": "ledger: SOLO-CLOSE item 59 (MD session-law A6 fabricated-chapter fix) + evidence log"
       }
     ]
   },
@@ -415,16 +415,16 @@
     "note": "Deferred per Spencer \u2014 canvass/memo validation begins once the corpus is production-ready"
   },
   "qa_backlog": {
-    "total": 55,
-    "done": 45,
-    "in_progress": 5,
-    "open": 4,
+    "total": 57,
+    "done": 46,
+    "in_progress": 4,
+    "open": 6,
     "blocked_spencer": 1,
     "by_status": {
-      "DONE": 45,
-      "IN-PROGRESS": 5,
+      "DONE": 46,
+      "IN-PROGRESS": 4,
       "BLOCKED-SPENCER": 1,
-      "OPEN": 4
+      "OPEN": 6
     }
   }
 }
