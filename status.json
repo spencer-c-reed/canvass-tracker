@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-17T22:10:04-0400",
-  "generated_human": "2026-06-17 10:10 PM EDT",
-  "generated_unix": 1781748604,
+  "generated_at": "2026-06-17T22:20:05-0400",
+  "generated_human": "2026-06-17 10:20 PM EDT",
+  "generated_unix": 1781749205,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 333114,
-    "as_of": "2026-06-17T22:10:04-0400",
+    "as_of": "2026-06-17T22:20:05-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 869,
     "docs_added_7d": 2905,
-    "last_commit": "2026-06-17 22:09"
+    "last_commit": "2026-06-17 22:17"
   },
   "runner": {
     "alive": true,
@@ -23,14 +23,14 @@
     "current_detached_ingest": null,
     "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
     "last_cycle_marker": "2026-06-17T22:10:02-04:00 === runner start ===",
-    "last_log_line": "2026-06-17T22:10:02-04:00 === runner start ==="
+    "last_log_line": "2026-06-17T22:20:03-04:00 [skip] already running"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-17T22:10:05-0400"
+    "checked_at": "2026-06-17T22:20:06-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -417,14 +417,14 @@
   "qa_backlog": {
     "total": 55,
     "done": 45,
-    "in_progress": 4,
-    "open": 5,
+    "in_progress": 5,
+    "open": 4,
     "blocked_spencer": 1,
     "by_status": {
       "DONE": 45,
-      "IN-PROGRESS": 4,
+      "IN-PROGRESS": 5,
       "BLOCKED-SPENCER": 1,
-      "OPEN": 5
+      "OPEN": 4
     }
   }
 }
