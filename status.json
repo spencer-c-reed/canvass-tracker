@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-17T20:50:04-0400",
-  "generated_human": "2026-06-17 08:50 PM EDT",
-  "generated_unix": 1781743804,
+  "generated_at": "2026-06-17T21:00:03-0400",
+  "generated_human": "2026-06-17 09:00 PM EDT",
+  "generated_unix": 1781744403,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 332981,
-    "as_of": "2026-06-17T20:50:04-0400",
+    "as_of": "2026-06-17T21:00:03-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 736,
     "docs_added_7d": 2772,
-    "last_commit": "2026-06-17 20:47"
+    "last_commit": "2026-06-17 20:59"
   },
   "runner": {
     "alive": true,
     "state": "working",
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
-    "current_detached_ingest": null,
-    "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
-    "last_cycle_marker": "2026-06-17T20:40:03-04:00 === runner start ===",
-    "last_log_line": "2026-06-17T20:50:02-04:00 [skip] already running"
+    "current_detached_ingest": "ky-session-2026",
+    "current_ingest_proc": "flock -w 7200 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/election-law'",
+    "last_cycle_marker": "2026-06-17T20:59:40-04:00 === runner end ===",
+    "last_log_line": "2026-06-17T20:59:40-04:00 === runner end ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-17T20:50:05-0400"
+    "checked_at": "2026-06-17T21:00:05-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -88,7 +88,7 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-17": 30,
+      "2026-06-17": 31,
       "2026-06-16": 44,
       "2026-06-15": 23,
       "2026-06-14": 48,
@@ -96,8 +96,12 @@
       "2026-06-12": 29,
       "2026-06-11": 39
     },
-    "today": 30,
+    "today": 31,
     "recent_closes": [
+      {
+        "when": "2026-06-17 20:59",
+        "subject": "campaign bookkeeping: KY session A3 SOLO-CLOSE (detached ky-session-2026) + discovery-queue hygiene"
+      },
       {
         "when": "2026-06-17 19:43",
         "subject": "adv-review QA-33 CONFIRMED \u2014 82 dark SOLO-CLOSE entries migrated into @review: protocol"
@@ -149,10 +153,6 @@
       {
         "when": "2026-06-17 07:15",
         "subject": "ledger: SOLO-CLOSE item 58 (A6 detector recovery-aware) + evidence log"
-      },
-      {
-        "when": "2026-06-17 06:50",
-        "subject": "campaign: evidence log \u2014 A2 ME auto-resolved + ME/MN override retired"
       }
     ]
   },
