@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-17T19:50:04-0400",
-  "generated_human": "2026-06-17 07:50 PM EDT",
-  "generated_unix": 1781740204,
+  "generated_at": "2026-06-17T20:00:08-0400",
+  "generated_human": "2026-06-17 08:00 PM EDT",
+  "generated_unix": 1781740808,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 332993,
-    "as_of": "2026-06-17T19:50:04-0400",
+    "documents": 332995,
+    "as_of": "2026-06-17T20:00:08-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 748,
-    "docs_added_7d": 2784,
-    "last_commit": "2026-06-17 19:43"
+    "docs_added_today": 750,
+    "docs_added_7d": 2786,
+    "last_commit": "2026-06-17 19:55"
   },
   "runner": {
     "alive": true,
@@ -23,14 +23,14 @@
     "current_detached_ingest": null,
     "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
     "last_cycle_marker": "2026-06-17T19:50:02-04:00 === runner start ===",
-    "last_log_line": "2026-06-17T19:50:02-04:00 === runner start ==="
+    "last_log_line": "2026-06-17T20:00:04-04:00 [skip] already running"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-17T19:50:05-0400"
+    "checked_at": "2026-06-17T20:00:10-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -44,8 +44,8 @@
   },
   "backlog": {
     "freshness_ledger": {
-      "open": 155,
-      "resolved": 23,
+      "open": 157,
+      "resolved": 24,
       "by_class": {
         "A1": 1,
         "A3": 118,
@@ -416,13 +416,13 @@
   },
   "qa_backlog": {
     "total": 54,
-    "done": 40,
-    "in_progress": 5,
+    "done": 41,
+    "in_progress": 4,
     "open": 8,
     "blocked_spencer": 1,
     "by_status": {
-      "DONE": 40,
-      "IN-PROGRESS": 5,
+      "DONE": 41,
+      "IN-PROGRESS": 4,
       "BLOCKED-SPENCER": 1,
       "OPEN": 8
     }
