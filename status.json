@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-18T22:10:02-0400",
-  "generated_human": "2026-06-18 10:10 PM EDT",
-  "generated_unix": 1781835002,
+  "generated_at": "2026-06-18T22:20:09-0400",
+  "generated_human": "2026-06-18 10:20 PM EDT",
+  "generated_unix": 1781835609,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 333739,
-    "as_of": "2026-06-18T22:10:02-0400",
+    "as_of": "2026-06-18T22:20:09-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 131,
     "docs_added_7d": 3530,
-    "last_commit": "2026-06-18 19:30"
+    "last_commit": "2026-06-18 22:17"
   },
   "runner": {
     "alive": true,
@@ -21,16 +21,16 @@
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
-    "current_ingest_proc": null,
-    "last_cycle_marker": "",
-    "last_log_line": "2026-06-18T22:00:03-04:00 [skip] all Claude accounts capped \u2014 yielding this cycle"
+    "current_ingest_proc": "/bin/bash -c source /home/spencer/.claude/shell-snapshots/snapshot-bash-17818354",
+    "last_cycle_marker": "2026-06-18T22:20:03-04:00 === runner start ===",
+    "last_log_line": "2026-06-18T22:20:03-04:00 === runner start ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-18T22:10:03-0400"
+    "checked_at": "2026-06-18T22:20:11-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
