@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-19T09:00:10-0400",
-  "generated_human": "2026-06-19 09:00 AM EDT",
-  "generated_unix": 1781874010,
+  "generated_at": "2026-06-19T09:10:05-0400",
+  "generated_human": "2026-06-19 09:10 AM EDT",
+  "generated_unix": 1781874605,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 334648,
-    "as_of": "2026-06-19T09:00:10-0400",
+    "documents": 334668,
+    "as_of": "2026-06-19T09:10:05-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 819,
-    "docs_added_7d": 4439,
-    "last_commit": "2026-06-19 08:52"
+    "docs_added_today": 839,
+    "docs_added_7d": 4459,
+    "last_commit": "2026-06-19 09:09"
   },
   "runner": {
     "alive": true,
@@ -23,14 +23,14 @@
     "current_detached_ingest": "exp-md-session_laws",
     "current_ingest_proc": "flock -w 7200 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/election-law'",
     "last_cycle_marker": "",
-    "last_log_line": "2026-06-19T09:00:04-04:00 runner account: claude-main"
+    "last_log_line": "2026-06-19T09:10:03-04:00 runner account: claude-main"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-19T09:00:11-0400"
+    "checked_at": "2026-06-19T09:10:07-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
