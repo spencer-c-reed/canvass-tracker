@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-19T00:20:02-0400",
-  "generated_human": "2026-06-19 12:20 AM EDT",
-  "generated_unix": 1781842802,
+  "generated_at": "2026-06-19T00:30:02-0400",
+  "generated_human": "2026-06-19 12:30 AM EDT",
+  "generated_unix": 1781843402,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 333874,
-    "as_of": "2026-06-19T00:20:02-0400",
+    "documents": 333907,
+    "as_of": "2026-06-19T00:30:02-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 45,
-    "docs_added_7d": 3665,
-    "last_commit": "2026-06-19 00:18"
+    "docs_added_today": 78,
+    "docs_added_7d": 3698,
+    "last_commit": "2026-06-19 00:29"
   },
   "runner": {
     "alive": true,
     "state": "working",
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
-    "current_detached_ingest": "az-session-2026",
-    "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
-    "last_cycle_marker": "2026-06-19T00:18:36-04:00 === runner end ===",
-    "last_log_line": "2026-06-19T00:18:36-04:00 === runner end ==="
+    "current_detached_ingest": null,
+    "current_ingest_proc": null,
+    "last_cycle_marker": "2026-06-19T00:29:24-04:00 === runner end ===",
+    "last_log_line": "2026-06-19T00:29:24-04:00 === runner end ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-19T00:20:04-0400"
+    "checked_at": "2026-06-19T00:30:04-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -82,11 +82,12 @@
     },
     "discovery_queue": {
       "pending": 23,
-      "candidates": 78
+      "candidates": 79
     }
   },
   "throughput": {
     "by_day": {
+      "2026-06-19": 1,
       "2026-06-18": 6,
       "2026-06-17": 38,
       "2026-06-16": 44,
@@ -95,8 +96,12 @@
       "2026-06-13": 57,
       "2026-06-12": 27
     },
-    "today": 0,
+    "today": 1,
     "recent_closes": [
+      {
+        "when": "2026-06-19 00:29",
+        "subject": "adv-review: CONFIRMED WY integrity-statute backfill (47 sections, 99eab5f)"
+      },
       {
         "when": "2026-06-18 23:54",
         "subject": "docs(TN): SOLO-CLOSE item 67 + campaign evidence \u2014 tn-session-2026 closed (+100 acts)"
@@ -148,10 +153,6 @@
       {
         "when": "2026-06-17 19:43",
         "subject": "adv-review QA-33 CONFIRMED \u2014 82 dark SOLO-CLOSE entries migrated into @review: protocol"
-      },
-      {
-        "when": "2026-06-17 19:23",
-        "subject": "QA-33: migrate 82 pre-protocol SOLO-CLOSE entries into the @review: protocol"
       }
     ]
   },
@@ -415,13 +416,13 @@
   },
   "qa_backlog": {
     "total": 62,
-    "done": 56,
-    "in_progress": 5,
+    "done": 57,
+    "in_progress": 4,
     "open": 1,
     "blocked_spencer": 1,
     "by_status": {
-      "DONE": 56,
-      "IN-PROGRESS": 5,
+      "DONE": 57,
+      "IN-PROGRESS": 4,
       "BLOCKED-SPENCER": 1,
       "OPEN": 1
     }
