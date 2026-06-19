@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-19T13:00:08-0400",
-  "generated_human": "2026-06-19 01:00 PM EDT",
-  "generated_unix": 1781888408,
+  "generated_at": "2026-06-19T13:10:04-0400",
+  "generated_human": "2026-06-19 01:10 PM EDT",
+  "generated_unix": 1781889005,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 335013,
-    "as_of": "2026-06-19T13:00:08-0400",
+    "documents": 335025,
+    "as_of": "2026-06-19T13:10:04-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 1184,
-    "docs_added_7d": 4804,
-    "last_commit": "2026-06-19 12:54"
+    "docs_added_today": 1196,
+    "docs_added_7d": 4816,
+    "last_commit": "2026-06-19 13:05"
   },
   "runner": {
     "alive": true,
@@ -23,14 +23,14 @@
     "current_detached_ingest": "exp-md-session_laws",
     "current_ingest_proc": "flock -w 7200 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/election-law'",
     "last_cycle_marker": "",
-    "last_log_line": "2026-06-19T13:00:03-04:00 runner account: claude-main"
+    "last_log_line": "2026-06-19T13:10:03-04:00 runner account: claude-main"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-19T13:00:10-0400"
+    "checked_at": "2026-06-19T13:10:06-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -94,7 +94,7 @@
       "2026-06-15": 23,
       "2026-06-14": 48,
       "2026-06-13": 57,
-      "2026-06-12": 5
+      "2026-06-12": 3
     },
     "today": 19,
     "recent_closes": [
@@ -415,13 +415,13 @@
     "note": "Deferred per Spencer \u2014 canvass/memo validation begins once the corpus is production-ready"
   },
   "qa_backlog": {
-    "total": 82,
-    "done": 80,
+    "total": 83,
+    "done": 81,
     "in_progress": 1,
     "open": 0,
     "blocked_spencer": 1,
     "by_status": {
-      "DONE": 80,
+      "DONE": 81,
       "IN-PROGRESS": 1,
       "BLOCKED-SPENCER": 1
     }
