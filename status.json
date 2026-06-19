@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-19T02:20:06-0400",
-  "generated_human": "2026-06-19 02:20 AM EDT",
-  "generated_unix": 1781850006,
+  "generated_at": "2026-06-19T02:30:02-0400",
+  "generated_human": "2026-06-19 02:30 AM EDT",
+  "generated_unix": 1781850602,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 333964,
-    "as_of": "2026-06-19T02:20:06-0400",
+    "documents": 333981,
+    "as_of": "2026-06-19T02:30:02-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 135,
-    "docs_added_7d": 3755,
-    "last_commit": "2026-06-19 02:16"
+    "docs_added_today": 152,
+    "docs_added_7d": 3772,
+    "last_commit": "2026-06-19 02:23"
   },
   "runner": {
     "alive": true,
     "state": "yield-to-maintenance",
-    "idle_yield_cycles": 1,
-    "idle_yield_min_est": 10,
+    "idle_yield_cycles": 2,
+    "idle_yield_min_est": 20,
     "current_detached_ingest": "exp-md-session_laws",
     "current_ingest_proc": "flock -w 7200 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/election-law'",
     "last_cycle_marker": "2026-06-19T02:00:18-04:00 === runner end ===",
-    "last_log_line": "2026-06-19T02:20:02-04:00 runner account: claude-main"
+    "last_log_line": "2026-06-19T02:25:02-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-19T02:20:08-0400"
+    "checked_at": "2026-06-19T02:30:04-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -82,7 +82,7 @@
     },
     "discovery_queue": {
       "pending": 23,
-      "candidates": 82
+      "candidates": 83
     }
   },
   "throughput": {
@@ -415,15 +415,16 @@
     "note": "Deferred per Spencer \u2014 canvass/memo validation begins once the corpus is production-ready"
   },
   "qa_backlog": {
-    "total": 63,
+    "total": 64,
     "done": 60,
     "in_progress": 3,
-    "open": 0,
+    "open": 1,
     "blocked_spencer": 1,
     "by_status": {
       "DONE": 60,
       "IN-PROGRESS": 3,
-      "BLOCKED-SPENCER": 1
+      "BLOCKED-SPENCER": 1,
+      "OPEN": 1
     }
   }
 }
