@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-19T00:50:07-0400",
-  "generated_human": "2026-06-19 12:50 AM EDT",
-  "generated_unix": 1781844607,
+  "generated_at": "2026-06-19T01:00:03-0400",
+  "generated_human": "2026-06-19 01:00 AM EDT",
+  "generated_unix": 1781845203,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 333907,
-    "as_of": "2026-06-19T00:50:07-0400",
+    "as_of": "2026-06-19T01:00:03-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 78,
     "docs_added_7d": 3698,
-    "last_commit": "2026-06-19 00:43"
+    "last_commit": "2026-06-19 00:58"
   },
   "runner": {
     "alive": true,
@@ -30,7 +30,7 @@
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-19T00:50:09-0400"
+    "checked_at": "2026-06-19T01:00:05-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -87,17 +87,21 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-19": 2,
+      "2026-06-19": 3,
       "2026-06-18": 6,
       "2026-06-17": 38,
       "2026-06-16": 44,
       "2026-06-15": 23,
       "2026-06-14": 48,
       "2026-06-13": 57,
-      "2026-06-12": 26
+      "2026-06-12": 25
     },
-    "today": 2,
+    "today": 3,
     "recent_closes": [
+      {
+        "when": "2026-06-19 00:53",
+        "subject": "adv-review: CONFIRMED VT integrity-statute backfill (89 sections, eae3aec)"
+      },
       {
         "when": "2026-06-19 00:43",
         "subject": "adv-review: CONFIRMED MD integrity-statute backfill (272 sections, 21814c6)"
@@ -149,10 +153,6 @@
       {
         "when": "2026-06-17 21:34",
         "subject": "campaign bookkeeping: A6 instrument-aware fix SOLO-CLOSE (item 63) + evidence log"
-      },
-      {
-        "when": "2026-06-17 20:59",
-        "subject": "campaign bookkeeping: KY session A3 SOLO-CLOSE (detached ky-session-2026) + discovery-queue hygiene"
       }
     ]
   },
