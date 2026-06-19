@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-19T07:40:01-0400",
-  "generated_human": "2026-06-19 07:40 AM EDT",
-  "generated_unix": 1781869201,
+  "generated_at": "2026-06-19T07:50:02-0400",
+  "generated_human": "2026-06-19 07:50 AM EDT",
+  "generated_unix": 1781869802,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 334523,
-    "as_of": "2026-06-19T07:40:01-0400",
+    "documents": 334541,
+    "as_of": "2026-06-19T07:50:02-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 694,
-    "docs_added_7d": 4314,
+    "docs_added_today": 712,
+    "docs_added_7d": 4332,
     "last_commit": "2026-06-19 07:39"
   },
   "runner": {
@@ -23,14 +23,14 @@
     "current_detached_ingest": "exp-md-session_laws",
     "current_ingest_proc": "flock -w 7200 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/election-law'",
     "last_cycle_marker": "",
-    "last_log_line": "2026-06-19T07:35:04-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
+    "last_log_line": "2026-06-19T07:45:02-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-19T07:40:02-0400"
+    "checked_at": "2026-06-19T07:50:04-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -94,7 +94,7 @@
       "2026-06-15": 23,
       "2026-06-14": 48,
       "2026-06-13": 57,
-      "2026-06-12": 10
+      "2026-06-12": 8
     },
     "today": 18,
     "recent_closes": [
