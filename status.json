@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-20T05:40:02-0400",
-  "generated_human": "2026-06-20 05:40 AM EDT",
-  "generated_unix": 1781948402,
+  "generated_at": "2026-06-20T05:50:01-0400",
+  "generated_human": "2026-06-20 05:50 AM EDT",
+  "generated_unix": 1781949001,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 333448,
-    "as_of": "2026-06-20T05:40:02-0400",
+    "as_of": "2026-06-20T05:50:01-0400",
     "stale": false
   },
   "live_today": {
@@ -20,17 +20,17 @@
     "state": "yield-to-maintenance",
     "idle_yield_cycles": 15,
     "idle_yield_min_est": 150,
-    "current_detached_ingest": "ga-session-2326",
-    "current_ingest_proc": "flock -w 7200 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/election-law'",
+    "current_detached_ingest": null,
+    "current_ingest_proc": null,
     "last_cycle_marker": "",
-    "last_log_line": "2026-06-20T05:35:03-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
+    "last_log_line": "2026-06-20T05:40:08-04:00 [skip] all Claude accounts capped \u2014 yielding this cycle"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-20T05:40:04-0400"
+    "checked_at": "2026-06-20T05:50:03-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -276,7 +276,7 @@
           "rate": 100.0
         }
       ],
-      "generated": "2026-06-19T17:58:17Z"
+      "generated": "2026-06-20T09:49:23Z"
     },
     "benchmarks": {
       "canonical": {
