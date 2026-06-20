@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-19T23:20:05-0400",
-  "generated_human": "2026-06-19 11:20 PM EDT",
-  "generated_unix": 1781925605,
+  "generated_at": "2026-06-19T23:30:08-0400",
+  "generated_human": "2026-06-19 11:30 PM EDT",
+  "generated_unix": 1781926208,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 333098,
-    "as_of": "2026-06-19T23:20:05-0400",
+    "as_of": "2026-06-19T23:30:08-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": -731,
     "docs_added_7d": 2889,
-    "last_commit": "2026-06-19 23:16"
+    "last_commit": "2026-06-19 23:29"
   },
   "runner": {
     "alive": true,
@@ -23,14 +23,14 @@
     "current_detached_ingest": null,
     "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
     "last_cycle_marker": "2026-06-19T23:20:02-04:00 === runner start ===",
-    "last_log_line": "2026-06-19T23:20:02-04:00 === runner start ==="
+    "last_log_line": "2026-06-19T23:30:04-04:00 [skip] already running"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-19T23:20:07-0400"
+    "checked_at": "2026-06-19T23:30:10-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -82,7 +82,7 @@
     },
     "discovery_queue": {
       "pending": 23,
-      "candidates": 95
+      "candidates": 97
     }
   },
   "throughput": {
@@ -414,14 +414,14 @@
     "note": "Deferred per Spencer \u2014 canvass/memo validation begins once the corpus is production-ready"
   },
   "qa_backlog": {
-    "total": 93,
+    "total": 94,
     "done": 86,
-    "in_progress": 2,
+    "in_progress": 3,
     "open": 4,
     "blocked_spencer": 1,
     "by_status": {
       "DONE": 86,
-      "IN-PROGRESS": 2,
+      "IN-PROGRESS": 3,
       "BLOCKED-SPENCER": 1,
       "OPEN": 4
     }
