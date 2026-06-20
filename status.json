@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-19T20:20:07-0400",
-  "generated_human": "2026-06-19 08:20 PM EDT",
-  "generated_unix": 1781914807,
+  "generated_at": "2026-06-19T20:30:06-0400",
+  "generated_human": "2026-06-19 08:30 PM EDT",
+  "generated_unix": 1781915406,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 332940,
-    "as_of": "2026-06-19T20:20:07-0400",
+    "documents": 332960,
+    "as_of": "2026-06-19T20:30:06-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": -889,
-    "docs_added_7d": 2731,
-    "last_commit": "2026-06-19 20:19"
+    "docs_added_today": -869,
+    "docs_added_7d": 2751,
+    "last_commit": "2026-06-19 20:22"
   },
   "runner": {
     "alive": true,
-    "state": "working",
-    "idle_yield_cycles": 0,
-    "idle_yield_min_est": 0,
+    "state": "yield-to-maintenance",
+    "idle_yield_cycles": 1,
+    "idle_yield_min_est": 10,
     "current_detached_ingest": "exp-gu-session_laws",
     "current_ingest_proc": "flock -w 7200 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/election-law'",
     "last_cycle_marker": "2026-06-19T20:19:19-04:00 === runner end ===",
-    "last_log_line": "2026-06-19T20:20:04-04:00 runner account: claude-secondary-20260306-snapshot"
+    "last_log_line": "2026-06-19T20:30:04-04:00 runner account: claude-secondary-20260306-snapshot"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-19T20:20:09-0400"
+    "checked_at": "2026-06-19T20:30:07-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -82,7 +82,7 @@
     },
     "discovery_queue": {
       "pending": 23,
-      "candidates": 94
+      "candidates": 95
     }
   },
   "throughput": {
@@ -416,13 +416,13 @@
   },
   "qa_backlog": {
     "total": 93,
-    "done": 84,
-    "in_progress": 3,
+    "done": 85,
+    "in_progress": 2,
     "open": 5,
     "blocked_spencer": 1,
     "by_status": {
-      "DONE": 84,
-      "IN-PROGRESS": 3,
+      "DONE": 85,
+      "IN-PROGRESS": 2,
       "BLOCKED-SPENCER": 1,
       "OPEN": 5
     }
