@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-20T08:40:04-0400",
-  "generated_human": "2026-06-20 08:40 AM EDT",
-  "generated_unix": 1781959204,
+  "generated_at": "2026-06-20T08:50:06-0400",
+  "generated_human": "2026-06-20 08:50 AM EDT",
+  "generated_unix": 1781959806,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 333505,
-    "as_of": "2026-06-20T08:40:04-0400",
+    "documents": 333588,
+    "as_of": "2026-06-20T08:50:06-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 324,
-    "docs_added_7d": 3296,
-    "last_commit": "2026-06-20 08:32"
+    "docs_added_today": 407,
+    "docs_added_7d": 3379,
+    "last_commit": "2026-06-20 08:46"
   },
   "runner": {
     "alive": true,
@@ -22,15 +22,15 @@
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
     "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
-    "last_cycle_marker": "2026-06-20T08:40:02-04:00 === runner start ===",
-    "last_log_line": "2026-06-20T08:40:02-04:00 === runner start ==="
+    "last_cycle_marker": "2026-06-20T08:50:03-04:00 === runner start ===",
+    "last_log_line": "2026-06-20T08:50:03-04:00 === runner start ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-20T08:40:06-0400"
+    "checked_at": "2026-06-20T08:50:07-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -87,7 +87,7 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-20": 15,
+      "2026-06-20": 18,
       "2026-06-19": 26,
       "2026-06-18": 6,
       "2026-06-17": 38,
@@ -96,8 +96,16 @@
       "2026-06-14": 48,
       "2026-06-13": 46
     },
-    "today": 15,
+    "today": 18,
     "recent_closes": [
+      {
+        "when": "2026-06-20 08:46",
+        "subject": "fix(freshness-monitor): budget cap $250\u2192$275 + ak-legislature baseline 404s"
+      },
+      {
+        "when": "2026-06-20 08:42",
+        "subject": "docs: SOLO-CLOSE Navajo Nation Supreme Court Opinions (exp-navajo-courts)"
+      },
       {
         "when": "2026-06-20 04:11",
         "subject": "adv-review: CONFIRM #46 WV AG backfill; note text_len receipt smell"
@@ -145,14 +153,6 @@
       {
         "when": "2026-06-19 14:39",
         "subject": "fix(freshness-monitor): suppress structural false-positive degraded + stale alerts"
-      },
-      {
-        "when": "2026-06-19 13:38",
-        "subject": "expansion(MD/session_laws): SOLO-CLOSE \u2014 1,107 enacted session laws (2015\u20132026 RS) verified + closed"
-      },
-      {
-        "when": "2026-06-19 09:11",
-        "subject": "adv-review: CONFIRMED 13-state integrity-statute backfill +140 (0b67ebd, 2026-06-19)"
       }
     ]
   },
