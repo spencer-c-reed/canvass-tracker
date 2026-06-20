@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-20T12:50:05-0400",
-  "generated_human": "2026-06-20 12:50 PM EDT",
-  "generated_unix": 1781974205,
+  "generated_at": "2026-06-20T13:00:12-0400",
+  "generated_human": "2026-06-20 01:00 PM EDT",
+  "generated_unix": 1781974812,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 333590,
-    "as_of": "2026-06-20T12:50:05-0400",
+    "documents": 333605,
+    "as_of": "2026-06-20T13:00:12-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 409,
-    "docs_added_7d": 3381,
-    "last_commit": "2026-06-20 12:44"
+    "docs_added_today": 424,
+    "docs_added_7d": 3396,
+    "last_commit": "2026-06-20 12:56"
   },
   "runner": {
     "alive": true,
@@ -23,14 +23,14 @@
     "current_detached_ingest": null,
     "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
     "last_cycle_marker": "2026-06-20T12:50:02-04:00 === runner start ===",
-    "last_log_line": "2026-06-20T12:50:02-04:00 === runner start ==="
+    "last_log_line": "2026-06-20T13:00:05-04:00 [skip] already running"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-20T12:50:06-0400"
+    "checked_at": "2026-06-20T13:00:14-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -94,7 +94,7 @@
       "2026-06-16": 44,
       "2026-06-15": 23,
       "2026-06-14": 48,
-      "2026-06-13": 39
+      "2026-06-13": 38
     },
     "today": 23,
     "recent_closes": [
@@ -415,16 +415,16 @@
     "note": "Deferred per Spencer \u2014 canvass/memo validation begins once the corpus is production-ready"
   },
   "qa_backlog": {
-    "total": 117,
-    "done": 102,
-    "in_progress": 3,
-    "open": 11,
+    "total": 118,
+    "done": 103,
+    "in_progress": 2,
+    "open": 12,
     "blocked_spencer": 1,
     "by_status": {
-      "DONE": 102,
-      "IN-PROGRESS": 3,
+      "DONE": 103,
+      "IN-PROGRESS": 2,
       "BLOCKED-SPENCER": 1,
-      "OPEN": 11
+      "OPEN": 12
     }
   }
 }
