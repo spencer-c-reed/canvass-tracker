@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-20T16:20:07-0400",
-  "generated_human": "2026-06-20 04:20 PM EDT",
-  "generated_unix": 1781986807,
+  "generated_at": "2026-06-20T16:30:12-0400",
+  "generated_human": "2026-06-20 04:30 PM EDT",
+  "generated_unix": 1781987413,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 334296,
-    "as_of": "2026-06-20T16:20:06-0400",
+    "documents": 334305,
+    "as_of": "2026-06-20T16:30:12-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 1115,
-    "docs_added_7d": 4087,
-    "last_commit": "2026-06-20 16:14"
+    "docs_added_today": 1124,
+    "docs_added_7d": 4096,
+    "last_commit": "2026-06-20 16:28"
   },
   "runner": {
     "alive": true,
@@ -22,22 +22,22 @@
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
     "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
-    "last_cycle_marker": "2026-06-20T16:20:04-04:00 === runner start ===",
-    "last_log_line": "2026-06-20T16:20:04-04:00 === runner start ==="
+    "last_cycle_marker": "2026-06-20T16:30:05-04:00 === runner start ===",
+    "last_log_line": "2026-06-20T16:30:05-04:00 === runner start ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-20T16:20:08-0400"
+    "checked_at": "2026-06-20T16:30:14-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
     "statute_promote_specs": 7,
     "gap_families_inventoried": 189,
     "freshness_cells_total": 26,
-    "freshness_cells_done": 13,
+    "freshness_cells_done": 14,
     "freshness_cells_done_method": "live recency_gate (DB-grounded)",
     "freshness_packets_written": 23,
     "freshness_promote_specs": 24
@@ -53,8 +53,8 @@
     },
     "freshness_cells": {
       "total": 26,
-      "done": 13,
-      "remaining": 13,
+      "done": 14,
+      "remaining": 12,
       "method": "live recency_gate (DB-grounded)"
     },
     "statute_integrity_states": {
@@ -82,7 +82,7 @@
     },
     "discovery_queue": {
       "pending": 23,
-      "candidates": 116
+      "candidates": 117
     }
   },
   "throughput": {
@@ -94,7 +94,7 @@
       "2026-06-16": 44,
       "2026-06-15": 23,
       "2026-06-14": 48,
-      "2026-06-13": 26
+      "2026-06-13": 25
     },
     "today": 29,
     "recent_closes": [
@@ -184,11 +184,11 @@
       "title": "Freshness without human babysitting",
       "compute": "freshness",
       "status": "in_progress",
-      "pct": 32,
+      "pct": 34,
       "note": "Computed: 50% freshness-repair cell progress + 50% durability-automation gate (G3). G3 stays red until 2 consecutive clean weekly + 1 clean monthly. The durability layer (recency-gate monitor, LLM audit jobs, pluggable inference) is supervised work, not autonomous-runner scope.",
       "phase": 1,
       "auto": true,
-      "inputs": "repair cells 13/26 (50%); durability automation gate G3 = red"
+      "inputs": "repair cells 14/26 (54%); durability automation gate G3 = red"
     },
     {
       "n": 4,
@@ -415,16 +415,16 @@
     "note": "Deferred per Spencer \u2014 canvass/memo validation begins once the corpus is production-ready"
   },
   "qa_backlog": {
-    "total": 119,
+    "total": 121,
     "done": 104,
     "in_progress": 2,
-    "open": 12,
+    "open": 14,
     "blocked_spencer": 1,
     "by_status": {
       "DONE": 104,
       "IN-PROGRESS": 2,
       "BLOCKED-SPENCER": 1,
-      "OPEN": 12
+      "OPEN": 14
     }
   }
 }
