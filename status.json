@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-20T01:10:07-0400",
-  "generated_human": "2026-06-20 01:10 AM EDT",
-  "generated_unix": 1781932207,
+  "generated_at": "2026-06-20T01:20:07-0400",
+  "generated_human": "2026-06-20 01:20 AM EDT",
+  "generated_unix": 1781932807,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 333335,
-    "as_of": "2026-06-20T01:10:07-0400",
+    "as_of": "2026-06-20T01:20:07-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 154,
     "docs_added_7d": 3126,
-    "last_commit": "2026-06-20 01:03"
+    "last_commit": "2026-06-20 01:18"
   },
   "runner": {
     "alive": true,
@@ -22,15 +22,15 @@
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
     "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
-    "last_cycle_marker": "2026-06-20T01:10:03-04:00 === runner start ===",
-    "last_log_line": "2026-06-20T01:10:03-04:00 === runner start ==="
+    "last_cycle_marker": "2026-06-20T01:20:04-04:00 === runner start ===",
+    "last_log_line": "2026-06-20T01:20:04-04:00 === runner start ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-20T01:10:09-0400"
+    "checked_at": "2026-06-20T01:20:09-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -87,7 +87,7 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-20": 4,
+      "2026-06-20": 5,
       "2026-06-19": 26,
       "2026-06-18": 6,
       "2026-06-17": 38,
@@ -96,8 +96,12 @@
       "2026-06-14": 48,
       "2026-06-13": 57
     },
-    "today": 4,
+    "today": 5,
     "recent_closes": [
+      {
+        "when": "2026-06-20 01:14",
+        "subject": "exp(PR/state_constitutions): SOLO-CLOSE + regen readiness/backlog"
+      },
       {
         "when": "2026-06-20 00:48",
         "subject": "docs(AK A3): SOLO-CLOSE backlog #75 + evidence log \u2014 AK session-law date/FP/contract fix"
@@ -149,10 +153,6 @@
       {
         "when": "2026-06-19 05:48",
         "subject": "QA-69: wire orphaned MI integrity solo-close (24 rows, c636f94) into adv-review gate"
-      },
-      {
-        "when": "2026-06-19 04:52",
-        "subject": "adv-review: CONFIRMED WI ch.19 public-integrity statute backfill (60 sections, 2026-06-19)"
       }
     ]
   },
@@ -417,14 +417,14 @@
   "qa_backlog": {
     "total": 96,
     "done": 89,
-    "in_progress": 2,
-    "open": 4,
+    "in_progress": 3,
+    "open": 3,
     "blocked_spencer": 1,
     "by_status": {
       "DONE": 89,
-      "IN-PROGRESS": 2,
+      "IN-PROGRESS": 3,
       "BLOCKED-SPENCER": 1,
-      "OPEN": 4
+      "OPEN": 3
     }
   }
 }
