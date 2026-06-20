@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-20T18:20:06-0400",
-  "generated_human": "2026-06-20 06:20 PM EDT",
-  "generated_unix": 1781994006,
+  "generated_at": "2026-06-20T18:30:07-0400",
+  "generated_human": "2026-06-20 06:30 PM EDT",
+  "generated_unix": 1781994607,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 334520,
-    "as_of": "2026-06-20T18:20:06-0400",
+    "documents": 334528,
+    "as_of": "2026-06-20T18:30:07-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 1339,
-    "docs_added_7d": 4311,
-    "last_commit": "2026-06-20 18:16"
+    "docs_added_today": 1347,
+    "docs_added_7d": 4319,
+    "last_commit": "2026-06-20 18:23"
   },
   "runner": {
     "alive": true,
     "state": "working",
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
-    "current_detached_ingest": "exp-as-session_laws",
+    "current_detached_ingest": null,
     "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
-    "last_cycle_marker": "2026-06-20T18:10:02-04:00 === runner start ===",
-    "last_log_line": "2026-06-20T18:20:03-04:00 [skip] already running"
+    "last_cycle_marker": "2026-06-20T18:30:05-04:00 === runner start ===",
+    "last_log_line": "2026-06-20T18:30:05-04:00 === runner start ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-20T18:20:08-0400"
+    "checked_at": "2026-06-20T18:30:09-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -82,12 +82,12 @@
     },
     "discovery_queue": {
       "pending": 23,
-      "candidates": 121
+      "candidates": 122
     }
   },
   "throughput": {
     "by_day": {
-      "2026-06-20": 34,
+      "2026-06-20": 36,
       "2026-06-19": 26,
       "2026-06-18": 6,
       "2026-06-17": 38,
@@ -96,8 +96,12 @@
       "2026-06-14": 48,
       "2026-06-13": 18
     },
-    "today": 34,
+    "today": 36,
     "recent_closes": [
+      {
+        "when": "2026-06-20 18:21",
+        "subject": "docs(E6a AK-MIG): SOLO-CLOSE entry for AK reject-cache migration (bbc4461)"
+      },
       {
         "when": "2026-06-20 17:28",
         "subject": "solo-close(exp MP-admin_rules_registers): NMIAC election+lobbying regs, 101 docs"
@@ -149,10 +153,6 @@
       {
         "when": "2026-06-20 08:46",
         "subject": "fix(freshness-monitor): budget cap $250\u2192$275 + ak-legislature baseline 404s"
-      },
-      {
-        "when": "2026-06-20 08:42",
-        "subject": "docs: SOLO-CLOSE Navajo Nation Supreme Court Opinions (exp-navajo-courts)"
       }
     ]
   },
@@ -415,16 +415,16 @@
     "note": "Deferred per Spencer \u2014 canvass/memo validation begins once the corpus is production-ready"
   },
   "qa_backlog": {
-    "total": 123,
-    "done": 106,
-    "in_progress": 3,
-    "open": 13,
+    "total": 125,
+    "done": 107,
+    "in_progress": 2,
+    "open": 15,
     "blocked_spencer": 1,
     "by_status": {
-      "DONE": 106,
-      "IN-PROGRESS": 3,
+      "DONE": 107,
+      "IN-PROGRESS": 2,
       "BLOCKED-SPENCER": 1,
-      "OPEN": 13
+      "OPEN": 15
     }
   }
 }
