@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-20T03:30:11-0400",
-  "generated_human": "2026-06-20 03:30 AM EDT",
-  "generated_unix": 1781940611,
+  "generated_at": "2026-06-20T03:40:08-0400",
+  "generated_human": "2026-06-20 03:40 AM EDT",
+  "generated_unix": 1781941208,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 333445,
-    "as_of": "2026-06-20T03:30:11-0400",
+    "documents": 333446,
+    "as_of": "2026-06-20T03:40:08-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 264,
-    "docs_added_7d": 3236,
-    "last_commit": "2026-06-20 03:24"
+    "docs_added_today": 265,
+    "docs_added_7d": 3237,
+    "last_commit": "2026-06-20 03:31"
   },
   "runner": {
     "alive": true,
     "state": "yield-to-maintenance",
-    "idle_yield_cycles": 2,
-    "idle_yield_min_est": 20,
+    "idle_yield_cycles": 3,
+    "idle_yield_min_est": 30,
     "current_detached_ingest": "ga-session-2326",
     "current_ingest_proc": "flock -w 7200 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/election-law'",
     "last_cycle_marker": "2026-06-20T03:05:15-04:00 === runner end ===",
-    "last_log_line": "2026-06-20T03:30:05-04:00 runner account: claude-main"
+    "last_log_line": "2026-06-20T03:40:04-04:00 runner account: claude-main"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-20T03:30:12-0400"
+    "checked_at": "2026-06-20T03:40:10-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -87,7 +87,7 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-20": 6,
+      "2026-06-20": 7,
       "2026-06-19": 26,
       "2026-06-18": 6,
       "2026-06-17": 38,
@@ -96,8 +96,12 @@
       "2026-06-14": 48,
       "2026-06-13": 57
     },
-    "today": 6,
+    "today": 7,
     "recent_closes": [
+      {
+        "when": "2026-06-20 03:31",
+        "subject": "adv-review: CONFIRM #44 VA AG freshness repair (315 docs, freeze at 2013 broken) + radar note on stuck OCR-pending row"
+      },
       {
         "when": "2026-06-20 02:36",
         "subject": "docs: SOLO-CLOSE + evidence log for Cherokee Nation Election Commission ingest (488fc26)"
@@ -149,10 +153,6 @@
       {
         "when": "2026-06-19 06:12",
         "subject": "adv-review: CONFIRMED WA Title-41 CB backfill (155 docs, 5 chapters, 2026-06-19)"
-      },
-      {
-        "when": "2026-06-19 05:53",
-        "subject": "adv-review: CONFIRMED AK integrity backfill (Whistleblower AS 39.90 + Public Records AS 40.25, +20 docs, 2026-06-19)"
       }
     ]
   },
