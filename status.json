@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-20T15:40:02-0400",
-  "generated_human": "2026-06-20 03:40 PM EDT",
-  "generated_unix": 1781984402,
+  "generated_at": "2026-06-20T15:50:05-0400",
+  "generated_human": "2026-06-20 03:50 PM EDT",
+  "generated_unix": 1781985005,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 334274,
-    "as_of": "2026-06-20T15:40:02-0400",
+    "as_of": "2026-06-20T15:50:05-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 1093,
     "docs_added_7d": 4065,
-    "last_commit": "2026-06-20 15:32"
+    "last_commit": "2026-06-20 15:48"
   },
   "runner": {
     "alive": true,
@@ -21,16 +21,16 @@
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
-    "current_ingest_proc": null,
-    "last_cycle_marker": "2026-06-20T15:37:15-04:00 === runner end ===",
-    "last_log_line": "2026-06-20T15:37:15-04:00 === runner end ==="
+    "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
+    "last_cycle_marker": "2026-06-20T15:40:06-04:00 === runner start ===",
+    "last_log_line": "2026-06-20T15:40:06-04:00 === runner start ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-20T15:40:03-0400"
+    "checked_at": "2026-06-20T15:50:06-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -94,7 +94,7 @@
       "2026-06-16": 44,
       "2026-06-15": 23,
       "2026-06-14": 48,
-      "2026-06-13": 30
+      "2026-06-13": 29
     },
     "today": 26,
     "recent_closes": [
@@ -416,15 +416,15 @@
   },
   "qa_backlog": {
     "total": 119,
-    "done": 103,
+    "done": 104,
     "in_progress": 2,
-    "open": 13,
+    "open": 12,
     "blocked_spencer": 1,
     "by_status": {
-      "DONE": 103,
+      "DONE": 104,
       "IN-PROGRESS": 2,
       "BLOCKED-SPENCER": 1,
-      "OPEN": 13
+      "OPEN": 12
     }
   }
 }
