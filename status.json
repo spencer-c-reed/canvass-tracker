@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-20T16:40:07-0400",
-  "generated_human": "2026-06-20 04:40 PM EDT",
-  "generated_unix": 1781988007,
+  "generated_at": "2026-06-20T16:50:07-0400",
+  "generated_human": "2026-06-20 04:50 PM EDT",
+  "generated_unix": 1781988607,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 334305,
-    "as_of": "2026-06-20T16:40:07-0400",
+    "documents": 334412,
+    "as_of": "2026-06-20T16:50:07-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 1124,
-    "docs_added_7d": 4096,
-    "last_commit": "2026-06-20 16:38"
+    "docs_added_today": 1231,
+    "docs_added_7d": 4203,
+    "last_commit": "2026-06-20 16:49"
   },
   "runner": {
     "alive": true,
@@ -22,15 +22,15 @@
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
     "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
-    "last_cycle_marker": "2026-06-20T16:40:04-04:00 === runner start ===",
-    "last_log_line": "2026-06-20T16:40:04-04:00 === runner start ==="
+    "last_cycle_marker": "2026-06-20T16:50:03-04:00 === runner start ===",
+    "last_log_line": "2026-06-20T16:50:03-04:00 === runner start ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-20T16:40:09-0400"
+    "checked_at": "2026-06-20T16:50:09-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -87,7 +87,7 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-20": 31,
+      "2026-06-20": 33,
       "2026-06-19": 26,
       "2026-06-18": 6,
       "2026-06-17": 38,
@@ -96,8 +96,16 @@
       "2026-06-14": 48,
       "2026-06-13": 25
     },
-    "today": 31,
+    "today": 33,
     "recent_closes": [
+      {
+        "when": "2026-06-20 16:49",
+        "subject": "docs(exp-seattle-ordinances): SOLO-CLOSE Seattle WA municipal_ordinances cell"
+      },
+      {
+        "when": "2026-06-20 16:44",
+        "subject": "docs(solo-close): AS statutes <div fix landed \u2014 STEP-0 Path-A close detached as-statutes-divfix (109/109 clean, 0 div leak)"
+      },
       {
         "when": "2026-06-20 16:35",
         "subject": "docs(solo-close): AS statutes <div fragment fix \u2014 re-ingest in flight (as-statutes-divfix)"
@@ -145,14 +153,6 @@
       {
         "when": "2026-06-20 04:11",
         "subject": "adv-review: CONFIRM #46 WV AG backfill; note text_len receipt smell"
-      },
-      {
-        "when": "2026-06-20 03:31",
-        "subject": "adv-review: CONFIRM #44 VA AG freshness repair (315 docs, freeze at 2013 broken) + radar note on stuck OCR-pending row"
-      },
-      {
-        "when": "2026-06-20 02:36",
-        "subject": "docs: SOLO-CLOSE + evidence log for Cherokee Nation Election Commission ingest (488fc26)"
       }
     ]
   },
@@ -416,15 +416,15 @@
   },
   "qa_backlog": {
     "total": 121,
-    "done": 104,
+    "done": 105,
     "in_progress": 2,
-    "open": 14,
+    "open": 13,
     "blocked_spencer": 1,
     "by_status": {
-      "DONE": 104,
+      "DONE": 105,
       "IN-PROGRESS": 2,
       "BLOCKED-SPENCER": 1,
-      "OPEN": 14
+      "OPEN": 13
     }
   }
 }
