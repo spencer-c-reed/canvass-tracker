@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-20T09:10:05-0400",
-  "generated_human": "2026-06-20 09:10 AM EDT",
-  "generated_unix": 1781961005,
+  "generated_at": "2026-06-20T09:20:06-0400",
+  "generated_human": "2026-06-20 09:20 AM EDT",
+  "generated_unix": 1781961606,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 333588,
-    "as_of": "2026-06-20T09:10:05-0400",
+    "as_of": "2026-06-20T09:20:06-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 407,
     "docs_added_7d": 3379,
-    "last_commit": "2026-06-20 09:09"
+    "last_commit": "2026-06-20 09:17"
   },
   "runner": {
     "alive": true,
     "state": "working",
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
-    "current_detached_ingest": null,
-    "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
-    "last_cycle_marker": "2026-06-20T09:00:04-04:00 === runner start ===",
-    "last_log_line": "2026-06-20T09:10:03-04:00 [skip] already running"
+    "current_detached_ingest": "ga-session-2026",
+    "current_ingest_proc": "flock -w 7200 -E 75 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/electio",
+    "last_cycle_marker": "2026-06-20T09:18:17-04:00 === runner end ===",
+    "last_log_line": "2026-06-20T09:20:03-04:00 runner account: claude-main"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-20T09:10:06-0400"
+    "checked_at": "2026-06-20T09:20:08-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -87,17 +87,21 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-20": 20,
+      "2026-06-20": 21,
       "2026-06-19": 26,
       "2026-06-18": 6,
       "2026-06-17": 38,
       "2026-06-16": 44,
       "2026-06-15": 23,
       "2026-06-14": 48,
-      "2026-06-13": 44
+      "2026-06-13": 43
     },
-    "today": 20,
+    "today": 21,
     "recent_closes": [
+      {
+        "when": "2026-06-20 09:17",
+        "subject": "campaign log: TX FTS-sync contract fix (c5b3747) + GA 2026 backfill launched detached"
+      },
       {
         "when": "2026-06-20 08:58",
         "subject": "solo-close: detached-ingest flock-starvation false-failure (cherokee-const) + -E 75 hardening"
@@ -149,10 +153,6 @@
       {
         "when": "2026-06-19 22:55",
         "subject": "adv-review(OH#GA135): CONFIRMED \u2014 GA 135 backfill close verified firsthand (5 rows survive, gate passes all 5)"
-      },
-      {
-        "when": "2026-06-19 22:27",
-        "subject": "docs(GU): SOLO-CLOSE backlog #72 + evidence log for GU session-laws close"
       }
     ]
   },
