@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-21T15:20:08-0400",
-  "generated_human": "2026-06-21 03:20 PM EDT",
-  "generated_unix": 1782069608,
+  "generated_at": "2026-06-21T15:30:10-0400",
+  "generated_human": "2026-06-21 03:30 PM EDT",
+  "generated_unix": 1782070210,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 334928,
-    "as_of": "2026-06-21T15:20:08-0400",
+    "as_of": "2026-06-21T15:30:10-0400",
     "stale": false
   },
   "live_today": {
@@ -18,19 +18,19 @@
   "runner": {
     "alive": true,
     "state": "yield-to-maintenance",
-    "idle_yield_cycles": 3,
-    "idle_yield_min_est": 30,
-    "current_detached_ingest": "exp-NC-enforcement_actions",
-    "current_ingest_proc": "timeout 2h python3 scripts/network_route_exec.py --label OK CourtListener --scri",
+    "idle_yield_cycles": 4,
+    "idle_yield_min_est": 40,
+    "current_detached_ingest": null,
+    "current_ingest_proc": "timeout 2h python3 scripts/network_route_exec.py --label MT CourtListener --scri",
     "last_cycle_marker": "2026-06-21T14:48:04-04:00 === runner end ===",
-    "last_log_line": "2026-06-21T15:20:03-04:00 runner account: claude-main"
+    "last_log_line": "2026-06-21T15:30:03-04:00 runner account: claude-main"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-21T15:20:10-0400"
+    "checked_at": "2026-06-21T15:30:11-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -82,7 +82,7 @@
     },
     "discovery_queue": {
       "pending": 23,
-      "candidates": 124
+      "candidates": 126
     }
   },
   "throughput": {
@@ -416,14 +416,14 @@
   "qa_backlog": {
     "total": 137,
     "done": 113,
-    "in_progress": 2,
-    "open": 17,
+    "in_progress": 3,
+    "open": 16,
     "blocked_spencer": 1,
     "by_status": {
       "DONE": 113,
-      "OPEN": 17,
-      "IN-PROGRESS": 2,
-      "BLOCKED-SPENCER": 1
+      "IN-PROGRESS": 3,
+      "BLOCKED-SPENCER": 1,
+      "OPEN": 16
     }
   }
 }
