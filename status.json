@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-21T14:30:02-0400",
-  "generated_human": "2026-06-21 02:30 PM EDT",
-  "generated_unix": 1782066602,
+  "generated_at": "2026-06-21T14:40:01-0400",
+  "generated_human": "2026-06-21 02:40 PM EDT",
+  "generated_unix": 1782067201,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 334928,
-    "as_of": "2026-06-21T14:30:02-0400",
+    "as_of": "2026-06-21T14:40:01-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 335,
     "docs_added_7d": 4719,
-    "last_commit": "2026-06-21 14:29"
+    "last_commit": "2026-06-21 14:38"
   },
   "runner": {
     "alive": true,
-    "state": "yield-to-maintenance",
-    "idle_yield_cycles": 4,
-    "idle_yield_min_est": 40,
+    "state": "working",
+    "idle_yield_cycles": 0,
+    "idle_yield_min_est": 0,
     "current_detached_ingest": null,
-    "current_ingest_proc": "timeout 2h python3 scripts/network_route_exec.py --label MN CFB Enforcement --sc",
-    "last_cycle_marker": "2026-06-20T21:47:55-04:00 === runner end ===",
-    "last_log_line": "2026-06-21T14:25:02-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
+    "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
+    "last_cycle_marker": "2026-06-21T14:33:08-04:00 === runner start ===",
+    "last_log_line": "2026-06-21T14:33:49-04:00 [tier] ingestion first-pass model: claude-sonnet-4-6"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-21T14:30:04-0400"
+    "checked_at": "2026-06-21T14:40:03-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
