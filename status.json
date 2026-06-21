@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-21T10:30:12-0400",
-  "generated_human": "2026-06-21 10:30 AM EDT",
-  "generated_unix": 1782052212,
+  "generated_at": "2026-06-21T10:40:01-0400",
+  "generated_human": "2026-06-21 10:40 AM EDT",
+  "generated_unix": 1782052801,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 334879,
-    "as_of": "2026-06-21T10:30:12-0400",
+    "documents": 334880,
+    "as_of": "2026-06-21T10:40:01-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 286,
-    "docs_added_7d": 4670,
-    "last_commit": "2026-06-21 10:06"
+    "docs_added_today": 287,
+    "docs_added_7d": 4671,
+    "last_commit": "2026-06-21 10:34"
   },
   "runner": {
     "alive": true,
@@ -30,7 +30,7 @@
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-21T10:30:13-0400"
+    "checked_at": "2026-06-21T10:40:03-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -87,7 +87,7 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-21": 1,
+      "2026-06-21": 2,
       "2026-06-20": 40,
       "2026-06-19": 26,
       "2026-06-18": 6,
@@ -96,8 +96,12 @@
       "2026-06-15": 23,
       "2026-06-14": 10
     },
-    "today": 1,
+    "today": 2,
     "recent_closes": [
+      {
+        "when": "2026-06-21 10:30",
+        "subject": "nervecenter durable fixes batch: WAL checkpoint, regression semantics, discovery fail-loud, trust-growth freshness"
+      },
       {
         "when": "2026-06-21 03:24",
         "subject": "matrix actor view: fail-closed staleness + wire backfill into daily chain"
@@ -149,10 +153,6 @@
       {
         "when": "2026-06-20 15:23",
         "subject": "reclose(mo-ag CHANGES-REQ): flip @review to RECLOSED \u2014 2021-2026 window backfilled (860 docs, FTS 860/860, 0 zero-text), 461/461 new-window "
-      },
-      {
-        "when": "2026-06-20 14:18",
-        "subject": "docs(exp): SOLO-CLOSE MP CNMI session_laws (30 docs, leg 19-24)"
       }
     ]
   },
