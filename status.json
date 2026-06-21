@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-21T03:20:06-0400",
-  "generated_human": "2026-06-21 03:20 AM EDT",
-  "generated_unix": 1782026406,
+  "generated_at": "2026-06-21T03:30:02-0400",
+  "generated_human": "2026-06-21 03:30 AM EDT",
+  "generated_unix": 1782027002,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 334597,
-    "as_of": "2026-06-21T03:20:06-0400",
+    "documents": 334598,
+    "as_of": "2026-06-21T03:30:02-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 4,
-    "docs_added_7d": 4388,
-    "last_commit": "2026-06-21 01:43"
+    "docs_added_today": 5,
+    "docs_added_7d": 4389,
+    "last_commit": "2026-06-21 03:24"
   },
   "runner": {
     "alive": true,
@@ -21,7 +21,7 @@
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
-    "current_ingest_proc": null,
+    "current_ingest_proc": "timeout 2h python3 scripts/network_route_exec.py --label FEC MURs --script inges",
     "last_cycle_marker": "2026-06-20T21:47:55-04:00 === runner end ===",
     "last_log_line": "2026-06-20T21:47:55-04:00 === runner end ==="
   },
@@ -30,7 +30,7 @@
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-21T03:20:08-0400"
+    "checked_at": "2026-06-21T03:30:04-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -87,6 +87,7 @@
   },
   "throughput": {
     "by_day": {
+      "2026-06-21": 1,
       "2026-06-20": 40,
       "2026-06-19": 26,
       "2026-06-18": 6,
@@ -95,8 +96,12 @@
       "2026-06-15": 23,
       "2026-06-14": 36
     },
-    "today": 0,
+    "today": 1,
     "recent_closes": [
+      {
+        "when": "2026-06-21 03:24",
+        "subject": "matrix actor view: fail-closed staleness + wire backfill into daily chain"
+      },
       {
         "when": "2026-06-20 21:22",
         "subject": "docs(as-asac): SOLO-CLOSE exp AS\u00d7admin_rules (ASAC Title 3) + evidence log"
@@ -148,10 +153,6 @@
       {
         "when": "2026-06-20 14:18",
         "subject": "docs(exp): SOLO-CLOSE MP CNMI session_laws (30 docs, leg 19-24)"
-      },
-      {
-        "when": "2026-06-20 12:42",
-        "subject": "docs(GU-GARR): SOLO-CLOSE item 88 + evidence log for GU GARR Title 6 admin-rules close"
       }
     ]
   },
