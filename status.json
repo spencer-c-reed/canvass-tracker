@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-21T15:40:09-0400",
-  "generated_human": "2026-06-21 03:40 PM EDT",
-  "generated_unix": 1782070809,
+  "generated_at": "2026-06-21T15:50:01-0400",
+  "generated_human": "2026-06-21 03:50 PM EDT",
+  "generated_unix": 1782071401,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 334928,
-    "as_of": "2026-06-21T15:40:09-0400",
+    "documents": 334930,
+    "as_of": "2026-06-21T15:50:01-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 335,
-    "docs_added_7d": 4719,
-    "last_commit": "2026-06-21 15:39"
+    "docs_added_today": 337,
+    "docs_added_7d": 4721,
+    "last_commit": "2026-06-21 15:48"
   },
   "runner": {
     "alive": true,
-    "state": "working",
-    "idle_yield_cycles": 0,
-    "idle_yield_min_est": 0,
-    "current_detached_ingest": "--self-lock",
-    "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
+    "state": "yield-to-maintenance",
+    "idle_yield_cycles": 1,
+    "idle_yield_min_est": 10,
+    "current_detached_ingest": "exp-NC-enforcement_actions",
+    "current_ingest_proc": "sg ellaw cd '/home/spencer/election-law' && PYTHONPATH='/home/spencer/election-l",
     "last_cycle_marker": "2026-06-21T15:39:17-04:00 === runner end ===",
-    "last_log_line": "2026-06-21T15:40:04-04:00 runner account: claude-main"
+    "last_log_line": "2026-06-21T15:45:05-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-21T15:40:11-0400"
+    "checked_at": "2026-06-21T15:50:03-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
