@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-21T14:20:09-0400",
-  "generated_human": "2026-06-21 02:20 PM EDT",
-  "generated_unix": 1782066009,
+  "generated_at": "2026-06-21T14:30:02-0400",
+  "generated_human": "2026-06-21 02:30 PM EDT",
+  "generated_unix": 1782066602,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 334928,
-    "as_of": "2026-06-21T14:20:09-0400",
+    "as_of": "2026-06-21T14:30:02-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 335,
     "docs_added_7d": 4719,
-    "last_commit": "2026-06-21 14:19"
+    "last_commit": "2026-06-21 14:29"
   },
   "runner": {
     "alive": true,
     "state": "yield-to-maintenance",
-    "idle_yield_cycles": 3,
-    "idle_yield_min_est": 30,
+    "idle_yield_cycles": 4,
+    "idle_yield_min_est": 40,
     "current_detached_ingest": null,
     "current_ingest_proc": "timeout 2h python3 scripts/network_route_exec.py --label MN CFB Enforcement --sc",
     "last_cycle_marker": "2026-06-20T21:47:55-04:00 === runner end ===",
-    "last_log_line": "2026-06-21T14:20:02-04:00 runner account: claude-main"
+    "last_log_line": "2026-06-21T14:25:02-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-21T14:20:11-0400"
+    "checked_at": "2026-06-21T14:30:04-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -82,12 +82,12 @@
     },
     "discovery_queue": {
       "pending": 23,
-      "candidates": 123
+      "candidates": 124
     }
   },
   "throughput": {
     "by_day": {
-      "2026-06-21": 3,
+      "2026-06-21": 4,
       "2026-06-20": 40,
       "2026-06-19": 26,
       "2026-06-18": 6,
@@ -95,8 +95,12 @@
       "2026-06-16": 44,
       "2026-06-15": 23
     },
-    "today": 3,
+    "today": 4,
     "recent_closes": [
+      {
+        "when": "2026-06-21 14:29",
+        "subject": "adv-review: CONFIRMED #89 MO AG election opinions 2021-2026 backfill (+462); radar: MO AG OCR backlog (464 scanned) un-queued"
+      },
       {
         "when": "2026-06-21 13:49",
         "subject": "adv-review: CONFIRMED GA session-law 2026 backfill (#87) \u2014 12 acts verbatim, all amend Title 21, receipts reproduce"
@@ -148,10 +152,6 @@
       {
         "when": "2026-06-20 16:02",
         "subject": "docs(cherokee-ec-guidance): SOLO-CLOSE item 77 + campaign evidence log"
-      },
-      {
-        "when": "2026-06-20 15:54",
-        "subject": "adv-review(ct-session-laws): CONFIRMED \u2014 CT freshness-repair RECLOSE verified firsthand"
       }
     ]
   },
