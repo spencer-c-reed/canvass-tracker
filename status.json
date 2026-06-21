@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-21T18:00:14-0400",
-  "generated_human": "2026-06-21 06:00 PM EDT",
-  "generated_unix": 1782079214,
+  "generated_at": "2026-06-21T18:10:07-0400",
+  "generated_human": "2026-06-21 06:10 PM EDT",
+  "generated_unix": 1782079807,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 335406,
-    "as_of": "2026-06-21T18:00:14-0400",
+    "documents": 335465,
+    "as_of": "2026-06-21T18:10:07-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 813,
-    "docs_added_7d": 5197,
+    "docs_added_today": 872,
+    "docs_added_7d": 5256,
     "last_commit": "2026-06-21 17:30"
   },
   "runner": {
@@ -26,11 +26,11 @@
     "last_log_line": "2026-06-21T16:25:03-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
   },
   "exit_node": {
-    "up": false,
-    "egress_ip": null,
+    "up": true,
+    "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
-    "note": "probe failed \u2014 verify with scripts/exit-node-status.sh before asserting down",
-    "checked_at": "2026-06-21T18:00:22-0400"
+    "note": "needs-exit-node = route via node, not a blocker",
+    "checked_at": "2026-06-21T18:10:09-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
