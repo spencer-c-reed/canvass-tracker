@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-22T12:20:15-0400",
-  "generated_human": "2026-06-22 12:20 PM EDT",
-  "generated_unix": 1782145215,
+  "generated_at": "2026-06-22T12:30:13-0400",
+  "generated_human": "2026-06-22 12:30 PM EDT",
+  "generated_unix": 1782145813,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 338599,
-    "as_of": "2026-06-22T12:20:15-0400",
+    "as_of": "2026-06-22T12:30:13-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 1384,
     "docs_added_7d": 8390,
-    "last_commit": "2026-06-22 12:20"
+    "last_commit": "2026-06-22 12:22"
   },
   "runner": {
     "alive": true,
@@ -21,16 +21,16 @@
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
-    "current_ingest_proc": "python3 scripts/ingest_id_ag_selected_advisory_letters.py --dry-run --year-from ",
-    "last_cycle_marker": "2026-06-22T12:15:10-04:00 === runner end ===",
-    "last_log_line": "2026-06-22T12:15:10-04:00 === runner end ==="
+    "current_ingest_proc": "python3 scripts/ingest_ny_session_laws.py --dry-run --bill S1102 --force --worke",
+    "last_cycle_marker": "",
+    "last_log_line": "2026-06-22T12:30:04-04:00 [skip] already running"
   },
   "exit_node": {
-    "up": true,
-    "egress_ip": "172.56.160.92",
+    "up": false,
+    "egress_ip": null,
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
-    "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-22T12:20:17-0400"
+    "note": "probe failed \u2014 verify with scripts/exit-node-status.sh before asserting down",
+    "checked_at": "2026-06-22T12:30:22-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -82,7 +82,7 @@
     },
     "discovery_queue": {
       "pending": 23,
-      "candidates": 135
+      "candidates": 136
     }
   },
   "throughput": {
