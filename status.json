@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-22T01:50:13-0400",
-  "generated_human": "2026-06-22 01:50 AM EDT",
-  "generated_unix": 1782107413,
+  "generated_at": "2026-06-22T02:00:10-0400",
+  "generated_human": "2026-06-22 02:00 AM EDT",
+  "generated_unix": 1782108010,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 337760,
-    "as_of": "2026-06-22T01:50:13-0400",
+    "as_of": "2026-06-22T02:00:10-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 545,
     "docs_added_7d": 7551,
-    "last_commit": "2026-06-22 01:41"
+    "last_commit": "2026-06-22 01:58"
   },
   "runner": {
     "alive": true,
-    "state": "yield-to-maintenance",
-    "idle_yield_cycles": 4,
-    "idle_yield_min_est": 40,
+    "state": "working",
+    "idle_yield_cycles": 0,
+    "idle_yield_min_est": 0,
     "current_detached_ingest": null,
-    "current_ingest_proc": "python3 -m pytest tests/test_ne_session_laws.py tests/test_session_law_filter_we",
-    "last_cycle_marker": "2026-06-22T01:02:03-04:00 === runner end ===",
-    "last_log_line": "2026-06-22T01:50:04-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
+    "current_ingest_proc": null,
+    "last_cycle_marker": "2026-06-22T01:59:33-04:00 === runner end ===",
+    "last_log_line": "2026-06-22T01:59:33-04:00 === runner end ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-22T01:50:14-0400"
+    "checked_at": "2026-06-22T02:00:12-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -414,16 +414,16 @@
     "note": "Deferred per Spencer \u2014 canvass/memo validation begins once the corpus is production-ready"
   },
   "qa_backlog": {
-    "total": 139,
-    "done": 120,
-    "in_progress": 4,
-    "open": 14,
+    "total": 140,
+    "done": 121,
+    "in_progress": 3,
+    "open": 15,
     "blocked_spencer": 1,
     "by_status": {
-      "DONE": 120,
-      "IN-PROGRESS": 4,
+      "DONE": 121,
+      "IN-PROGRESS": 3,
       "BLOCKED-SPENCER": 1,
-      "OPEN": 14
+      "OPEN": 15
     }
   }
 }
