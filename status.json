@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-22T02:30:09-0400",
-  "generated_human": "2026-06-22 02:30 AM EDT",
-  "generated_unix": 1782109809,
+  "generated_at": "2026-06-22T02:40:06-0400",
+  "generated_human": "2026-06-22 02:40 AM EDT",
+  "generated_unix": 1782110406,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 337760,
-    "as_of": "2026-06-22T02:30:09-0400",
+    "as_of": "2026-06-22T02:40:06-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 545,
     "docs_added_7d": 7551,
-    "last_commit": "2026-06-22 02:28"
+    "last_commit": "2026-06-22 02:39"
   },
   "runner": {
     "alive": true,
-    "state": "yield-to-maintenance",
-    "idle_yield_cycles": 3,
-    "idle_yield_min_est": 30,
-    "current_detached_ingest": null,
-    "current_ingest_proc": null,
-    "last_cycle_marker": "2026-06-22T02:09:09-04:00 === runner end ===",
-    "last_log_line": "2026-06-22T02:25:04-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
+    "state": "working",
+    "idle_yield_cycles": 0,
+    "idle_yield_min_est": 0,
+    "current_detached_ingest": "exp-de-ag-opinions-datefix",
+    "current_ingest_proc": "flock -w 7200 -E 75 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/electio",
+    "last_cycle_marker": "",
+    "last_log_line": "0"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-22T02:30:11-0400"
+    "checked_at": "2026-06-22T02:40:08-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -87,7 +87,7 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-22": 1,
+      "2026-06-22": 2,
       "2026-06-21": 7,
       "2026-06-20": 40,
       "2026-06-19": 26,
@@ -96,8 +96,12 @@
       "2026-06-16": 44,
       "2026-06-15": 21
     },
-    "today": 1,
+    "today": 2,
     "recent_closes": [
+      {
+        "when": "2026-06-22 02:39",
+        "subject": "Fix Delaware AG opinion date backfill"
+      },
       {
         "when": "2026-06-22 02:03",
         "subject": "Fix DE AG opinion date backfill"
@@ -149,10 +153,6 @@
       {
         "when": "2026-06-20 17:28",
         "subject": "solo-close(exp MP-admin_rules_registers): NMIAC election+lobbying regs, 101 docs"
-      },
-      {
-        "when": "2026-06-20 16:49",
-        "subject": "docs(exp-seattle-ordinances): SOLO-CLOSE Seattle WA municipal_ordinances cell"
       }
     ]
   },
@@ -166,7 +166,7 @@
       "note": "Computed from the coverage matrix (effective + raw 8/8 across 8 tracked families \u00d7 51 jurisdictions) blended with the wide-scope frontier checklist. Tracked families are near-complete; frontier categories (tribal, territories, emerging-tech, ballot-measure, c3/c4 depth) are the real remaining breadth.",
       "phase": 1,
       "auto": true,
-      "inputs": "tracked families 49/51 effective (99.3%), 42/51 raw 8/8 (96.8%); wide-scope frontier 30%"
+      "inputs": "tracked families 49/51 effective (99.3%), 43/51 raw 8/8 (97.1%); wide-scope frontier 30%"
     },
     {
       "n": 2,
@@ -238,9 +238,9 @@
   "scorecard": {
     "coverage_matrix": {
       "juris": 51,
-      "raw_8of8": 42,
+      "raw_8of8": 43,
       "eff_8of8": 49,
-      "raw_pct": 96.8,
+      "raw_pct": 97.1,
       "eff_pct": 99.3,
       "families": [
         {
@@ -265,7 +265,7 @@
         },
         {
           "family": "Enforcement",
-          "rate": 92.2
+          "rate": 94.1
         },
         {
           "family": "Agency Guidance",
@@ -276,7 +276,7 @@
           "rate": 100.0
         }
       ],
-      "generated": "2026-06-21T06:42:51Z"
+      "generated": "2026-06-22T06:29:58Z"
     },
     "benchmarks": {
       "canonical": {
