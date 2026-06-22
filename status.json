@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-22T02:00:10-0400",
-  "generated_human": "2026-06-22 02:00 AM EDT",
-  "generated_unix": 1782108010,
+  "generated_at": "2026-06-22T02:10:07-0400",
+  "generated_human": "2026-06-22 02:10 AM EDT",
+  "generated_unix": 1782108607,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 337760,
-    "as_of": "2026-06-22T02:00:10-0400",
+    "as_of": "2026-06-22T02:10:07-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 545,
     "docs_added_7d": 7551,
-    "last_commit": "2026-06-22 01:58"
+    "last_commit": "2026-06-22 02:08"
   },
   "runner": {
     "alive": true,
     "state": "working",
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
-    "current_detached_ingest": null,
-    "current_ingest_proc": null,
-    "last_cycle_marker": "2026-06-22T01:59:33-04:00 === runner end ===",
-    "last_log_line": "2026-06-22T01:59:33-04:00 === runner end ==="
+    "current_detached_ingest": "exp-de-ag-opinions-datefix",
+    "current_ingest_proc": "flock -w 7200 -E 75 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/electio",
+    "last_cycle_marker": "2026-06-22T02:09:09-04:00 === runner end ===",
+    "last_log_line": "2026-06-22T02:09:09-04:00 === runner end ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-22T02:00:12-0400"
+    "checked_at": "2026-06-22T02:10:08-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -87,6 +87,7 @@
   },
   "throughput": {
     "by_day": {
+      "2026-06-22": 1,
       "2026-06-21": 7,
       "2026-06-20": 40,
       "2026-06-19": 26,
@@ -95,8 +96,12 @@
       "2026-06-16": 44,
       "2026-06-15": 21
     },
-    "today": 0,
+    "today": 1,
     "recent_closes": [
+      {
+        "when": "2026-06-22 02:03",
+        "subject": "Fix DE AG opinion date backfill"
+      },
       {
         "when": "2026-06-21 15:38",
         "subject": "docs(backlog): SOLO-CLOSE #91 db_write_lock benign rc=75 fix + NC re-launch"
@@ -148,10 +153,6 @@
       {
         "when": "2026-06-20 16:49",
         "subject": "docs(exp-seattle-ordinances): SOLO-CLOSE Seattle WA municipal_ordinances cell"
-      },
-      {
-        "when": "2026-06-20 16:44",
-        "subject": "docs(solo-close): AS statutes <div fix landed \u2014 STEP-0 Path-A close detached as-statutes-divfix (109/109 clean, 0 div leak)"
       }
     ]
   },
@@ -415,15 +416,15 @@
   },
   "qa_backlog": {
     "total": 140,
-    "done": 121,
+    "done": 122,
     "in_progress": 3,
-    "open": 15,
+    "open": 14,
     "blocked_spencer": 1,
     "by_status": {
-      "DONE": 121,
+      "DONE": 122,
       "IN-PROGRESS": 3,
       "BLOCKED-SPENCER": 1,
-      "OPEN": 15
+      "OPEN": 14
     }
   }
 }
