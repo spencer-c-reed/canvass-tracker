@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-22T09:10:02-0400",
-  "generated_human": "2026-06-22 09:10 AM EDT",
-  "generated_unix": 1782133802,
+  "generated_at": "2026-06-22T09:20:16-0400",
+  "generated_human": "2026-06-22 09:20 AM EDT",
+  "generated_unix": 1782134416,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 338443,
-    "as_of": "2026-06-22T09:10:02-0400",
+    "as_of": "2026-06-22T09:20:16-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 1228,
     "docs_added_7d": 8234,
-    "last_commit": "2026-06-22 09:09"
+    "last_commit": "2026-06-22 09:19"
   },
   "runner": {
     "alive": true,
     "state": "working",
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
-    "current_detached_ingest": null,
-    "current_ingest_proc": null,
-    "last_cycle_marker": "",
-    "last_log_line": "The SOLO-CLOSE entry is in the review backlog with the required `@review: AWAITING` first line and rerunnable scoped receipts. I\u2019m adding the matching campaign evidence-log entry now."
+    "current_detached_ingest": "exp-id-ethics-campaign-finance-advisory",
+    "current_ingest_proc": "flock -w 7200 -E 75 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/electio",
+    "last_cycle_marker": "2026-06-22T09:19:59-04:00 === runner end ===",
+    "last_log_line": "2026-06-22T09:19:59-04:00 === runner end ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-22T09:10:04-0400"
+    "checked_at": "2026-06-22T09:20:18-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -166,7 +166,7 @@
       "note": "Computed from the coverage matrix (effective + raw 8/8 across 8 tracked families \u00d7 51 jurisdictions) blended with the wide-scope frontier checklist. Tracked families are near-complete; frontier categories (tribal, territories, emerging-tech, ballot-measure, c3/c4 depth) are the real remaining breadth.",
       "phase": 1,
       "auto": true,
-      "inputs": "tracked families 49/51 effective (99.3%), 43/51 raw 8/8 (97.1%); wide-scope frontier 30%"
+      "inputs": "tracked families 49/51 effective (99.3%), 44/51 raw 8/8 (97.5%); wide-scope frontier 30%"
     },
     {
       "n": 2,
@@ -238,9 +238,9 @@
   "scorecard": {
     "coverage_matrix": {
       "juris": 51,
-      "raw_8of8": 43,
+      "raw_8of8": 44,
       "eff_8of8": 49,
-      "raw_pct": 97.1,
+      "raw_pct": 97.5,
       "eff_pct": 99.3,
       "families": [
         {
@@ -253,7 +253,7 @@
         },
         {
           "family": "AG Opinions",
-          "rate": 96.1
+          "rate": 98.0
         },
         {
           "family": "Constitutions",
@@ -261,7 +261,7 @@
         },
         {
           "family": "Advisory Opinions",
-          "rate": 86.3
+          "rate": 88.2
         },
         {
           "family": "Enforcement",
@@ -276,7 +276,7 @@
           "rate": 100.0
         }
       ],
-      "generated": "2026-06-22T06:29:58Z"
+      "generated": "2026-06-22T13:10:59Z"
     },
     "benchmarks": {
       "canonical": {
@@ -417,14 +417,14 @@
   "qa_backlog": {
     "total": 144,
     "done": 127,
-    "in_progress": 3,
-    "open": 13,
+    "in_progress": 4,
+    "open": 12,
     "blocked_spencer": 1,
     "by_status": {
       "DONE": 127,
-      "IN-PROGRESS": 3,
+      "IN-PROGRESS": 4,
       "BLOCKED-SPENCER": 1,
-      "OPEN": 13
+      "OPEN": 12
     }
   }
 }
