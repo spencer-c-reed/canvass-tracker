@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-22T07:30:09-0400",
-  "generated_human": "2026-06-22 07:30 AM EDT",
-  "generated_unix": 1782127809,
+  "generated_at": "2026-06-22T07:40:11-0400",
+  "generated_human": "2026-06-22 07:40 AM EDT",
+  "generated_unix": 1782128411,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 337871,
-    "as_of": "2026-06-22T07:30:09-0400",
+    "as_of": "2026-06-22T07:40:11-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 656,
     "docs_added_7d": 7662,
-    "last_commit": "2026-06-22 07:29"
+    "last_commit": "2026-06-22 07:38"
   },
   "runner": {
     "alive": true,
@@ -21,16 +21,16 @@
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
-    "current_ingest_proc": "/usr/bin/python3 /home/spencer/projects/claude-usage/ingest_taildrop_laptop_usag",
-    "last_cycle_marker": "2026-06-22T07:27:07-04:00 === runner end ===",
-    "last_log_line": "2026-06-22T07:27:07-04:00 === runner end ==="
+    "current_ingest_proc": "/bin/bash -c perl -0pi -e \"s/\\*\\*Files:\\*\\* `scripts\\/ingest_ny_session_laws.py`",
+    "last_cycle_marker": "",
+    "last_log_line": "     if not args.dry_run and (total_added > 0 or total_updated > 0 or total_errors > 0):"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-22T07:30:11-0400"
+    "checked_at": "2026-06-22T07:40:12-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -94,7 +94,7 @@
       "2026-06-18": 6,
       "2026-06-17": 38,
       "2026-06-16": 44,
-      "2026-06-15": 21
+      "2026-06-15": 18
     },
     "today": 2,
     "recent_closes": [
@@ -417,14 +417,14 @@
   "qa_backlog": {
     "total": 142,
     "done": 125,
-    "in_progress": 3,
-    "open": 13,
+    "in_progress": 4,
+    "open": 12,
     "blocked_spencer": 1,
     "by_status": {
       "DONE": 125,
-      "IN-PROGRESS": 3,
+      "IN-PROGRESS": 4,
       "BLOCKED-SPENCER": 1,
-      "OPEN": 13
+      "OPEN": 12
     }
   }
 }
