@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-22T17:50:06-0400",
-  "generated_human": "2026-06-22 05:50 PM EDT",
-  "generated_unix": 1782165006,
+  "generated_at": "2026-06-22T18:00:18-0400",
+  "generated_human": "2026-06-22 06:00 PM EDT",
+  "generated_unix": 1782165618,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 338609,
-    "as_of": "2026-06-22T17:50:06-0400",
+    "as_of": "2026-06-22T18:00:18-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 1394,
     "docs_added_7d": 8400,
-    "last_commit": "2026-06-22 17:38"
+    "last_commit": "2026-06-22 17:53"
   },
   "runner": {
     "alive": true,
@@ -21,7 +21,7 @@
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
-    "current_ingest_proc": null,
+    "current_ingest_proc": "timeout 360 claude -p You are the senior operating analyst for the \"Nerve Center",
     "last_cycle_marker": "",
     "last_log_line": "+    assert receipt[\"missing_requested_ids\"] == [\"11646\"]"
   },
@@ -30,7 +30,7 @@
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-22T17:50:07-0400"
+    "checked_at": "2026-06-22T18:00:20-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
