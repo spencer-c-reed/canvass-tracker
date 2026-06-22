@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-22T00:10:03-0400",
-  "generated_human": "2026-06-22 12:10 AM EDT",
-  "generated_unix": 1782101403,
+  "generated_at": "2026-06-22T00:20:07-0400",
+  "generated_human": "2026-06-22 12:20 AM EDT",
+  "generated_unix": 1782102007,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 337215,
-    "as_of": "2026-06-22T00:10:03-0400",
+    "as_of": "2026-06-22T00:20:07-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 0,
     "docs_added_7d": 7006,
-    "last_commit": "2026-06-21 23:55"
+    "last_commit": "2026-06-22 00:18"
   },
   "runner": {
     "alive": true,
     "state": "yield-to-maintenance",
-    "idle_yield_cycles": 1,
-    "idle_yield_min_est": 10,
-    "current_detached_ingest": null,
-    "current_ingest_proc": null,
+    "idle_yield_cycles": 3,
+    "idle_yield_min_est": 30,
+    "current_detached_ingest": "exp-de-ag-opinions",
+    "current_ingest_proc": "flock -w 7200 -E 75 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/electio",
     "last_cycle_marker": "2026-06-21T23:56:04-04:00 === runner end ===",
-    "last_log_line": "2026-06-22T00:05:05-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
+    "last_log_line": "2026-06-22T00:20:06-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-22T00:10:05-0400"
+    "checked_at": "2026-06-22T00:20:09-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -415,15 +415,15 @@
   },
   "qa_backlog": {
     "total": 138,
-    "done": 116,
+    "done": 117,
     "in_progress": 3,
-    "open": 17,
+    "open": 16,
     "blocked_spencer": 1,
     "by_status": {
-      "DONE": 116,
+      "DONE": 117,
       "IN-PROGRESS": 3,
       "BLOCKED-SPENCER": 1,
-      "OPEN": 17
+      "OPEN": 16
     }
   }
 }
