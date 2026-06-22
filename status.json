@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-22T09:00:17-0400",
-  "generated_human": "2026-06-22 09:00 AM EDT",
-  "generated_unix": 1782133217,
+  "generated_at": "2026-06-22T09:10:02-0400",
+  "generated_human": "2026-06-22 09:10 AM EDT",
+  "generated_unix": 1782133802,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 338443,
-    "as_of": "2026-06-22T09:00:17-0400",
+    "as_of": "2026-06-22T09:10:02-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 1228,
     "docs_added_7d": 8234,
-    "last_commit": "2026-06-22 08:59"
+    "last_commit": "2026-06-22 09:09"
   },
   "runner": {
     "alive": true,
-    "state": "yield-to-maintenance",
-    "idle_yield_cycles": 3,
-    "idle_yield_min_est": 30,
-    "current_detached_ingest": "exp-ak-ethics-advisory",
-    "current_ingest_proc": "flock -w 7200 -E 75 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/electio",
-    "last_cycle_marker": "2026-06-22T08:27:54-04:00 === runner end ===",
-    "last_log_line": "2026-06-22T08:55:05-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
+    "state": "working",
+    "idle_yield_cycles": 0,
+    "idle_yield_min_est": 0,
+    "current_detached_ingest": null,
+    "current_ingest_proc": null,
+    "last_cycle_marker": "",
+    "last_log_line": "The SOLO-CLOSE entry is in the review backlog with the required `@review: AWAITING` first line and rerunnable scoped receipts. I\u2019m adding the matching campaign evidence-log entry now."
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-22T09:00:19-0400"
+    "checked_at": "2026-06-22T09:10:04-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -416,15 +416,15 @@
   },
   "qa_backlog": {
     "total": 144,
-    "done": 126,
+    "done": 127,
     "in_progress": 3,
-    "open": 14,
+    "open": 13,
     "blocked_spencer": 1,
     "by_status": {
-      "DONE": 126,
+      "DONE": 127,
       "IN-PROGRESS": 3,
       "BLOCKED-SPENCER": 1,
-      "OPEN": 14
+      "OPEN": 13
     }
   }
 }
