@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-22T06:00:13-0400",
-  "generated_human": "2026-06-22 06:00 AM EDT",
-  "generated_unix": 1782122413,
+  "generated_at": "2026-06-22T06:10:10-0400",
+  "generated_human": "2026-06-22 06:10 AM EDT",
+  "generated_unix": 1782123010,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 337761,
-    "as_of": "2026-06-22T06:00:13-0400",
+    "documents": 337782,
+    "as_of": "2026-06-22T06:10:10-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 546,
-    "docs_added_7d": 7552,
-    "last_commit": "2026-06-22 05:59"
+    "docs_added_today": 567,
+    "docs_added_7d": 7573,
+    "last_commit": "2026-06-22 06:09"
   },
   "runner": {
     "alive": true,
@@ -21,16 +21,16 @@
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
     "current_detached_ingest": "exp-NC-enforcement-actions-retry",
-    "current_ingest_proc": "sg ellaw python3 -m pytest tests/test_co_session_laws.py tests/test_reclassify_c",
-    "last_cycle_marker": "2026-06-22T06:00:09-04:00 === runner end ===",
-    "last_log_line": "2026-06-22T06:00:09-04:00 === runner end ==="
+    "current_ingest_proc": "sg ellaw cd '/home/spencer/election-law' && PYTHONPATH='/home/spencer/election-l",
+    "last_cycle_marker": "2026-06-22T06:10:04-04:00 === runner start ===",
+    "last_log_line": "2026-06-22T06:10:04-04:00 === runner start ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-22T06:00:14-0400"
+    "checked_at": "2026-06-22T06:10:12-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -199,7 +199,7 @@
       "note": "Computed from live benchmark JSON: canonical-facts pass rate + adversarial-observables pass rate + citation regression. Re-verify after each ingest batch.",
       "phase": 1,
       "auto": true,
-      "inputs": "canonical 27/27; adversarial 5/5 pass (6 not run); citation regression 236/236"
+      "inputs": "canonical 27/27; adversarial 11/11 pass; citation regression 236/236"
     },
     {
       "n": 5,
@@ -282,12 +282,12 @@
       "canonical": {
         "passed": 27,
         "total": 27,
-        "run_date": "2026-06-21"
+        "run_date": "2026-06-22"
       },
       "adversarial": {
-        "pass": 5,
+        "pass": 11,
         "fail": 0,
-        "not_run": 6
+        "not_run": 0
       }
     },
     "frontier_pct": 30,
@@ -415,16 +415,16 @@
     "note": "Deferred per Spencer \u2014 canvass/memo validation begins once the corpus is production-ready"
   },
   "qa_backlog": {
-    "total": 141,
+    "total": 142,
     "done": 123,
-    "in_progress": 4,
-    "open": 13,
+    "in_progress": 3,
+    "open": 15,
     "blocked_spencer": 1,
     "by_status": {
       "DONE": 123,
-      "IN-PROGRESS": 4,
+      "IN-PROGRESS": 3,
       "BLOCKED-SPENCER": 1,
-      "OPEN": 13
+      "OPEN": 15
     }
   }
 }
