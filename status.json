@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-22T17:30:12-0400",
-  "generated_human": "2026-06-22 05:30 PM EDT",
-  "generated_unix": 1782163812,
+  "generated_at": "2026-06-22T17:40:06-0400",
+  "generated_human": "2026-06-22 05:40 PM EDT",
+  "generated_unix": 1782164406,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 338609,
-    "as_of": "2026-06-22T17:30:12-0400",
+    "as_of": "2026-06-22T17:40:06-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 1394,
     "docs_added_7d": 8400,
-    "last_commit": "2026-06-22 17:17"
+    "last_commit": "2026-06-22 17:38"
   },
   "runner": {
     "alive": true,
@@ -30,7 +30,7 @@
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-22T17:30:13-0400"
+    "checked_at": "2026-06-22T17:40:07-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -166,7 +166,7 @@
       "note": "Computed from the coverage matrix (effective + raw 8/8 across 8 tracked families \u00d7 51 jurisdictions) blended with the wide-scope frontier checklist. Tracked families are near-complete; frontier categories (tribal, territories, emerging-tech, ballot-measure, c3/c4 depth) are the real remaining breadth.",
       "phase": 1,
       "auto": true,
-      "inputs": "tracked families 49/51 effective (99.3%), 44/51 raw 8/8 (97.5%); wide-scope frontier 30%"
+      "inputs": "tracked families 49/51 effective (99.5%), 45/51 raw 8/8 (98.3%); wide-scope frontier 30%"
     },
     {
       "n": 2,
@@ -238,10 +238,10 @@
   "scorecard": {
     "coverage_matrix": {
       "juris": 51,
-      "raw_8of8": 44,
+      "raw_8of8": 45,
       "eff_8of8": 49,
-      "raw_pct": 97.5,
-      "eff_pct": 99.3,
+      "raw_pct": 98.3,
+      "eff_pct": 99.5,
       "families": [
         {
           "family": "State Statute",
@@ -261,7 +261,7 @@
         },
         {
           "family": "Advisory Opinions",
-          "rate": 88.2
+          "rate": 94.1
         },
         {
           "family": "Enforcement",
@@ -276,7 +276,7 @@
           "rate": 100.0
         }
       ],
-      "generated": "2026-06-22T13:10:59Z"
+      "generated": "2026-06-22T21:31:16Z"
     },
     "benchmarks": {
       "canonical": {
