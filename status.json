@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-22T17:10:02-0400",
-  "generated_human": "2026-06-22 05:10 PM EDT",
-  "generated_unix": 1782162602,
+  "generated_at": "2026-06-22T17:20:06-0400",
+  "generated_human": "2026-06-22 05:20 PM EDT",
+  "generated_unix": 1782163206,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 338609,
-    "as_of": "2026-06-22T17:10:02-0400",
+    "as_of": "2026-06-22T17:20:06-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 1394,
     "docs_added_7d": 8400,
-    "last_commit": "2026-06-22 16:39"
+    "last_commit": "2026-06-22 17:17"
   },
   "runner": {
     "alive": true,
@@ -30,7 +30,7 @@
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-22T17:10:04-0400"
+    "checked_at": "2026-06-22T17:20:07-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
