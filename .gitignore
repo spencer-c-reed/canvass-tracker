@@ -1,2 +1,6 @@
 tools/gen.log
 tools/corpus_count.cache
+
+__pycache__/
+*.pyc
+tools/__pycache__/
