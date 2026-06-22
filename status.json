@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-22T12:40:09-0400",
-  "generated_human": "2026-06-22 12:40 PM EDT",
-  "generated_unix": 1782146409,
+  "generated_at": "2026-06-22T12:50:09-0400",
+  "generated_human": "2026-06-22 12:50 PM EDT",
+  "generated_unix": 1782147009,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 338599,
-    "as_of": "2026-06-22T12:40:09-0400",
+    "as_of": "2026-06-22T12:50:09-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 1384,
     "docs_added_7d": 8390,
-    "last_commit": "2026-06-22 12:39"
+    "last_commit": "2026-06-22 12:49"
   },
   "runner": {
     "alive": true,
-    "state": "yield-to-maintenance",
-    "idle_yield_cycles": 1,
-    "idle_yield_min_est": 10,
+    "state": "working",
+    "idle_yield_cycles": 0,
+    "idle_yield_min_est": 0,
     "current_detached_ingest": null,
     "current_ingest_proc": null,
-    "last_cycle_marker": "2026-06-22T12:33:42-04:00 === runner end ===",
-    "last_log_line": "2026-06-22T12:40:03-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
+    "last_cycle_marker": "",
+    "last_log_line": "RECEIPT_JSON {\"added\": 0, \"candidate_docs\": 8, \"document_type\": \"State Advisory Opinion\", \"dry_run\": true, \"errors\": 0, \"fts_indexed\": 0, \"jurisdiction\": \"ID\", \"new_ids\": [], \"reports_seen\": 1, \"skipp"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-22T12:40:11-0400"
+    "checked_at": "2026-06-22T12:50:10-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -82,7 +82,7 @@
     },
     "discovery_queue": {
       "pending": 23,
-      "candidates": 136
+      "candidates": 137
     }
   },
   "throughput": {
