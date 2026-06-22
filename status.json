@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-22T07:10:09-0400",
-  "generated_human": "2026-06-22 07:10 AM EDT",
-  "generated_unix": 1782126609,
+  "generated_at": "2026-06-22T07:20:09-0400",
+  "generated_human": "2026-06-22 07:20 AM EDT",
+  "generated_unix": 1782127209,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 337782,
-    "as_of": "2026-06-22T07:10:09-0400",
+    "documents": 337871,
+    "as_of": "2026-06-22T07:20:09-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 567,
-    "docs_added_7d": 7573,
-    "last_commit": "2026-06-22 07:08"
+    "docs_added_today": 656,
+    "docs_added_7d": 7662,
+    "last_commit": "2026-06-22 07:12"
   },
   "runner": {
     "alive": true,
-    "state": "yield-to-maintenance",
-    "idle_yield_cycles": 5,
-    "idle_yield_min_est": 50,
-    "current_detached_ingest": "exp-as-admin-rules-integrity",
-    "current_ingest_proc": "flock -w 7200 -E 75 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/electio",
-    "last_cycle_marker": "2026-06-22T06:29:13-04:00 === runner end ===",
-    "last_log_line": "2026-06-22T07:05:06-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
+    "state": "working",
+    "idle_yield_cycles": 0,
+    "idle_yield_min_est": 0,
+    "current_detached_ingest": null,
+    "current_ingest_proc": null,
+    "last_cycle_marker": "",
+    "last_log_line": "I\u2019ll run this as a bounded campaign batch: first I\u2019m loading the relevant repo skill and state files, then I\u2019ll follow the detached-ingest resume gate before choosing any new work."
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-22T07:10:11-0400"
+    "checked_at": "2026-06-22T07:20:10-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -417,14 +417,14 @@
   "qa_backlog": {
     "total": 142,
     "done": 125,
-    "in_progress": 3,
-    "open": 13,
+    "in_progress": 4,
+    "open": 12,
     "blocked_spencer": 1,
     "by_status": {
       "DONE": 125,
-      "IN-PROGRESS": 3,
+      "IN-PROGRESS": 4,
       "BLOCKED-SPENCER": 1,
-      "OPEN": 13
+      "OPEN": 12
     }
   }
 }
