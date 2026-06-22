@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-22T10:20:10-0400",
-  "generated_human": "2026-06-22 10:20 AM EDT",
-  "generated_unix": 1782138010,
+  "generated_at": "2026-06-22T10:30:14-0400",
+  "generated_human": "2026-06-22 10:30 AM EDT",
+  "generated_unix": 1782138614,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 338504,
-    "as_of": "2026-06-22T10:20:10-0400",
+    "documents": 338549,
+    "as_of": "2026-06-22T10:30:13-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 1289,
-    "docs_added_7d": 8295,
-    "last_commit": "2026-06-22 10:19"
+    "docs_added_today": 1334,
+    "docs_added_7d": 8340,
+    "last_commit": "2026-06-22 10:29"
   },
   "runner": {
     "alive": true,
@@ -22,15 +22,15 @@
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
     "current_ingest_proc": null,
-    "last_cycle_marker": "",
-    "last_log_line": "2026-06-22T10:20:04-04:00 [skip] already running"
+    "last_cycle_marker": "2026-06-22T10:30:06-04:00 === runner start ===",
+    "last_log_line": "2026-06-22T10:30:06-04:00 === runner start ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-22T10:20:12-0400"
+    "checked_at": "2026-06-22T10:30:15-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -82,7 +82,7 @@
     },
     "discovery_queue": {
       "pending": 23,
-      "candidates": 133
+      "candidates": 134
     }
   },
   "throughput": {
@@ -415,16 +415,16 @@
     "note": "Deferred per Spencer \u2014 canvass/memo validation begins once the corpus is production-ready"
   },
   "qa_backlog": {
-    "total": 144,
+    "total": 146,
     "done": 129,
-    "in_progress": 3,
-    "open": 11,
+    "in_progress": 4,
+    "open": 12,
     "blocked_spencer": 1,
     "by_status": {
       "DONE": 129,
-      "IN-PROGRESS": 3,
+      "IN-PROGRESS": 4,
       "BLOCKED-SPENCER": 1,
-      "OPEN": 11
+      "OPEN": 12
     }
   }
 }
