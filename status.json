@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-22T09:30:09-0400",
-  "generated_human": "2026-06-22 09:30 AM EDT",
-  "generated_unix": 1782135009,
+  "generated_at": "2026-06-22T09:40:13-0400",
+  "generated_human": "2026-06-22 09:40 AM EDT",
+  "generated_unix": 1782135613,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 338496,
-    "as_of": "2026-06-22T09:30:09-0400",
+    "documents": 338498,
+    "as_of": "2026-06-22T09:40:13-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 1281,
-    "docs_added_7d": 8287,
-    "last_commit": "2026-06-22 09:29"
+    "docs_added_today": 1283,
+    "docs_added_7d": 8289,
+    "last_commit": "2026-06-22 09:39"
   },
   "runner": {
     "alive": true,
     "state": "working",
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
-    "current_detached_ingest": "exp-ut-enforcement-actions-docx",
-    "current_ingest_proc": "sg ellaw cd '/home/spencer/election-law' && PYTHONPATH='/home/spencer/election-l",
+    "current_detached_ingest": null,
+    "current_ingest_proc": "python3 scripts/ingest_id_ag_selected_advisory_letters.py --dry-run",
     "last_cycle_marker": "",
-    "last_log_line": "2f8c89c Close ID advisory expansion gap"
+    "last_log_line": "2026-06-22T09:40:06-04:00 [skip] already running"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-22T09:30:11-0400"
+    "checked_at": "2026-06-22T09:40:14-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -416,15 +416,15 @@
   },
   "qa_backlog": {
     "total": 144,
-    "done": 127,
+    "done": 128,
     "in_progress": 4,
-    "open": 12,
+    "open": 11,
     "blocked_spencer": 1,
     "by_status": {
-      "DONE": 127,
+      "DONE": 128,
       "IN-PROGRESS": 4,
       "BLOCKED-SPENCER": 1,
-      "OPEN": 12
+      "OPEN": 11
     }
   }
 }
