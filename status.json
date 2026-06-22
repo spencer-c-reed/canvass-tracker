@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-22T11:00:14-0400",
-  "generated_human": "2026-06-22 11:00 AM EDT",
-  "generated_unix": 1782140414,
+  "generated_at": "2026-06-22T11:10:02-0400",
+  "generated_human": "2026-06-22 11:10 AM EDT",
+  "generated_unix": 1782141002,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 338588,
-    "as_of": "2026-06-22T11:00:14-0400",
+    "as_of": "2026-06-22T11:10:02-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 1373,
     "docs_added_7d": 8379,
-    "last_commit": "2026-06-22 11:00"
+    "last_commit": "2026-06-22 11:08"
   },
   "runner": {
     "alive": true,
     "state": "working",
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
-    "current_detached_ingest": null,
-    "current_ingest_proc": "sg ellaw python3 scripts/purge_ut_nonelection_session_laws.py --year 2018 --appl",
-    "last_cycle_marker": "2026-06-22T11:00:05-04:00 === runner start ===",
-    "last_log_line": "2026-06-22T11:00:05-04:00 === runner start ==="
+    "current_detached_ingest": "exp-nh-ethics-campaign-finance-advisory",
+    "current_ingest_proc": "flock -w 7200 -E 75 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/electio",
+    "last_cycle_marker": "2026-06-22T11:04:55-04:00 === runner end ===",
+    "last_log_line": "2026-06-22T11:04:55-04:00 === runner end ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-22T11:00:15-0400"
+    "checked_at": "2026-06-22T11:10:03-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -415,16 +415,16 @@
     "note": "Deferred per Spencer \u2014 canvass/memo validation begins once the corpus is production-ready"
   },
   "qa_backlog": {
-    "total": 147,
+    "total": 148,
     "done": 130,
-    "in_progress": 4,
-    "open": 12,
+    "in_progress": 3,
+    "open": 14,
     "blocked_spencer": 1,
     "by_status": {
       "DONE": 130,
-      "IN-PROGRESS": 4,
+      "IN-PROGRESS": 3,
       "BLOCKED-SPENCER": 1,
-      "OPEN": 12
+      "OPEN": 14
     }
   }
 }
