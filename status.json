@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-21T23:40:08-0400",
-  "generated_human": "2026-06-21 11:40 PM EDT",
-  "generated_unix": 1782099608,
+  "generated_at": "2026-06-21T23:50:06-0400",
+  "generated_human": "2026-06-21 11:50 PM EDT",
+  "generated_unix": 1782100206,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 337159,
-    "as_of": "2026-06-21T23:40:08-0400",
+    "documents": 337215,
+    "as_of": "2026-06-21T23:50:06-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 2566,
-    "docs_added_7d": 6950,
-    "last_commit": "2026-06-21 23:34"
+    "docs_added_today": 2622,
+    "docs_added_7d": 7006,
+    "last_commit": "2026-06-21 23:43"
   },
   "runner": {
     "alive": true,
-    "state": "yield-to-maintenance",
-    "idle_yield_cycles": 19,
-    "idle_yield_min_est": 190,
-    "current_detached_ingest": "exp-NC-enforcement_actions",
-    "current_ingest_proc": "flock -w 7200 -E 75 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/electio",
-    "last_cycle_marker": "2026-06-21T15:39:17-04:00 === runner end ===",
-    "last_log_line": "2026-06-21T23:35:06-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
+    "state": "working",
+    "idle_yield_cycles": 0,
+    "idle_yield_min_est": 0,
+    "current_detached_ingest": null,
+    "current_ingest_proc": null,
+    "last_cycle_marker": "2026-06-21T23:48:39-04:00 === runner start ===",
+    "last_log_line": "2026-06-21T23:50:02-04:00 [skip] already running"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-21T23:40:09-0400"
+    "checked_at": "2026-06-21T23:50:08-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -416,14 +416,14 @@
   "qa_backlog": {
     "total": 138,
     "done": 116,
-    "in_progress": 2,
-    "open": 18,
+    "in_progress": 3,
+    "open": 17,
     "blocked_spencer": 1,
     "by_status": {
       "DONE": 116,
-      "OPEN": 18,
-      "IN-PROGRESS": 2,
-      "BLOCKED-SPENCER": 1
+      "IN-PROGRESS": 3,
+      "BLOCKED-SPENCER": 1,
+      "OPEN": 17
     }
   }
 }
