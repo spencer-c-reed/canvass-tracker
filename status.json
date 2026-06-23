@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-23T05:20:09-0400",
-  "generated_human": "2026-06-23 05:20 AM EDT",
-  "generated_unix": 1782206409,
+  "generated_at": "2026-06-23T05:30:14-0400",
+  "generated_human": "2026-06-23 05:30 AM EDT",
+  "generated_unix": 1782207014,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 338780,
-    "as_of": "2026-06-23T05:20:09-0400",
+    "as_of": "2026-06-23T05:30:14-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 126,
     "docs_added_7d": 8571,
-    "last_commit": "2026-06-23 05:18"
+    "last_commit": "2026-06-23 05:28"
   },
   "runner": {
     "alive": true,
@@ -23,14 +23,14 @@
     "current_detached_ingest": null,
     "current_ingest_proc": "timeout 21600 /home/spencer/.nvm/versions/node/v22.22.0/bin/claude --model claud",
     "last_cycle_marker": "",
-    "last_log_line": "2026-06-23T05:20:03-04:00 [skip] already running"
+    "last_log_line": "2026-06-23T05:30:04-04:00 [skip] already running"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-23T05:20:11-0400"
+    "checked_at": "2026-06-23T05:30:16-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -83,12 +83,12 @@
     },
     "discovery_queue": {
       "pending": 23,
-      "candidates": 145
+      "candidates": 146
     }
   },
   "throughput": {
     "by_day": {
-      "2026-06-23": 1,
+      "2026-06-23": 2,
       "2026-06-22": 5,
       "2026-06-21": 7,
       "2026-06-20": 40,
@@ -97,7 +97,7 @@
       "2026-06-17": 38,
       "2026-06-16": 31
     },
-    "today": 1,
+    "today": 2,
     "recent_closes": [
       {
         "when": "2026-06-23 02:27",
