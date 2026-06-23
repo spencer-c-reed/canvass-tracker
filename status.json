@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-22T20:20:06-0400",
-  "generated_human": "2026-06-22 08:20 PM EDT",
-  "generated_unix": 1782174006,
+  "generated_at": "2026-06-22T20:30:09-0400",
+  "generated_human": "2026-06-22 08:30 PM EDT",
+  "generated_unix": 1782174609,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 338609,
-    "as_of": "2026-06-22T20:20:06-0400",
+    "documents": 338613,
+    "as_of": "2026-06-22T20:30:09-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 1394,
-    "docs_added_7d": 8400,
-    "last_commit": "2026-06-22 20:14"
+    "docs_added_today": 1398,
+    "docs_added_7d": 8404,
+    "last_commit": "2026-06-22 20:23"
   },
   "runner": {
     "alive": true,
-    "state": "yield-to-maintenance",
-    "idle_yield_cycles": 1,
-    "idle_yield_min_est": 10,
-    "current_detached_ingest": "ak-apoc-ao-ocr4-20260622",
-    "current_ingest_proc": "flock -w 7200 -E 75 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/electio",
-    "last_cycle_marker": "2026-06-22T20:13:50-04:00 === runner end ===",
-    "last_log_line": "2026-06-22T20:20:06-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
+    "state": "working",
+    "idle_yield_cycles": 0,
+    "idle_yield_min_est": 0,
+    "current_detached_ingest": null,
+    "current_ingest_proc": null,
+    "last_cycle_marker": "",
+    "last_log_line": "2026-06-22T20:30:07-04:00 [skip] already running"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-22T20:20:07-0400"
+    "checked_at": "2026-06-22T20:30:11-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
