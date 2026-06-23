@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-23T06:40:08-0400",
-  "generated_human": "2026-06-23 06:40 AM EDT",
-  "generated_unix": 1782211208,
+  "generated_at": "2026-06-23T06:50:04-0400",
+  "generated_human": "2026-06-23 06:50 AM EDT",
+  "generated_unix": 1782211804,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 338980,
-    "as_of": "2026-06-23T06:40:08-0400",
+    "documents": 339020,
+    "as_of": "2026-06-23T06:50:04-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 326,
-    "docs_added_7d": 8771,
-    "last_commit": "2026-06-23 06:37"
+    "docs_added_today": 366,
+    "docs_added_7d": 8811,
+    "last_commit": "2026-06-23 06:47"
   },
   "runner": {
     "alive": true,
@@ -22,15 +22,15 @@
     "idle_yield_min_est": 0,
     "current_detached_ingest": "nc-ncsbe-enf-2026-r2",
     "current_ingest_proc": "sg ellaw cd '/home/spencer/election-law' && PYTHONPATH='/home/spencer/election-l",
-    "last_cycle_marker": "2026-06-23T06:40:02-04:00 === runner start ===",
-    "last_log_line": "2026-06-23T06:40:02-04:00 === runner start ==="
+    "last_cycle_marker": "2026-06-23T06:46:50-04:00 === runner end ===",
+    "last_log_line": "2026-06-23T06:46:50-04:00 === runner end ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-23T06:40:10-0400"
+    "checked_at": "2026-06-23T06:50:05-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -88,7 +88,7 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-23": 3,
+      "2026-06-23": 4,
       "2026-06-22": 5,
       "2026-06-21": 7,
       "2026-06-20": 40,
@@ -97,8 +97,12 @@
       "2026-06-17": 38,
       "2026-06-16": 26
     },
-    "today": 3,
+    "today": 4,
     "recent_closes": [
+      {
+        "when": "2026-06-23 06:47",
+        "subject": "fix(freshness-monitor): suppress 6 R13 display-name false-positive stale alerts"
+      },
       {
         "when": "2026-06-23 06:10",
         "subject": "adv-QA: CONFIRM CO x forms_manuals_calendars_guidance \u2014 5/8 CO SOS guidance parents recognized (no over-sweep), dates source-grounded verbat"
@@ -150,10 +154,6 @@
       {
         "when": "2026-06-20 21:22",
         "subject": "docs(as-asac): SOLO-CLOSE exp AS\u00d7admin_rules (ASAC Title 3) + evidence log"
-      },
-      {
-        "when": "2026-06-20 21:18",
-        "subject": "docs(cherokee-ec-guid): RECLOSE CR 21:13:31Z + guid-* SOLO-CLOSE + evidence log"
       }
     ]
   },
