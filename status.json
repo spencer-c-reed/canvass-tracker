@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-23T00:30:07-0400",
-  "generated_human": "2026-06-23 12:30 AM EDT",
-  "generated_unix": 1782189007,
+  "generated_at": "2026-06-23T00:40:09-0400",
+  "generated_human": "2026-06-23 12:40 AM EDT",
+  "generated_unix": 1782189609,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 338674,
-    "as_of": "2026-06-23T00:30:07-0400",
+    "as_of": "2026-06-23T00:40:09-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 20,
     "docs_added_7d": 8465,
-    "last_commit": "2026-06-23 00:04"
+    "last_commit": "2026-06-23 00:35"
   },
   "runner": {
     "alive": true,
@@ -23,14 +23,14 @@
     "current_detached_ingest": null,
     "current_ingest_proc": "timeout 2h python3 scripts/network_route_exec.py --label State Statutes (CA) --s",
     "last_cycle_marker": "",
-    "last_log_line": "2026-06-23T00:25:04-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
+    "last_log_line": "2026-06-23T00:35:06-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-23T00:30:09-0400"
+    "checked_at": "2026-06-23T00:40:11-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -417,13 +417,13 @@
   "qa_backlog": {
     "total": 155,
     "done": 132,
-    "in_progress": 4,
+    "in_progress": 3,
     "open": 18,
-    "blocked_spencer": 1,
+    "blocked_spencer": 2,
     "by_status": {
       "DONE": 132,
-      "IN-PROGRESS": 4,
-      "BLOCKED-SPENCER": 1,
+      "IN-PROGRESS": 3,
+      "BLOCKED-SPENCER": 2,
       "OPEN": 18
     }
   }
