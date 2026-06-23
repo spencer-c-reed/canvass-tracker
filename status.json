@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-23T02:50:09-0400",
-  "generated_human": "2026-06-23 02:50 AM EDT",
-  "generated_unix": 1782197409,
+  "generated_at": "2026-06-23T03:00:11-0400",
+  "generated_human": "2026-06-23 03:00 AM EDT",
+  "generated_unix": 1782198011,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 338779,
-    "as_of": "2026-06-23T02:50:09-0400",
+    "as_of": "2026-06-23T03:00:11-0400",
     "stale": false
   },
   "live_today": {
@@ -23,14 +23,14 @@
     "current_detached_ingest": "nc-ncsbe-enf-2026-20260623",
     "current_ingest_proc": "sg ellaw cd '/home/spencer/election-law' && PYTHONPATH='/home/spencer/election-l",
     "last_cycle_marker": "",
-    "last_log_line": "The process tree shows the helper is actively running a `codex exec` review under its own 2700-second timeout, so it is not a dead shell loop. I\u2019m continuing to wait for the formal verdict."
+    "last_log_line": "2026-06-23T03:00:05-04:00 [skip] already running"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-23T02:50:10-0400"
+    "checked_at": "2026-06-23T03:00:13-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
