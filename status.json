@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-22T20:30:09-0400",
-  "generated_human": "2026-06-22 08:30 PM EDT",
-  "generated_unix": 1782174609,
+  "generated_at": "2026-06-22T20:40:09-0400",
+  "generated_human": "2026-06-22 08:40 PM EDT",
+  "generated_unix": 1782175209,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 338613,
-    "as_of": "2026-06-22T20:30:09-0400",
+    "documents": 338619,
+    "as_of": "2026-06-22T20:40:09-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 1398,
-    "docs_added_7d": 8404,
-    "last_commit": "2026-06-22 20:23"
+    "docs_added_today": 1404,
+    "docs_added_7d": 8410,
+    "last_commit": "2026-06-22 20:38"
   },
   "runner": {
     "alive": true,
     "state": "working",
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
-    "current_detached_ingest": null,
-    "current_ingest_proc": null,
-    "last_cycle_marker": "",
-    "last_log_line": "2026-06-22T20:30:07-04:00 [skip] already running"
+    "current_detached_ingest": "ak-apoc-ao-ocr2-20260622",
+    "current_ingest_proc": "flock -w 7200 -E 75 /tmp/election-law-db.lock sg ellaw cd '/home/spencer/electio",
+    "last_cycle_marker": "2026-06-22T20:38:22-04:00 === runner end ===",
+    "last_log_line": "2026-06-22T20:38:22-04:00 === runner end ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-22T20:30:11-0400"
+    "checked_at": "2026-06-22T20:40:10-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -88,7 +88,7 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-22": 4,
+      "2026-06-22": 5,
       "2026-06-21": 7,
       "2026-06-20": 40,
       "2026-06-19": 26,
@@ -97,8 +97,12 @@
       "2026-06-16": 44,
       "2026-06-15": 6
     },
-    "today": 4,
+    "today": 5,
     "recent_closes": [
+      {
+        "when": "2026-06-22 20:36",
+        "subject": "coverage: read-only measurement audit \u2014 effective_date reclaim small; freshness-on-codified-law is the real (gated) question"
+      },
       {
         "when": "2026-06-22 20:07",
         "subject": "cron campaign: record final closure scoreboard (Spencer closed; R3/R6 dropped, R10 skipped)"
@@ -150,10 +154,6 @@
       {
         "when": "2026-06-20 18:32",
         "subject": "docs(E6a EXP AS): SOLO-CLOSE AS x session_laws (8 election laws, AWAITING)"
-      },
-      {
-        "when": "2026-06-20 18:21",
-        "subject": "docs(E6a AK-MIG): SOLO-CLOSE entry for AK reject-cache migration (bbc4461)"
       }
     ]
   },
