@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-23T22:30:04-0400",
-  "generated_human": "2026-06-23 10:30 PM EDT",
-  "generated_unix": 1782268204,
+  "generated_at": "2026-06-23T22:40:03-0400",
+  "generated_human": "2026-06-23 10:40 PM EDT",
+  "generated_unix": 1782268803,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 339401,
-    "as_of": "2026-06-23T22:30:04-0400",
+    "as_of": "2026-06-23T22:40:03-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 747,
     "docs_added_7d": 9192,
-    "last_commit": "2026-06-23 22:20"
+    "last_commit": "2026-06-23 22:39"
   },
   "runner": {
     "alive": true,
@@ -21,16 +21,16 @@
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
-    "current_ingest_proc": "timeout 2h python3 scripts/network_route_exec.py --label IL Integrity Statutes -",
-    "last_cycle_marker": "2026-06-23T22:27:33-04:00 === runner end ===",
-    "last_log_line": "2026-06-23T22:27:33-04:00 === runner end ==="
+    "current_ingest_proc": "timeout 2h python3 scripts/network_route_exec.py --label RI Integrity Statutes -",
+    "last_cycle_marker": "2026-06-23T22:37:22-04:00 === runner end ===",
+    "last_log_line": "2026-06-23T22:37:22-04:00 === runner end ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-23T22:30:05-0400"
+    "checked_at": "2026-06-23T22:40:04-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -88,7 +88,7 @@
   },
   "throughput": {
     "by_day": {
-      "2026-06-23": 7,
+      "2026-06-23": 8,
       "2026-06-22": 5,
       "2026-06-21": 7,
       "2026-06-20": 40,
@@ -97,8 +97,12 @@
       "2026-06-17": 38,
       "2026-06-16": 1
     },
-    "today": 7,
+    "today": 8,
     "recent_closes": [
+      {
+        "when": "2026-06-23 22:39",
+        "subject": "Freshness: re-probe + unblock reachable sources (mo-ec/mo-mec/nj-ag via exit node)"
+      },
       {
         "when": "2026-06-23 17:38",
         "subject": "Freshness recency-depth triage: separate real-stale from quiet sources"
@@ -150,10 +154,6 @@
       {
         "when": "2026-06-21 14:29",
         "subject": "adv-review: CONFIRMED #89 MO AG election opinions 2021-2026 backfill (+462); radar: MO AG OCR backlog (464 scanned) un-queued"
-      },
-      {
-        "when": "2026-06-21 13:49",
-        "subject": "adv-review: CONFIRMED GA session-law 2026 backfill (#87) \u2014 12 acts verbatim, all amend Title 21, receipts reproduce"
       }
     ]
   },
