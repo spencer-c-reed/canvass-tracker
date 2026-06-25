@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-25T02:20:06-0400",
-  "generated_human": "2026-06-25 02:20 AM EDT",
-  "generated_unix": 1782368406,
+  "generated_at": "2026-06-25T02:30:02-0400",
+  "generated_human": "2026-06-25 02:30 AM EDT",
+  "generated_unix": 1782369002,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
     "documents": 339860,
-    "as_of": "2026-06-25T02:20:06-0400",
+    "as_of": "2026-06-25T02:30:02-0400",
     "stale": false
   },
   "live_today": {
     "docs_added_today": 4,
     "docs_added_7d": 6252,
-    "last_commit": "2026-06-25 02:14"
+    "last_commit": "2026-06-25 02:23"
   },
   "runner": {
     "alive": true,
@@ -21,16 +21,16 @@
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
-    "current_ingest_proc": "timeout 25m python3 scripts/network_route_exec.py --label AG Opinions (oh-ag) --",
-    "last_cycle_marker": "2026-06-25T02:17:22-04:00 === runner end ===",
-    "last_log_line": "2026-06-25T02:17:22-04:00 === runner end ==="
+    "current_ingest_proc": "timeout 25m python3 scripts/network_route_exec.py --label AG Opinions (il-ag) --",
+    "last_cycle_marker": "2026-06-25T02:29:10-04:00 === runner end ===",
+    "last_log_line": "2026-06-25T02:29:10-04:00 === runner end ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-25T02:20:08-0400"
+    "checked_at": "2026-06-25T02:30:03-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
