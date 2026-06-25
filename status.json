@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-25T11:40:01-0400",
-  "generated_human": "2026-06-25 11:40 AM EDT",
-  "generated_unix": 1782402001,
+  "generated_at": "2026-06-25T11:50:02-0400",
+  "generated_human": "2026-06-25 11:50 AM EDT",
+  "generated_unix": 1782402602,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 340144,
-    "as_of": "2026-06-25T11:40:01-0400",
+    "documents": 340576,
+    "as_of": "2026-06-25T11:50:01-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 288,
-    "docs_added_7d": 6536,
+    "docs_added_today": 720,
+    "docs_added_7d": 6968,
     "last_commit": "2026-06-25 10:41"
   },
   "runner": {
@@ -21,16 +21,16 @@
     "idle_yield_cycles": 0,
     "idle_yield_min_est": 0,
     "current_detached_ingest": null,
-    "current_ingest_proc": "timeout 360 claude -p You are the senior operating analyst for the \"Nerve Center",
-    "last_cycle_marker": "2026-06-25T11:39:49-04:00 === runner end ===",
-    "last_log_line": "2026-06-25T11:39:49-04:00 === runner end ==="
+    "current_ingest_proc": "timeout 4h python3 scripts/network_route_exec.py --label Enforcement (CA) --scri",
+    "last_cycle_marker": "2026-06-25T11:45:30-04:00 === runner end ===",
+    "last_log_line": "2026-06-25T11:45:30-04:00 === runner end ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-25T11:40:02-0400"
+    "checked_at": "2026-06-25T11:50:03-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
