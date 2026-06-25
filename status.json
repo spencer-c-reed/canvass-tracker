@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-25T14:50:01-0400",
-  "generated_human": "2026-06-25 02:50 PM EDT",
-  "generated_unix": 1782413401,
+  "generated_at": "2026-06-25T15:00:01-0400",
+  "generated_human": "2026-06-25 03:00 PM EDT",
+  "generated_unix": 1782414001,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 353146,
-    "as_of": "2026-06-25T14:50:01-0400",
+    "documents": 353798,
+    "as_of": "2026-06-25T15:00:01-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 13290,
-    "docs_added_7d": 19538,
+    "docs_added_today": 13942,
+    "docs_added_7d": 20190,
     "last_commit": "2026-06-25 14:15"
   },
   "runner": {
     "alive": true,
-    "state": "yield-to-maintenance",
-    "idle_yield_cycles": 19,
-    "idle_yield_min_est": 190,
+    "state": "working",
+    "idle_yield_cycles": 0,
+    "idle_yield_min_est": 0,
     "current_detached_ingest": null,
-    "current_ingest_proc": "timeout 4h python3 scripts/network_route_exec.py --label Enforcement (FL-DOAH) -",
-    "last_cycle_marker": "",
-    "last_log_line": "2026-06-25T14:45:02-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
+    "current_ingest_proc": "python3 ingest/ingest_fec_admin_fines.py",
+    "last_cycle_marker": "2026-06-25T14:52:46-04:00 === runner end ===",
+    "last_log_line": "2026-06-25T14:52:46-04:00 === runner end ==="
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-25T14:50:04-0400"
+    "checked_at": "2026-06-25T15:00:04-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
