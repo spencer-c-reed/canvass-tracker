@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-26T01:10:02-0400",
-  "generated_human": "2026-06-26 01:10 AM EDT",
-  "generated_unix": 1782450602,
+  "generated_at": "2026-06-26T01:20:11-0400",
+  "generated_human": "2026-06-26 01:20 AM EDT",
+  "generated_unix": 1782451211,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 359036,
-    "as_of": "2026-06-26T01:10:02-0400",
+    "documents": 359106,
+    "as_of": "2026-06-26T01:20:11-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 598,
-    "docs_added_7d": 25207,
+    "docs_added_today": 668,
+    "docs_added_7d": 25277,
     "last_commit": "2026-06-26 00:59"
   },
   "runner": {
     "alive": true,
     "state": "yield-to-maintenance",
-    "idle_yield_cycles": 17,
-    "idle_yield_min_est": 170,
+    "idle_yield_cycles": 18,
+    "idle_yield_min_est": 180,
     "current_detached_ingest": null,
     "current_ingest_proc": "timeout 4h python3 scripts/network_route_exec.py --label PA Ethics Commission --",
     "last_cycle_marker": "2026-06-25T22:55:38-04:00 === runner end ===",
-    "last_log_line": "2026-06-26T01:05:05-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
+    "last_log_line": "2026-06-26T01:15:04-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-26T01:10:05-0400"
+    "checked_at": "2026-06-26T01:20:12-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -93,7 +93,7 @@
       "2026-06-22": 5,
       "2026-06-21": 7,
       "2026-06-20": 40,
-      "2026-06-19": 23
+      "2026-06-19": 22
     },
     "today": 0,
     "recent_closes": [
