@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-26T20:30:04-0400",
-  "generated_human": "2026-06-26 08:30 PM EDT",
-  "generated_unix": 1782520204,
+  "generated_at": "2026-06-26T20:40:02-0400",
+  "generated_human": "2026-06-26 08:40 PM EDT",
+  "generated_unix": 1782520802,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 379970,
-    "as_of": "2026-06-26T20:30:03-0400",
+    "documents": 379972,
+    "as_of": "2026-06-26T20:40:02-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 21532,
-    "docs_added_7d": 46141,
+    "docs_added_today": 21534,
+    "docs_added_7d": 46143,
     "last_commit": "2026-06-26 18:02"
   },
   "runner": {
     "alive": true,
     "state": "yield-to-maintenance",
-    "idle_yield_cycles": 7,
-    "idle_yield_min_est": 70,
+    "idle_yield_cycles": 8,
+    "idle_yield_min_est": 80,
     "current_detached_ingest": null,
     "current_ingest_proc": "timeout 2h python3 scripts/network_route_exec.py --label CT Session Laws --scrip",
     "last_cycle_marker": "2026-06-26T19:29:24-04:00 === runner end ===",
-    "last_log_line": "2026-06-26T20:25:08-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
+    "last_log_line": "2026-06-26T20:35:06-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-26T20:30:05-0400"
+    "checked_at": "2026-06-26T20:40:03-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
