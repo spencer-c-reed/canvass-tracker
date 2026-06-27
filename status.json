@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-27T04:00:02-0400",
-  "generated_human": "2026-06-27 04:00 AM EDT",
-  "generated_unix": 1782547202,
+  "generated_at": "2026-06-27T04:10:02-0400",
+  "generated_human": "2026-06-27 04:10 AM EDT",
+  "generated_unix": 1782547802,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 380165,
-    "as_of": "2026-06-27T04:00:02-0400",
+    "documents": 380187,
+    "as_of": "2026-06-27T04:10:02-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 84,
-    "docs_added_7d": 46984,
+    "docs_added_today": 106,
+    "docs_added_7d": 47006,
     "last_commit": "2026-06-27 02:13"
   },
   "runner": {
     "alive": true,
     "state": "yield-to-maintenance",
-    "idle_yield_cycles": 1,
-    "idle_yield_min_est": 10,
+    "idle_yield_cycles": 2,
+    "idle_yield_min_est": 20,
     "current_detached_ingest": null,
     "current_ingest_proc": "timeout 2h python3 scripts/network_route_exec.py --label TN Session Laws --scrip",
     "last_cycle_marker": "2026-06-27T03:49:32-04:00 === runner end ===",
-    "last_log_line": "2026-06-27T03:55:05-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
+    "last_log_line": "2026-06-27T04:05:08-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
   },
   "exit_node": {
-    "up": false,
-    "egress_ip": null,
+    "up": true,
+    "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
-    "note": "probe failed \u2014 verify with scripts/exit-node-status.sh before asserting down",
-    "checked_at": "2026-06-27T04:00:11-0400"
+    "note": "needs-exit-node = route via node, not a blocker",
+    "checked_at": "2026-06-27T04:10:04-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -92,7 +92,7 @@
       "2026-06-23": 8,
       "2026-06-22": 5,
       "2026-06-21": 7,
-      "2026-06-20": 30
+      "2026-06-20": 29
     },
     "today": 0,
     "recent_closes": [
