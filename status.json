@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-27T14:10:02-0400",
-  "generated_human": "2026-06-27 02:10 PM EDT",
-  "generated_unix": 1782583802,
+  "generated_at": "2026-06-27T14:20:17-0400",
+  "generated_human": "2026-06-27 02:20 PM EDT",
+  "generated_unix": 1782584417,
   "north_star": "Better than the best local expert lawyer \u2014 more complete, more current, more precise. Make Westlaw look like amateurs. Comprehensive, current, correct coverage in EVERY document category \u00d7 EVERY jurisdiction (federal + 50 + DC + territories + local).",
   "deadline": "2026-06-17",
   "assessment_updated": "2026-06-16",
   "corpus": {
-    "documents": 381796,
-    "as_of": "2026-06-27T14:10:02-0400",
+    "documents": 381818,
+    "as_of": "2026-06-27T14:20:17-0400",
     "stale": false
   },
   "live_today": {
-    "docs_added_today": 1715,
-    "docs_added_7d": 48615,
+    "docs_added_today": 1737,
+    "docs_added_7d": 48637,
     "last_commit": "2026-06-27 02:13"
   },
   "runner": {
@@ -23,14 +23,14 @@
     "current_detached_ingest": null,
     "current_ingest_proc": "timeout 2h python3 scripts/network_route_exec.py --label WY Session Laws --scrip",
     "last_cycle_marker": "",
-    "last_log_line": "2026-06-27T14:05:10-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
+    "last_log_line": "2026-06-27T14:15:06-04:00 [skip] maintenance holding DB lock >5min \u2014 yield this cycle"
   },
   "exit_node": {
     "up": true,
     "egress_ip": "172.56.160.92",
     "label": "always-on Beryl SOCKS5 (100.77.29.6:1080)",
     "note": "needs-exit-node = route via node, not a blocker",
-    "checked_at": "2026-06-27T14:10:04-0400"
+    "checked_at": "2026-06-27T14:20:18-0400"
   },
   "queue": {
     "staged_statute_ingesters": 10,
@@ -92,7 +92,7 @@
       "2026-06-23": 8,
       "2026-06-22": 5,
       "2026-06-21": 7,
-      "2026-06-20": 16
+      "2026-06-20": 15
     },
     "today": 0,
     "recent_closes": [
